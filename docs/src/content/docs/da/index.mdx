@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Tag noter, tegn frit, og organisér dine idéer på en uendelig arbejdsflade
+template: splash
+hero:
+  tagline: Your ideas should not have to fit inside a page. Handwrite, sketch, annotate, and organize on an infinite canvas that stays yours.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Hent Butterfly
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Prøv webappen
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Dokumentation
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Et Butterfly-lærred med håndskrevne noter, diagrammer og en lineal">
+
+
+
+
+  ## En arbejdsflade for visuelle tænkere
+
+  Tag forelæsningsnoter med en pen, skriv kommentarer i en PDF, skitsér en brugerflade, lav et diagram, planlæg et projekt — eller kombiner det hele i samme dokument.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Penindstillinger for et tegneværktøj i Butterfly" reverse>
+
+
+
+
+
+  ## Finjustér hvert eneste strøg
+
+  Draw with a stylus, touch, or mouse. Adjust stroke width, color, smoothing, and texture. If a mark is not quite right, edit it instead of starting over.
+</LandingFeature>
+
+## Kraftfuld, når dine projekter vokser
+
+<CardGrid stagger>
+  <Card title="Alle elementer kan stadig redigeres" icon="pencil">
+    Move, resize, recolor, and reorganize content after placing it. Your first attempt never has to be your final one.
+  </Card>
+  <Card title="Alle gængse medier i ét dokument" icon="document">
+    Import camera photos, gallery images, PDFs, and SVGs. Combine them with your own notes and export clean results in common formats.
+  </Card>
+  <Card title="Genbrugelige byggesten" icon="puzzle">
+    Gør dine foretrukne layouts til skabeloner og ofte brugt indhold til pakker, stempler, paletter og typografier, som kan bruges på tværs af dokumenter.
+  </Card>
+  <Card title="Værktøjer til enhver idé" icon="open-book">
+    Ræk længere end pen og viskelæder med etiketter, figurer, polygoner, linealer, gitre, teksturer, stempler, laserpointer, præsentationsværktøjer og meget mere.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Butterfly-skabeloner og -pakker med genbrugelige lærredstile">
+
+
+
+
+  ## Tilpas Butterfly til din arbejdsgang
+
+  Start with a template that brings together your favorite backgrounds, tools, layers, areas, and pages. Save reusable content in packs so your next project starts with everything you need.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Et håndskrevet Butterfly-dokument på en telefon og en computer" reverse>
+
+
+
+
+
+  ## Virker overalt
+
+  Take your canvas from your desk to your next class or meeting. Butterfly runs on Android, Windows, macOS, Linux, and in your browser, with an iOS preview also available.
+
+</LandingFeature>
+
+## Dit arbejde tilhører dig
+
+<CardGrid>
+  <Card title="Lokalt som standard" icon="laptop">
+    Keep working without an internet connection. Your documents live on your device unless you choose to save them somewhere else.
+  </Card>
+  <Card title="Brug din egen cloud" icon="rocket">
+    Forbind WebDAV-tjenester som Nextcloud for at synkronisere, sikkerhedskopiere og redigere dine noter, uanset hvor du er.
+  </Card>
+  <Card title="Open source-software" icon="code-branch">
+    Butterfly is free and open source under the GNU AGPL-3.0 license. Keep your documents in its documented `.bfly` and `.tbfly` formats.
+  </Card>
+  <Card title="Skab sammen" icon="comment">
+    Den eksperimentelle samarbejdsfunktion understøtter end-to-end-krypterede sessioner via Swamp eller en WebSocket-server, du selv hoster.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly — det grænseløse lærred til visuel tænkning.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Hent Butterfly" description="Installér appen på din telefon, tablet eller computer." href="/downloads/" />
+  <LinkCard title="Prøv webappen" description="Start a canvas in your browser without installing anything. Chromium-based browsers are recommended." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Læs Butterfly-bloggen" description="Følg med i udgivelser, projektnyheder og historier fra udviklingen." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Lær det grundlæggende" description="Opret dit første dokument, og gå på opdagelse i hele værktøjskassen." href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly is built in the open and available in many languages. [Join the community](/community/) to share feedback, help with translations, or contribute to the project.

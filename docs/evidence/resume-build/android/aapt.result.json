@@ -1,0 +1,8 @@
+{
+  "command": [
+    "/workspace/toolchains/android-sdk/build-tools/36.0.0/aapt",
+    "version"
+  ],
+  "exit_code": 0,
+  "seconds": 0.002228260040283203
+}

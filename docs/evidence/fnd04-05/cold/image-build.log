@@ -1,0 +1,33 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 887B done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.2s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/ubuntu:26.04@sha256:f144425ff09be612d6d9ad965196e9cdc23dae1f42110a8a11a3e9a8198759f7
+#4 DONE 0.0s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [stage-0 1/3] FROM docker.io/library/ubuntu:26.04@sha256:f144425ff09be612d6d9ad965196e9cdc23dae1f42110a8a11a3e9a8198759f7
+#6 DONE 0.0s
+
+#7 [stage-0 2/3] RUN --mount=type=secret,id=combined_ca,required=true     apt-get -o Acquire::https::CaInfo=/run/secrets/combined_ca update     && DEBIAN_FRONTEND=noninteractive apt-get -o Acquire::https::CaInfo=/run/secrets/combined_ca        install --yes --no-install-recommends        bash build-essential ca-certificates curl file git libglib2.0-0t64        libglu1-mesa pkg-config python3 unzip xz-utils zip     && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [stage-0 3/3] WORKDIR /work
+#8 CACHED
+
+#9 exporting to image
+#9 exporting layers done
+#9 writing image sha256:a03e8a18dbef0cc19f3aff97620d07d7cd3902b3b3212932b16e11b1ea18a63e done
+#9 naming to docker.io/library/nowia-fnd04:ubuntu26.04 done
+#9 DONE 0.0s

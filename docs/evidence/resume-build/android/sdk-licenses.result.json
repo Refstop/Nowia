@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/workspace/toolchains/android-sdk/cmdline-tools/latest/bin/sdkmanager",
+    "--sdk_root=/workspace/toolchains/android-sdk",
+    "--proxy=http",
+    "--proxy_host=proxy",
+    "--proxy_port=8080",
+    "--licenses"
+  ],
+  "exit_code": 0,
+  "seconds": 0.002762317657470703
+}

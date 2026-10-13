@@ -1,0 +1,27 @@
+$ /workspace/scratch/26e6ed352677/toolchains/flutter/bin/flutter build apk --debug --flavor production
+CWD=/workspace/scratch/26e6ed352677/butterfly-baseline/app
+[1/10] Material Fonts                                               6.4s
+[2/10] Gradle Wrapper                                               6.5s
+/usr/bin/tar: gradle/wrapper/gradle-wrapper.properties: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradle/wrapper/gradle-wrapper.jar: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradle/wrapper: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradle: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradlew: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradlew.bat: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: NOTICE: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: Exiting with failure status due to previous errors
+[2/10] Gradle Wrapper                                               6.5s
+/usr/bin/tar: gradle/wrapper/gradle-wrapper.properties: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradle/wrapper/gradle-wrapper.jar: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradle/wrapper: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradle: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradlew: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: gradlew.bat: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: NOTICE: Cannot change ownership to uid 397546, gid 5000: Invalid argument
+/usr/bin/tar: Exiting with failure status due to previous errors
+Flutter could not download and/or extract https://storage.googleapis.com/flutter_infra_release/gradle-wrapper/fd5c1f2c013565a3bea56ada6df9d2b8e96d56aa/gradle-wrapper.tgz. Ensure you have network connectivity and all of the required dependencies listed at https://flutter.dev/setup.
+The original exception was: ProcessException: The command failed with exit code 2
+  Command: tar -xzf /workspace/scratch/26e6ed352677/toolchains/flutter/bin/cache/downloads/storage.googleapis.com/flutter_infra_release/gradle-wrapper/fd5c1f2c013565a3bea56ada6df9d2b8e96d56aa/gradle-wrapper.tgz -C /workspace/scratch/26e6ed352677/toolchains/flutter/bin/cache/artifacts/gradle_wrapper.
+
+EXIT_CODE=1
+HARNESS_TIMEOUT=False

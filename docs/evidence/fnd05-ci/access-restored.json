@@ -1,0 +1,12 @@
+{
+  "recorded_at_kst": "2026-10-13T19:18:00.846527+09:00",
+  "account": "Refstop",
+  "repository": "Refstop/Nowia",
+  "user_confirmation": "GitHub installation repository access configured; no ChatGPT reconnection performed",
+  "profile_id": "75850451",
+  "branch": "task/fnd-04-05-ci",
+  "base_sha": "b0ab030fa132028fee02b3e4210257d894dc5e00",
+  "create_branch": "SUCCESS",
+  "remote_ci": "PENDING",
+  "prior_denial": "See ../fnd04-05/remote/access-result.json; historical 403 resolved by user permission update"
+}

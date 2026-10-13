@@ -1,0 +1,7 @@
+Installed packages:
+  build-tools/36.0.0           36.0.0                            Android SDK Build-Tools 36             
+  cmdline-tools/latest         unknown         ->        23.0.0  Android SDK Command-line Tools (latest)
+  ndk/28.2.13676358            28.2.13676358                     NDK (Side by side) 28.2.13676358       
+  platform-tools               37.0.1                            Android SDK Platform-Tools             
+  platforms/android-36         2.0.0                             Android SDK Platform 36                
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts

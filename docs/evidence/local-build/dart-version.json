@@ -1,0 +1,10 @@
+{
+  "command": [
+    "/workspace/scratch/26e6ed352677/toolchains/flutter/bin/cache/dart-sdk/bin/dart",
+    "--version"
+  ],
+  "exit_code": 0,
+  "stdout": "Dart SDK version: 3.13.4 (stable) (Tue Sep 15 01:01:15 2026 -0700) on \"linux_x64\"\n",
+  "stderr": "",
+  "utc": "2026-10-12T16:11:07.162439+00:00"
+}

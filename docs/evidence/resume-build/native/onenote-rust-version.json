@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/home/agent/.rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+    "--version"
+  ],
+  "exit_code": 0,
+  "stdout": "rustc 1.98.0 (88d9e12ae 2026-08-18)\n",
+  "stderr": "",
+  "source_git_ref": "78d98f1eb5a40c4f0f351cdafeabc2eee3b56504",
+  "note": "Dependency-owned hook sanitizes environment and uses default HOME Rust cache. Main app pin remains Rust 1.98.1."
+}

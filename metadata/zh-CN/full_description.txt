@@ -1,0 +1,11 @@
+Butterfly 是一款开源应用，让您的想法拥有充分的发挥空间。您可以记笔记、画草图、制作图表，并在可随工作不断延展的工作空间中自由放置图片和文档。 Instead of writing everything from top to bottom on a fixed page, you get an endless workspace where you can place notes, sketches, diagrams, images, and documents wherever they make sense.
+
+Use it for class notes, meeting notes, research, math, worksheets, planning, whiteboarding, storyboards, product sketches, or any project that starts messy and needs room to grow. Write by hand with a stylus, touch, or mouse, type text and Markdown, add shapes and lines, place images and photos, import PDFs, SVGs, and image files, then export your work as PDF, SVG, images, or portable Butterfly files.
+
+Butterfly tries to stay out of your way while you work. Recent files, quick-start templates, search, folders, imports, page navigation, and tool settings are close when you need them, but the document stays at the center. You can begin with a plain page, ruled paper, a grid, dotted paper, music paper, or your own template.
+
+As your document grows, Butterfly gives you ways to keep it understandable. Split work into pages and page folders, use layers, mark important places with areas and waypoints, save reusable parts in packs, and keep palettes and text styles ready for the next document. Almost everything you add remains editable, so you can move, resize, recolor, reorder, and refine your work later instead of starting over.
+
+Your files stay under your control. 您的文件由您掌控。离线工作、在设备上存储文档、选择不同的数据目录，或者如果您想要自己的同步设置，则连接 WebDAV 和 Nextcloud。不需要帐户，不需要订阅，也不需要专有云。 There is no required account, no required subscription, and no required proprietary cloud.
+
+Butterfly 是免费的，经过社区翻译，可在手机、平板电脑、台式机和网络上使用，并根据 AGPL-3.0 许可证公开开发。

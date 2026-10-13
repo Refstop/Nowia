@@ -1,0 +1,10 @@
+{
+  "generated_paths_removed": [
+    "/workspace/toolchains/gradle-cache",
+    "/workspace/Nowia/app/build",
+    "/workspace/Nowia/app/.dart_tool",
+    "/workspace/toolchains/flutter/bin/cache"
+  ],
+  "apk_preserved": "/workspace/Nowia/app/build/app/outputs/flutter-apk",
+  "purpose": "Disk space for independent FND04 container with no shared caches"
+}

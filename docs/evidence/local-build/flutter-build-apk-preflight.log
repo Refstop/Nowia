@@ -1,0 +1,8 @@
+ENV: TAR_OPTIONS=--no-same-owner
+PREFLIGHT ONLY: --no-pub deliberately skips unresolved dependencies; not a valid APK success gate.
+$ /workspace/scratch/26e6ed352677/toolchains/flutter/bin/flutter build apk --debug --flavor production --no-pub
+CWD=/workspace/scratch/26e6ed352677/butterfly-baseline/app
+[!] No Android SDK found. Try setting the ANDROID_HOME environment variable.
+
+EXIT_CODE=1
+HARNESS_TIMEOUT=False

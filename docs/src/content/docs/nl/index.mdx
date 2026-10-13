@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Maak notities, teken vrij en organiseer ideeën op een eindeloze werkruimte
+template: splash
+hero:
+  tagline: Je ideeën hoeven niet op één pagina te passen. Schrijf met de hand, schets, maak aantekeningen en organiseer alles op een oneindig canvas dat van jou blijft.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Butterfly downloaden
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Probeer de webapp
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Documentatie
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Een Butterfly-canvas met handgeschreven notities, diagrammen en een liniaal">
+
+
+
+
+  ## Een werkruimte voor visuele denkers
+
+  Maak collegeaantekeningen met een stylus, annoteer een pdf, schets een interface, bouw een diagram, plan een project of combineer alles in hetzelfde document.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Peninstellingen voor een Butterfly-tekentool" reverse>
+
+
+
+
+
+  ## Stem elke streek af
+
+  Teken met een stylus, aanraking of muis. Pas lijndikte, kleur, vloeiendheid en textuur aan. Is een markering niet helemaal goed, bewerk die dan in plaats van opnieuw te beginnen.
+</LandingFeature>
+
+## Krachtig als je projecten groeien
+
+<CardGrid stagger>
+  <Card title="Elk element blijft bewerkbaar" icon="pencil">
+    Verplaats, vergroot, verklein, herkleur en orden inhoud opnieuw nadat je die hebt geplaatst. Je eerste poging hoeft nooit de laatste te zijn.
+  </Card>
+  <Card title="Veelgebruikte media in één document" icon="document">
+    Importeer camerafoto’s, galerijafbeeldingen, pdf’s en SVG’s. Combineer ze met je notities en exporteer nette resultaten in gangbare formaten.
+  </Card>
+  <Card title="Herbruikbare bouwstenen" icon="puzzle">
+    Maak van favoriete indelingen sjablonen en van veelgebruikte inhoud pakketten, stempels, paletten en stijlen die beschikbaar zijn in al je documenten.
+  </Card>
+  <Card title="Gereedschap voor elk idee" icon="open-book">
+    Ga verder dan pen en gum met labels, vormen, veelhoeken, linialen, rasters, texturen, stempels, een laserpointer, presentatietools en meer.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Butterfly-sjablonen en -pakketten met herbruikbare canvasstijlen">
+
+
+
+
+  ## Laat Butterfly passen bij je werkwijze
+
+  Begin met een sjabloon waarin je favoriete achtergronden, tools, lagen, gebieden en pagina’s samenkomen. Sla herbruikbare inhoud op in pakketten, zodat je volgende project met alles wat je nodig hebt begint.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Een handgeschreven Butterfly-document op een telefoon en desktopcomputer" reverse>
+
+
+
+
+
+  ## Werkt overal
+
+  Neem je canvas mee van je bureau naar je volgende les of vergadering. Butterfly werkt op Android, Windows, macOS, Linux en in je browser; er is ook een iOS-voorvertoning beschikbaar.
+
+</LandingFeature>
+
+## Je werk is van jou
+
+<CardGrid>
+  <Card title="Standaard lokaal" icon="laptop">
+    Blijf werken zonder internetverbinding. Je documenten staan op je apparaat, tenzij je ervoor kiest ze ergens anders op te slaan.
+  </Card>
+  <Card title="Gebruik je eigen cloud" icon="rocket">
+    Verbind WebDAV-diensten zoals Nextcloud om je notities overal te synchroniseren, back-uppen en bewerken.
+  </Card>
+  <Card title="Open-sourcesoftware" icon="code-branch">
+    Butterfly is gratis en open source onder de GNU AGPL-3.0-licentie. Bewaar je documenten in de gedocumenteerde formaten `.bfly` en `.tbfly`.
+  </Card>
+  <Card title="Samen creëren" icon="comment">
+    De experimentele samenwerking ondersteunt end-to-endversleutelde sessies via Swamp of een WebSocket-server die je zelf host.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly, het grenzeloze canvas voor visueel denken.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Butterfly downloaden" description="Installeer de app op je telefoon, tablet of computer." href="/downloads/" />
+  <LinkCard title="Probeer de webapp" description="Start een canvas in je browser zonder iets te installeren. Browsers op basis van Chromium worden aanbevolen." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Lees de Butterfly-blog" description="Volg releases, projectnieuws en verhalen uit de ontwikkeling." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Learn the essentials" description="Maak je eerste document en ontdek de complete gereedschapskist." href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly wordt open ontwikkeld en is beschikbaar in veel talen. [Sluit je aan bij de community](/community/) om feedback te delen, te helpen met vertalingen of bij te dragen aan het project.

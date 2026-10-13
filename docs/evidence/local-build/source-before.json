@@ -1,0 +1,42 @@
+[
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "stdout": "1e4c86b91f4d64361a73598bda0acc587f9381b0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain=v1"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--exit-code"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "sha256sum",
+      "app/pubspec.lock",
+      "api/pubspec.lock"
+    ],
+    "exit_code": 0,
+    "stdout": "fbc231cdef6548052a57a9809a070e6682ce6fe156e39984a40ea552ef6e490a  app/pubspec.lock\ne5fa6063dc3c9d0781d5630775eb068f6cd3a6498f694c4f62f7af3b2ab27e24  api/pubspec.lock\n",
+    "stderr": ""
+  }
+]

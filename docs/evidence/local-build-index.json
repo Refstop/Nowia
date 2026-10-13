@@ -1,0 +1,107 @@
+[
+  {
+    "path": "android-package-metadata.json",
+    "bytes": 3428,
+    "sha256": "b155cd0819a324ec87cc5585a012eec45c990b23b5156f1a02d52dd04f508716"
+  },
+  {
+    "path": "android-repository.xml",
+    "bytes": 375813,
+    "sha256": "2fe5ec9185d840be617b2d336f12f6683c4c365e213599a8be28a2d7fb026afe"
+  },
+  {
+    "path": "apk-inventory.json",
+    "bytes": 137,
+    "sha256": "5255410ae824e41ef7d2857510c2809b60bf2b2c4d7c55e022a769831b183c0e"
+  },
+  {
+    "path": "dart-version.json",
+    "bytes": 304,
+    "sha256": "0d3ee6e2d4740ad2221fb02e08378fa72c37088f4933b404afc21b316343dc93"
+  },
+  {
+    "path": "flutter-build-apk-no-owner.json",
+    "bytes": 436,
+    "sha256": "f584f2f2eca45cf1ffe898d4ed498d0699b8abe7444e7ea15e0142acd4ef3372"
+  },
+  {
+    "path": "flutter-build-apk-no-owner.log",
+    "bytes": 1284,
+    "sha256": "3c2c7a37ec2856ebe9d68355719f3c73a1835a0fb4069a940a1e78bdb2fba50f"
+  },
+  {
+    "path": "flutter-build-apk-preflight.json",
+    "bytes": 530,
+    "sha256": "8bd44efcc930324875bb2729d21254593bbb82d83ad09731122d1c782683c615"
+  },
+  {
+    "path": "flutter-build-apk-preflight.log",
+    "bytes": 415,
+    "sha256": "65c5515af807a50c457ef0b0709cd19613a13378fe79463db1c51456f38b8ff6"
+  },
+  {
+    "path": "flutter-build-apk.json",
+    "bytes": 369,
+    "sha256": "a01c8e13cdb6da5c002a634a9ae40e39cc22f79e97f8ad674f636e6c56e53297"
+  },
+  {
+    "path": "flutter-build-apk.log",
+    "bytes": 2593,
+    "sha256": "7185178ef13a6ab872d2dc19c80a1a2c0ad254750bd48e6a3c480df903971cd4"
+  },
+  {
+    "path": "flutter-clone.json",
+    "bytes": 313,
+    "sha256": "5efb2e2716d69088de4cfccfdc6627cbe1efe80293e1eb9f431888aaa6259e48"
+  },
+  {
+    "path": "flutter-clone.log",
+    "bytes": 790,
+    "sha256": "ccc829dfff8dfee6f83a495ed70833d1bdab79e27ecc4cf0358331ad705d82a9"
+  },
+  {
+    "path": "flutter-source.json",
+    "bytes": 153,
+    "sha256": "3d794198f81065acd587cc6ac44bc6913468e84418b5df493e9411edd6764111"
+  },
+  {
+    "path": "flutter-version.json",
+    "bytes": 218,
+    "sha256": "79155537f051edf0462c09c72496ff3d18d8797bdd5580bb7b65647f7a170de6"
+  },
+  {
+    "path": "flutter-version.log",
+    "bytes": 4737,
+    "sha256": "0eae191f40cd00f9462fbc3e98c92c9e6b1ef3f26f9395003df80a3d91e2ef3f"
+  },
+  {
+    "path": "host-environment.json",
+    "bytes": 1858,
+    "sha256": "414e14c82df163c71262d71452a5b44d71af540aff245c5131ca1e6e8d466cff"
+  },
+  {
+    "path": "pub-connectivity.json",
+    "bytes": 2762,
+    "sha256": "83e29772c91afe15826cb39543814e9dfb8bb8fcf35723a8005be4157b0de9c0"
+  },
+  {
+    "path": "result-summary.json",
+    "bytes": 852,
+    "sha256": "aaddeaf3a691c3b99d55e95431c9e3c37959b2701e7fc45a564803a2926b002d"
+  },
+  {
+    "path": "source-after.json",
+    "bytes": 778,
+    "sha256": "0e322cb87cb7e4578d90ffcc557516c7c3ed43631d0bd1f92441dac3ee579193"
+  },
+  {
+    "path": "source-before.json",
+    "bytes": 778,
+    "sha256": "0e322cb87cb7e4578d90ffcc557516c7c3ed43631d0bd1f92441dac3ee579193"
+  },
+  {
+    "path": "temurin-fetch-status.json",
+    "bytes": 399,
+    "sha256": "7e4e6954fa1ffe399e53c2c1d1c3740c0f5c45393915d6f36075d82b7bb83b83"
+  }
+]

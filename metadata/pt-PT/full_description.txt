@@ -1,0 +1,11 @@
+Butterfly é uma aplicação de código aberto que dá espaço às suas ideias. Tome notas, faça esboços, crie diagramas e organize imagens e documentos livremente num espaço de trabalho que cresce consigo.
+
+Use-o para anotações de aula, anotações de reuniões, pesquisas, matemática, planilhas, planejamento, quadros brancos, storyboards, esboços de produtos ou qualquer projeto que comece confuso e precise de espaço para crescer. Escreva à mão com uma caneta, toque ou mouse, digite texto e Markdown, adicione formas e linhas, coloque imagens e fotos, importe PDFs, SVGs e arquivos de imagem e exporte seu trabalho como PDF, SVG, imagens ou arquivos Butterfly portáteis.
+
+Butterfly tenta ficar fora do seu caminho enquanto você trabalha. Arquivos recentes, modelos de início rápido, pesquisa, pastas, importações, navegação de páginas e configurações de ferramentas estão próximos quando você precisa deles, mas o documento permanece no centro. Você pode começar com uma página comum, papel pautado, grade, papel pontilhado, papel musical ou seu próprio modelo.
+
+À medida que o seu documento cresce, o Butterfly oferece maneiras de mantê-lo compreensível. Divida o trabalho em páginas e pastas de páginas, use camadas, marque locais importantes com áreas e pontos de referência, salve partes reutilizáveis ​​em pacotes e mantenha paletas e estilos de texto prontos para o próximo documento. Quase tudo o que você adiciona permanece editável, então você pode mover, redimensionar, recolorir, reordenar e refinar seu trabalho mais tarde, em vez de recomeçar.
+
+Seus arquivos permanecem sob seu controle. Trabalhe offline, armazene documentos em seu dispositivo, escolha um diretório de dados diferente ou conecte WebDAV e Nextcloud se desejar sua própria configuração de sincronização. Não há conta obrigatória, assinatura obrigatória e nuvem proprietária obrigatória.
+
+O Butterfly é gratuito, traduzido pela comunidade, disponível em telefones, tablets, desktops e na web e desenvolvido publicamente sob a licença AGPL-3.0.

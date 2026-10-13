@@ -1,0 +1,15 @@
+{
+  "stage": "flutter-doctor",
+  "command": [
+    "flutter",
+    "doctor",
+    "-v"
+  ],
+  "cwd": "/workspace/Nowia",
+  "started_utc": "2026-10-13T07:36:50.164491+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "flutter-doctor.log",
+  "ended_utc": "2026-10-13T07:36:53.040767+00:00"
+}

@@ -1,0 +1,16 @@
+* Reimplement color field
+* Fix bake issues when moving the camera with a gesture
+* Fix move gesture relative to viewport
+* Fix fill mode
+* Fix hard edges in settings dialog
+* Fix firefox bug when creating a new path
+* Fix undo/redo buttons
+* Fix invalid elements after changing the layer
+* Fix background dialog slider
+* Fix svg export
+    * Only export elements that are in this bounds
+    * Fix option to disable background
+    * Fix offset of eraser mask
+* Fix loading of templates in old version
+* Add reset button in templates
+* Ignore invalid templates ([#183](https://github.com/LinwoodDev/Butterfly/issues/183))

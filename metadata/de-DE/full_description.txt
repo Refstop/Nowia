@@ -1,0 +1,11 @@
+Butterfly ist eine Open-Source-App für alle, die beim Denken Raum für ihre Ideen brauchen. Statt alles von oben nach unten auf eine feste Seite zu schreiben, arbeiten Sie auf einer unendlichen Fläche und platzieren Notizen, Skizzen, Diagramme, Bilder und Dokumente genau dort, wo sie hingehören.
+
+Ob Unterrichts- oder Besprechungsnotizen, Recherche, Mathematik, Arbeitsblätter, Planung, Whiteboards, Storyboards oder Produktskizzen: Butterfly eignet sich für jedes Projekt, das ungeordnet beginnt und Raum zum Wachsen braucht. Schreiben Sie mit Stift, Finger oder Maus, fügen Sie Text und Markdown, Formen und Linien sowie Bilder und Fotos hinzu, importieren Sie PDFs, SVGs und andere Bilddateien und exportieren Sie Ihre Ergebnisse als PDF, SVG, Bild oder portable Butterfly-Datei.
+
+Butterfly hält sich während Ihrer Arbeit angenehm im Hintergrund. Zuletzt verwendete Dateien, Schnellstartvorlagen, Suche, Ordner, Importe, Seitennavigation und Werkzeugeinstellungen sind schnell zur Hand, wenn Sie sie brauchen – das Dokument bleibt dabei im Mittelpunkt. Beginnen Sie mit einer leeren Seite, liniertem, kariertem oder gepunktetem Papier, Notenpapier oder Ihrer eigenen Vorlage.
+
+Wenn Ihr Dokument wächst, hilft Butterfly Ihnen, den Überblick zu behalten. Teilen Sie Ihre Arbeit in Seiten und Seitenordner auf, verwenden Sie Ebenen, markieren Sie wichtige Stellen mit Bereichen und Wegpunkten und speichern Sie wiederverwendbare Inhalte in Paketen. Fast alles bleibt bearbeitbar: Sie können Inhalte später verschieben, skalieren, umfärben, neu anordnen und weiter verfeinern, statt von vorne anzufangen.
+
+Ihre Dateien bleiben unter Ihrer Kontrolle. Arbeiten Sie offline, speichern Sie Dokumente auf Ihrem Gerät, wählen Sie ein anderes Datenverzeichnis oder verbinden Sie WebDAV und Nextcloud für Ihre eigene Synchronisation. Sie benötigen weder ein Konto noch ein Abonnement oder eine proprietäre Cloud.
+
+Butterfly ist kostenlos, wird von der Community übersetzt, läuft auf Smartphones, Tablets, Desktop-Computern und im Web und wird offen unter der AGPL-3.0-Lizenz entwickelt.

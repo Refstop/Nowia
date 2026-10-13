@@ -1,0 +1,46 @@
+---
+title: Pakke
+---
+
+A pack holds reusable content for documents. Open the Butterfly menu and select **Packs** to create, import, or manage one. Packs can contain components for the Stamp tool, color palettes, text styles, textures, tool presets, and toolbar layouts.
+
+Packs are saved globally, so you can use them in any document. If you want to share the pack in a document, you can bundle it with the document. The Packs dialog also lets you switch storage connections and export a pack as a packaged or raw Butterfly file.
+
+## Egenskaber
+
+|            Navn | Varebeskrivelse             |
+| --------------: | :-------------------------- |
+|            Navn | Navnet på pakningen         |
+|       Forfatter | Ophavsmanden til pakken     |
+|         Version | The version of the pack     |
+| Varebeskrivelse | En beskrivelse af pakningen |
+
+## Components {#components}
+
+Components are a way to save elements that you use often. You can create your own components or import an existing one using packs.
+
+Use the components navigator page to paste components into your notes.
+
+### Adding a component into a pack {#adding-a-component-into-a-pack}
+
+To add a component:
+
+1. Select the elements on the infinite canvas
+2. Double tap or right click to summon the context menu
+3. Press the plus icon (Add to pack)
+4. Choose the pack
+5. Give a name to the new component, it can be anything.
+
+You can use these components with the [stamp tool](../tools/stamp).
+
+## Styles
+
+Styles are used to customize the appearance of the text. The paragraph styles can be used to format a whole paragraph (like a heading), while the text styles can be used to format only a part of the text (like a bold word).
+
+## Palettes
+
+The color palettes can be used to quickly select colors for the colorable tools. You will see a color picker overlay (as mentioned in the [color picker documentation](../colors)) when you edit a color.
+
+## Tools and toolbars
+
+Tool presets from packs appear in the [Add catalog](../add/). Save a configured tool as a preset from its properties view to use those settings again. In [Utilities → Toolbars](../utilities/#toolbars), you can save the current toolbar arrangement into a pack and select a saved layout for the document.

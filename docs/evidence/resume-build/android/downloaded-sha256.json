@@ -1,0 +1,27 @@
+[
+  {
+    "path": "/workspace/build-resume-evidence/android/sdk-repository.xml",
+    "size": 375813,
+    "sha256": "8639415997d7309d0cb1199c2f0dc3a5bb22acde7a4730e951437116bc72679f"
+  },
+  {
+    "path": "/workspace/build-resume-evidence/android/cmdline-tools.zip",
+    "size": 181052239,
+    "sha256": "0877a1d048fe4a24efe2eff536ca4223f7adeb58648bb81909d33c446918cfa8"
+  },
+  {
+    "path": "/workspace/build-resume-evidence/android/jdk21.tar.gz",
+    "size": 207473347,
+    "sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94"
+  },
+  {
+    "path": "/workspace/build-resume-evidence/android/agp.jar",
+    "size": 12137130,
+    "sha256": "606a2136d291e69ba18c9b21672ff62de0af65c1eb3a9f69c0e7da6a490348ca"
+  },
+  {
+    "path": "/workspace/build-resume-evidence/android/builder.jar",
+    "size": 17431699,
+    "sha256": "dcc7126ce9077ab8113bc29518e68e42b05ab1c9ed053b9f97f46e257396485f"
+  }
+]

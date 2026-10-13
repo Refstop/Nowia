@@ -1,0 +1,896 @@
+<div class="embed-demo" data-embed-demo>
+  <div class="embed-demo__commands" aria-label="Embed message commands">
+    <button class="embed-demo__button" type="button" data-action="getData">
+      Get data
+    </button>
+    <label class="embed-demo__button embed-demo__file">
+      Load .bfly
+      <input
+        type="file"
+        accept=".bfly,application/octet-stream"
+        data-document-file
+      />
+    </label>
+    <button class="embed-demo__button" type="button" data-action="clear">
+      Clear
+    </button>
+  </div>
+
+  <section class="embed-demo__render-controls" aria-labelledby="embed-render-title">
+    <div class="embed-demo__render-heading">
+      <div>
+        <h2 id="embed-render-title">Render export</h2>
+        <p data-render-help>
+          Current view uses the position, zoom, rotation, and size visible in the
+          embedded canvas. Padding remains configurable below.
+        </p>
+      </div>
+      <label class="embed-demo__field embed-demo__field--view">
+        <span>View</span>
+        <select data-render-view>
+          <option value="current">Current view</option>
+          <option value="origin">Document origin</option>
+          <option value="custom">Custom view</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="embed-demo__render-grid">
+      <label class="embed-demo__field">
+        <span>X</span>
+        <input type="number" value="0" step="10" data-render-x />
+      </label>
+      <label class="embed-demo__field">
+        <span>Y</span>
+        <input type="number" value="0" step="10" data-render-y />
+      </label>
+      <label class="embed-demo__field">
+        <span>Width</span>
+        <input type="number" value="640" min="1" step="10" data-render-width />
+      </label>
+      <label class="embed-demo__field">
+        <span>Height</span>
+        <input type="number" value="420" min="1" step="10" data-render-height />
+      </label>
+      <label class="embed-demo__field">
+        <span>Scale</span>
+        <input type="number" value="1" min="0.01" step="0.1" data-render-scale />
+      </label>
+      <label class="embed-demo__field">
+        <span>Rotation (degrees)</span>
+        <input type="number" value="0" step="5" data-render-rotation />
+      </label>
+    </div>
+
+    <div class="embed-demo__padding-grid" aria-label="Export padding">
+      <label class="embed-demo__field">
+        <span>Padding top</span>
+        <input type="number" value="0" min="0" step="8" data-render-padding-top />
+      </label>
+      <label class="embed-demo__field">
+        <span>Padding right</span>
+        <input type="number" value="0" min="0" step="8" data-render-padding-right />
+      </label>
+      <label class="embed-demo__field">
+        <span>Padding bottom</span>
+        <input type="number" value="0" min="0" step="8" data-render-padding-bottom />
+      </label>
+      <label class="embed-demo__field">
+        <span>Padding left</span>
+        <input type="number" value="0" min="0" step="8" data-render-padding-left />
+      </label>
+    </div>
+
+    <label class="embed-demo__check">
+      <input type="checkbox" checked data-render-background />
+      <span>Render background</span>
+    </label>
+
+    <div class="embed-demo__render-actions">
+      <button class="embed-demo__button" type="button" data-action="render">
+        Render PNG
+      </button>
+      <button class="embed-demo__button" type="button" data-action="renderSVG">
+        Render SVG
+      </button>
+    </div>
+  </section>
+
+  <iframe
+    class="embed-demo__frame"
+    title="Butterfly embed messaging example"
+    src="https://preview.butterfly.linwood.dev/embed?save=true&editable=true&language=user"
+    loading="lazy"
+    allowtransparency="true"
+    data-butterfly-frame
+  ></iframe>
+
+  <div class="embed-demo__summary" aria-live="polite">
+    <div>
+      <span class="embed-demo__label">Last response</span>
+      <strong data-response-title>Waiting for Butterfly</strong>
+    </div>
+    <p data-response-detail>Send a request after the embedded document is visible.</p>
+  </div>
+
+  <div class="embed-demo__output">
+    <section class="embed-demo__panel">
+      <div class="embed-demo__panel-heading">
+        <span class="embed-demo__title">Result</span>
+        <span data-result-type>None</span>
+      </div>
+      <div class="embed-demo__preview" data-preview>
+        Render an image or request document data to show it here.
+      </div>
+    </section>
+
+    <section class="embed-demo__panel">
+      <div class="embed-demo__panel-heading">
+        <span class="embed-demo__title">Messages</span>
+        <span data-message-count>0</span>
+      </div>
+      <ol class="embed-demo__messages" data-message-log>
+        <li class="embed-demo__empty">No messages yet.</li>
+      </ol>
+    </section>
+  </div>
+</div>
+
+<script is:inline>
+  const demo = document.querySelector('[data-embed-demo]');
+
+  if (demo) {
+    const frame = demo.querySelector('[data-butterfly-frame]');
+    const embedUrl = new URL(frame.src);
+    const expectedOrigins = new Set([
+      embedUrl.origin,
+      'https://web.butterfly.linwood.dev',
+      'https://preview.butterfly.linwood.dev',
+    ]);
+    const targetOrigin = embedUrl.origin;
+    const log = demo.querySelector('[data-message-log]');
+    const preview = demo.querySelector('[data-preview]');
+    const fileInput = demo.querySelector('[data-document-file]');
+    const responseTitle = demo.querySelector('[data-response-title]');
+    const responseDetail = demo.querySelector('[data-response-detail]');
+    const resultType = demo.querySelector('[data-result-type]');
+    const messageCount = demo.querySelector('[data-message-count]');
+    const renderView = demo.querySelector('[data-render-view]');
+    const renderGrid = demo.querySelector('.embed-demo__render-grid');
+    const renderHelp = demo.querySelector('[data-render-help]');
+    const renderX = demo.querySelector('[data-render-x]');
+    const renderY = demo.querySelector('[data-render-y]');
+    const renderWidth = demo.querySelector('[data-render-width]');
+    const renderHeight = demo.querySelector('[data-render-height]');
+    const renderScale = demo.querySelector('[data-render-scale]');
+    const renderRotation = demo.querySelector('[data-render-rotation]');
+    const renderPaddingTop = demo.querySelector('[data-render-padding-top]');
+    const renderPaddingRight = demo.querySelector('[data-render-padding-right]');
+    const renderPaddingBottom = demo.querySelector('[data-render-padding-bottom]');
+    const renderPaddingLeft = demo.querySelector('[data-render-padding-left]');
+    const renderBackground = demo.querySelector('[data-render-background]');
+    const messages = [];
+    let artifactUrl;
+
+    const renderFields = [
+      renderX,
+      renderY,
+      renderWidth,
+      renderHeight,
+      renderScale,
+      renderRotation,
+    ];
+
+    function numberValue(input, fallback) {
+      const value = Number(input.value);
+      return Number.isFinite(value) ? value : fallback;
+    }
+
+    function updateRenderControls() {
+      const view = renderView.value;
+      const useCurrentView = view === 'current';
+      renderGrid.hidden = useCurrentView;
+      for (const field of renderFields) field.disabled = useCurrentView;
+      renderX.disabled = view !== 'custom';
+      renderY.disabled = view !== 'custom';
+      renderHelp.textContent = useCurrentView
+        ? 'Current view uses the position, zoom, rotation, and size visible in the embedded canvas. Padding remains configurable below.'
+        : view === 'origin'
+          ? 'Document origin starts at (0, 0). Adjust the output size, scale, rotation, and background.'
+          : 'Custom view lets you choose the document position as well as the output transform.';
+    }
+
+    function renderOptions() {
+      const padding = {
+        top: Math.max(0, numberValue(renderPaddingTop, 0)),
+        right: Math.max(0, numberValue(renderPaddingRight, 0)),
+        bottom: Math.max(0, numberValue(renderPaddingBottom, 0)),
+        left: Math.max(0, numberValue(renderPaddingLeft, 0)),
+      };
+      const options = { renderBackground: renderBackground.checked, padding };
+      if (renderView.value === 'current') return options;
+      const width = Math.max(1, numberValue(renderWidth, 640));
+      const height = Math.max(1, numberValue(renderHeight, 420));
+      const scale = Math.max(0.01, numberValue(renderScale, 1));
+      const rotation = numberValue(renderRotation, 0) * Math.PI / 180;
+      const requestedX = renderView.value === 'origin' ? 0 : numberValue(renderX, 0);
+      const requestedY = renderView.value === 'origin' ? 0 : numberValue(renderY, 0);
+      const centerX = width / 2;
+      const centerY = height / 2;
+      const rotatedCenterX = centerX * Math.cos(rotation) + centerY * Math.sin(rotation);
+      const rotatedCenterY = -centerX * Math.sin(rotation) + centerY * Math.cos(rotation);
+      return {
+        ...options,
+        x: requestedX + (centerX - rotatedCenterX) / scale,
+        y: requestedY + (centerY - rotatedCenterY) / scale,
+        width,
+        height,
+        scale,
+        rotation,
+      };
+    }
+
+    renderView.addEventListener('change', updateRenderControls);
+    updateRenderControls();
+
+    function bytesFromMessage(message) {
+      if (message == null) return undefined;
+      if (message instanceof Uint8Array) return message;
+      if (message instanceof ArrayBuffer) return new Uint8Array(message);
+      if (ArrayBuffer.isView(message)) {
+        return new Uint8Array(message.buffer, message.byteOffset, message.byteLength);
+      }
+      if (Array.isArray(message)) return Uint8Array.from(message);
+      if (typeof message === 'object' && typeof message.length === 'number') {
+        return Uint8Array.from(message);
+      }
+      if (typeof message === 'object') {
+        const values = Object.values(message);
+        if (values.length > 0 && values.every((value) => Number.isInteger(value))) {
+          return Uint8Array.from(values);
+        }
+      }
+      return undefined;
+    }
+
+    function describeMessage(message) {
+      if (message == null) return 'No payload';
+      const bytes = bytesFromMessage(message);
+      if (bytes) return `${bytes.byteLength.toLocaleString()} bytes`;
+      if (typeof message === 'string') {
+        return `${message.length.toLocaleString()} characters`;
+      }
+      return JSON.stringify(message);
+    }
+
+    function previewMessage(type, message) {
+      if (message == null) return '';
+      const bytes = bytesFromMessage(message);
+      if (bytes) {
+        return `Binary document data hidden from the log (${bytes.byteLength.toLocaleString()} bytes).`;
+      }
+      if (typeof message === 'string') {
+        if (type === 'render') {
+          return `Base64 PNG data hidden from the log (${message.length.toLocaleString()} characters).`;
+        }
+        return message.slice(0, 180);
+      }
+      return JSON.stringify(message)?.slice(0, 180) ?? '';
+    }
+
+    function writeLog() {
+      messageCount.textContent = messages.length.toString();
+      log.replaceChildren(
+        ...(messages.length
+          ? messages
+              .slice()
+              .reverse()
+              .map((entry) => {
+                const item = document.createElement('li');
+                item.className = `embed-demo__message embed-demo__message--${entry.direction}`;
+
+                const meta = document.createElement('div');
+                meta.className = 'embed-demo__message-meta';
+
+                const direction = document.createElement('span');
+                direction.textContent = entry.direction;
+
+                const type = document.createElement('strong');
+                type.textContent = entry.type;
+
+                const time = document.createElement('time');
+                time.textContent = entry.time;
+
+                meta.append(direction, type, time);
+
+                const body = document.createElement('p');
+                body.textContent = entry.preview;
+
+                item.append(meta, body);
+                return item;
+              })
+          : [Object.assign(document.createElement('li'), {
+              className: 'embed-demo__empty',
+              textContent: 'No messages yet.',
+            })]),
+      );
+    }
+
+    function clearArtifactUrl() {
+      if (!artifactUrl) return;
+      URL.revokeObjectURL(artifactUrl);
+      artifactUrl = undefined;
+    }
+
+    function addMessage(direction, type, message) {
+      messages.push({
+        direction,
+        type,
+        preview: previewMessage(type, message),
+        time: new Date().toLocaleTimeString(),
+      });
+      writeLog();
+
+      if (direction === 'received') {
+        responseTitle.textContent = type;
+        responseDetail.textContent = describeMessage(message);
+      }
+    }
+
+    function sendToButterfly(type, message) {
+      frame.contentWindow?.postMessage({ type, message }, targetOrigin);
+      addMessage('sent', type, message);
+    }
+
+    function showEmptyResult() {
+      clearArtifactUrl();
+      resultType.textContent = 'None';
+      preview.replaceChildren('Render an image or request document data to show it here.');
+    }
+
+    function showDocumentDownload(type, message) {
+      const bytes = bytesFromMessage(message);
+      if (!bytes) {
+        resultType.textContent = 'Document data';
+        preview.replaceChildren('The response did not contain downloadable document bytes.');
+        return;
+      }
+
+      clearArtifactUrl();
+      const blob = new Blob([bytes], { type: 'application/octet-stream' });
+      artifactUrl = URL.createObjectURL(blob);
+      const filename = type === 'getData' ? 'butterfly-document.bfly' : `butterfly-${type}.bfly`;
+
+      const artifact = document.createElement('div');
+      artifact.className = 'embed-demo__artifact';
+
+      const name = document.createElement('strong');
+      name.textContent = filename;
+
+      const detail = document.createElement('span');
+      detail.textContent = `${bytes.byteLength.toLocaleString()} bytes ready to download`;
+
+      const link = document.createElement('a');
+      link.className = 'embed-demo__button embed-demo__download';
+      link.href = artifactUrl;
+      link.download = filename;
+      link.textContent = 'Download .bfly';
+
+      artifact.append(name, detail, link);
+      resultType.textContent = 'Download';
+      preview.replaceChildren(artifact);
+    }
+
+    function showError(message) {
+      clearArtifactUrl();
+      resultType.textContent = 'Error';
+      const detail = typeof message === 'object' && message !== null
+        ? message.message ?? JSON.stringify(message)
+        : message;
+      preview.replaceChildren(detail || 'Butterfly reported an error.');
+    }
+
+    function downloadLink(url, filename, label) {
+      const link = document.createElement('a');
+      link.className = 'embed-demo__button embed-demo__download';
+      link.href = url;
+      link.download = filename;
+      link.textContent = label;
+      return link;
+    }
+
+    function showPng(message) {
+      if (typeof message !== 'string' || message.length === 0) {
+        showError('Butterfly returned an empty PNG.');
+        return;
+      }
+      try {
+        const binary = atob(message);
+        const bytes = Uint8Array.from(binary, (character) => character.charCodeAt(0));
+        clearArtifactUrl();
+        artifactUrl = URL.createObjectURL(new Blob([bytes], { type: 'image/png' }));
+
+        const result = document.createElement('div');
+        result.className = 'embed-demo__render-result';
+        const image = new Image();
+        image.alt = 'Rendered Butterfly document';
+        image.src = artifactUrl;
+        result.append(
+          image,
+          downloadLink(artifactUrl, 'butterfly-render.png', 'Download PNG'),
+        );
+        resultType.textContent = 'PNG';
+        preview.replaceChildren(result);
+      } catch (error) {
+        showError(`Could not decode the PNG response: ${error}`);
+      }
+    }
+
+    function showSvg(message) {
+      if (typeof message !== 'string' || message.length === 0) {
+        showError('Butterfly returned an empty SVG.');
+        return;
+      }
+      clearArtifactUrl();
+      artifactUrl = URL.createObjectURL(
+        new Blob([message], { type: 'image/svg+xml;charset=utf-8' }),
+      );
+      const result = document.createElement('div');
+      result.className = 'embed-demo__render-result';
+      const wrapper = document.createElement('div');
+      wrapper.innerHTML = message;
+      result.append(
+        wrapper,
+        downloadLink(artifactUrl, 'butterfly-render.svg', 'Download SVG'),
+      );
+      resultType.textContent = 'SVG';
+      preview.replaceChildren(result);
+    }
+
+    frame.addEventListener('load', () => {
+      responseTitle.textContent = 'Iframe loaded';
+      responseDetail.textContent = 'The embedded app is ready to receive browser messages once the document is visible.';
+      addMessage('notice', 'iframe', 'Loaded');
+    });
+
+    demo.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-action]');
+      if (!button) return;
+
+      const action = button.dataset.action;
+      if (action === 'clear') {
+        messages.length = 0;
+        responseTitle.textContent = 'Waiting for Butterfly';
+        responseDetail.textContent = 'Send a request after the embedded document is visible.';
+        showEmptyResult();
+        writeLog();
+        return;
+      }
+
+      if (action === 'getData') {
+        sendToButterfly('getData');
+        return;
+      }
+
+      if (action === 'render') {
+        sendToButterfly('render', renderOptions());
+        return;
+      }
+
+      if (action === 'renderSVG') {
+        sendToButterfly('renderSVG', renderOptions());
+      }
+    });
+
+    fileInput.addEventListener('change', async () => {
+      const file = fileInput.files?.[0];
+      if (!file) return;
+      const bytes = Array.from(new Uint8Array(await file.arrayBuffer()));
+      sendToButterfly('setData', bytes);
+      fileInput.value = '';
+    });
+
+    window.addEventListener('message', (event) => {
+      if (
+        event.source !== frame.contentWindow ||
+        !expectedOrigins.has(event.origin)
+      ) {
+        return;
+      }
+
+      const { type, message } = event.data ?? {};
+      addMessage('received', type, message);
+
+      if (type === 'render') {
+        showPng(message);
+      }
+
+      if (type === 'renderSVG') {
+        showSvg(message);
+      }
+
+      if (type === 'getData' || type === 'save' || type === 'change' || type === 'exit') {
+        showDocumentDownload(type, message);
+      }
+
+      if (type === 'error') {
+        showError(message);
+      }
+    });
+  }
+</script>
+
+<style>
+  .embed-demo {
+    display: grid;
+    gap: 0.75rem;
+    max-inline-size: 100%;
+    margin-block: 1.25rem;
+    min-inline-size: 0;
+  }
+
+  .embed-demo :where(div, section, h2, p, label, button) {
+    margin-block: 0 !important;
+  }
+
+  .embed-demo__commands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .embed-demo__button {
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.35rem;
+    background: var(--sl-color-gray-6);
+    color: var(--sl-color-white);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 0.6rem 0.9rem;
+    text-decoration: none;
+    transition:
+      background 120ms ease,
+      border-color 120ms ease,
+      color 120ms ease;
+  }
+
+  .embed-demo__button:hover {
+    border-color: var(--sl-color-accent);
+    background: var(--sl-color-gray-5);
+    color: var(--sl-color-white);
+  }
+
+  .embed-demo__render-controls {
+    display: grid;
+    gap: 0.85rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.55rem;
+    background: var(--sl-color-bg-nav);
+    padding: 1rem;
+  }
+
+  .embed-demo__render-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .embed-demo__render-heading h2 {
+    color: var(--sl-color-white);
+    font-size: var(--sl-text-lg);
+    margin: 0;
+  }
+
+  .embed-demo__render-heading p {
+    color: var(--sl-color-gray-2);
+    margin: 0.25rem 0 0;
+    max-inline-size: 46rem;
+  }
+
+  .embed-demo__render-grid,
+  .embed-demo__padding-grid {
+    display: grid;
+    gap: 0.65rem;
+    align-items: end;
+  }
+
+  .embed-demo__render-grid {
+    grid-template-columns: repeat(6, minmax(6.5rem, 1fr));
+  }
+
+  .embed-demo__padding-grid {
+    grid-template-columns: repeat(4, minmax(6.5rem, 1fr));
+  }
+
+  .embed-demo__render-grid[hidden] {
+    display: none;
+  }
+
+  .embed-demo__field {
+    display: grid;
+    gap: 0.3rem;
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-sm);
+    font-weight: 600;
+  }
+
+  .embed-demo__field--view {
+    min-inline-size: 12rem;
+  }
+
+  .embed-demo__field input,
+  .embed-demo__field select {
+    min-inline-size: 0;
+    inline-size: 100%;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.35rem;
+    background: var(--sl-color-bg);
+    color: var(--sl-color-white);
+    font: inherit;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .embed-demo__field input:focus-visible,
+  .embed-demo__field select:focus-visible,
+  .embed-demo__button:focus-visible {
+    outline: 2px solid var(--sl-color-accent-high);
+    outline-offset: 2px;
+  }
+
+  .embed-demo__field input:disabled {
+    cursor: not-allowed;
+    opacity: 0.45;
+  }
+
+  .embed-demo__check {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    grid-column: 1 / -1;
+    color: var(--sl-color-gray-2);
+    cursor: pointer;
+    font-size: var(--sl-text-sm);
+    font-weight: 600;
+  }
+
+  .embed-demo__check input {
+    inline-size: 1rem;
+    block-size: 1rem;
+    accent-color: var(--sl-color-accent);
+  }
+
+  .embed-demo__render-actions {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .embed-demo__file input {
+    inline-size: 1px;
+    block-size: 1px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+  }
+
+  .embed-demo__frame {
+    inline-size: 100%;
+    max-inline-size: 100%;
+    block-size: min(62vh, 560px);
+    min-block-size: 360px;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.45rem;
+    background: white;
+  }
+
+  .embed-demo__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.45rem;
+    background: var(--sl-color-bg-nav);
+    padding: 0.75rem;
+  }
+
+  .embed-demo__summary div {
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  .embed-demo__summary strong {
+    color: var(--sl-color-white);
+  }
+
+  .embed-demo__summary p {
+    color: var(--sl-color-gray-2);
+    margin: 0;
+    text-align: end;
+  }
+
+  .embed-demo__label {
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .embed-demo__output {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-inline-size: 0;
+  }
+
+  .embed-demo__panel {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.45rem;
+    background: var(--sl-color-bg-nav);
+    min-inline-size: 0;
+    padding: 0.75rem;
+  }
+
+  .embed-demo__panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-block-end: 0.75rem;
+  }
+
+  .embed-demo__title {
+    color: var(--sl-color-white);
+    font-weight: 700;
+  }
+
+  .embed-demo__panel-heading span {
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 999px;
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-xs);
+    font-weight: 700;
+    padding: 0.15rem 0.55rem;
+  }
+
+  .embed-demo__messages {
+    display: grid;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    max-block-size: 18rem;
+    overflow: auto;
+    padding: 0;
+  }
+
+  .embed-demo__message,
+  .embed-demo__empty {
+    border: 1px solid var(--sl-color-gray-6);
+    border-radius: 0.55rem;
+    padding: 0.65rem;
+  }
+
+  .embed-demo__message--received {
+    border-color: color-mix(in srgb, var(--sl-color-accent) 45%, var(--sl-color-gray-6));
+  }
+
+  .embed-demo__message-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-xs);
+  }
+
+  .embed-demo__message-meta strong {
+    color: var(--sl-color-white);
+  }
+
+  .embed-demo__message-meta time {
+    margin-inline-start: auto;
+  }
+
+  .embed-demo__message p,
+  .embed-demo__empty {
+    color: var(--sl-color-gray-2);
+    margin: 0.35rem 0 0;
+    overflow-wrap: anywhere;
+  }
+
+  .embed-demo__preview {
+    display: grid;
+    min-block-size: 12rem;
+    place-items: center;
+    overflow: auto;
+    color: var(--sl-color-gray-2);
+    text-align: center;
+  }
+
+  .embed-demo__preview img,
+  .embed-demo__preview svg {
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  .embed-demo__render-result {
+    display: grid;
+    gap: 0.75rem;
+    inline-size: 100%;
+    justify-items: center;
+  }
+
+  .embed-demo__render-result > div {
+    display: grid;
+    inline-size: 100%;
+    place-items: center;
+  }
+
+  .embed-demo__artifact {
+    display: grid;
+    justify-items: center;
+    gap: 0.55rem;
+    inline-size: min(100%, 22rem);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.45rem;
+    padding: 1rem;
+  }
+
+  .embed-demo__artifact strong {
+    color: var(--sl-color-white);
+    overflow-wrap: anywhere;
+  }
+
+  .embed-demo__artifact span {
+    color: var(--sl-color-gray-2);
+    font-size: var(--sl-text-sm);
+  }
+
+  .embed-demo__download {
+    margin-block-start: 0.25rem;
+  }
+
+  @media (max-width: 72rem) {
+    .embed-demo__render-grid,
+    .embed-demo__padding-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .embed-demo__output {
+      grid-template-columns: 1fr;
+    }
+
+    .embed-demo__summary {
+      align-items: start;
+      flex-direction: column;
+    }
+
+    .embed-demo__summary p {
+      text-align: start;
+    }
+  }
+
+  @media (max-width: 40rem) {
+    .embed-demo__render-heading {
+      align-items: stretch;
+      flex-direction: column;
+    }
+
+    .embed-demo__field--view {
+      min-inline-size: 0;
+    }
+
+    .embed-demo__render-grid,
+    .embed-demo__padding-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>

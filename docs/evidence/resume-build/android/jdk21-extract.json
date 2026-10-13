@@ -1,0 +1,16 @@
+{
+  "command": [
+    "tar",
+    "--no-same-owner",
+    "-xzf",
+    "/workspace/build-resume-evidence/android/jdk21.tar.gz",
+    "-C",
+    "/workspace/toolchains/jdk-21",
+    "--strip-components=1"
+  ],
+  "exit_code": 0,
+  "seconds": 2.207376480102539,
+  "stderr": "",
+  "expected_sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94",
+  "actual_sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94"
+}

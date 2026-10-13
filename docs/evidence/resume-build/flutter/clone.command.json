@@ -1,0 +1,1 @@
+["git", "clone", "--depth", "1", "--branch", "3.47.5", "https://github.com/flutter/flutter.git", "/workspace/toolchains/flutter"]

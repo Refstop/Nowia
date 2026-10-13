@@ -1,0 +1,72 @@
+{
+  "utc": "2026-10-12T16:09:31.912798+00:00",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "executables": {
+    "flutter": null,
+    "dart": null,
+    "java": "/usr/bin/java",
+    "javac": null,
+    "adb": null,
+    "sdkmanager": null,
+    "rustc": null,
+    "cargo": null,
+    "git": "/usr/local/bin/git",
+    "curl": "/usr/bin/curl",
+    "unzip": "/usr/bin/unzip",
+    "xz": "/usr/bin/xz"
+  },
+  "sdk_env": {
+    "ANDROID_HOME": null,
+    "ANDROID_SDK_ROOT": null,
+    "JAVA_HOME": null,
+    "FLUTTER_ROOT": null
+  },
+  "commands": [
+    {
+      "command": [
+        "java",
+        "-version"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "openjdk version \"17.0.20\" 2026-07-21\nOpenJDK Runtime Environment (build 17.0.20+8-1-24.04-Ubuntu)\nOpenJDK 64-Bit Server VM (build 17.0.20+8-1-24.04-Ubuntu, mixed mode, sharing)\n"
+    },
+    {
+      "command": [
+        "uname",
+        "-a"
+      ],
+      "exit_code": 0,
+      "stdout": "Linux 20c34a92f0e7 6.18.44 #1 SMP Sat Sep 26 20:02:31 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "df",
+        "-h",
+        "/workspace/scratch/26e6ed352677"
+      ],
+      "exit_code": 0,
+      "stdout": "Filesystem      Size  Used Avail Use% Mounted on\noverlay          32G  391M   30G   2% /\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "free",
+        "-h"
+      ],
+      "exit_code": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\nMem:           9.7Gi       694Mi       8.8Gi        12Ki       512Mi       9.1Gi\nSwap:             0B          0B          0B\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "git version 2.51.1\n",
+      "stderr": ""
+    }
+  ]
+}

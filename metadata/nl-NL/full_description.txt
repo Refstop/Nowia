@@ -1,0 +1,11 @@
+Butterfly is een open-source app die uw ideeën de ruimte geeft. Maak notities, schets, werk diagrammen uit en plaats afbeeldingen en documenten vrij op een werkruimte die met uw werk meegroeit.
+
+Gebruik het voor lesnotities, vergadernotities, onderzoek, wiskunde, werkbladen, planning, whiteboards, storyboards, productschetsen of elk ander project dat rommelig begint en ruimte nodig heeft om te groeien. Schrijf met de hand met een stylus, aanraking of muis, typ tekst en Markdown, voeg vormen en lijnen toe, plaats afbeeldingen en foto's, importeer PDF's, SVG's en afbeeldingsbestanden en exporteer uw werk vervolgens als PDF, SVG, afbeeldingen of draagbare Butterfly-bestanden.
+
+Butterfly probeert uit je buurt te blijven terwijl je werkt. Recente bestanden, snelstartsjablonen, zoeken, mappen, imports, paginanavigatie en toolinstellingen zijn dichtbij wanneer u ze nodig hebt, maar het document blijft centraal staan. U kunt beginnen met een gewone pagina, gelinieerd papier, een raster, gestippeld papier, muziekpapier of uw eigen sjabloon.
+
+Naarmate uw document groeit, biedt Butterfly u manieren om het begrijpelijk te houden. Verdeel uw werk in pagina's en paginamappen, gebruik lagen, markeer belangrijke plaatsen met gebieden en waypoints, sla herbruikbare delen op in pakketten en houd paletten en tekststijlen gereed voor het volgende document. Bijna alles wat u toevoegt, blijft bewerkbaar, zodat u uw werk later kunt verplaatsen, vergroten of verkleinen, opnieuw kleuren, ordenen en verfijnen in plaats van opnieuw te beginnen.
+
+Uw bestanden blijven onder uw controle. Werk offline, sla documenten op uw apparaat op, kies een andere gegevensmap of verbind WebDAV en Nextcloud als u uw eigen synchronisatie-instellingen wilt. Er is geen vereist account, geen vereist abonnement en geen vereiste eigen cloud.
+
+Butterfly is gratis, door de gemeenschap vertaald, beschikbaar op telefoons, tablets, desktops en internet, en openbaar ontwikkeld onder de AGPL-3.0-licentie.

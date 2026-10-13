@@ -1,0 +1,11 @@
+Butterfly est une application open source qui laisse de la place à vos idées. Prenez des notes, réalisez des croquis, créez des schémas et disposez librement vos images et documents dans un espace qui s’adapte à votre travail.
+
+Utilisez-le pour les notes de cours, les notes de réunion, la recherche, les mathématiques, les feuilles de travail, la planification, les tableaux blancs, les storyboards, les croquis de produits ou tout projet qui commence en désordre et a besoin d'espace pour se développer. Écrivez à la main avec un stylet, une touche tactile ou une souris, tapez du texte et du Markdown, ajoutez des formes et des lignes, placez des images et des photos, importez des PDF, des SVG et des fichiers image, puis exportez votre travail au format PDF, SVG, images ou fichiers Butterfly portables.
+
+Butterfly essaie de rester en dehors de votre chemin pendant que vous travaillez. Les fichiers récents, les modèles de démarrage rapide, la recherche, les dossiers, les importations, la navigation dans les pages et les paramètres des outils sont proches lorsque vous en avez besoin, mais le document reste au centre. Vous pouvez commencer avec une page ordinaire, du papier ligné, une grille, du papier à pointillés, du papier à musique ou votre propre modèle.
+
+Au fur et à mesure que votre document s'agrandit, Butterfly vous propose des moyens de le maintenir compréhensible. Divisez le travail en pages et dossiers de pages, utilisez des calques, marquez les endroits importants avec des zones et des points de cheminement, enregistrez les parties réutilisables dans des packs et gardez les palettes et les styles de texte prêts pour le prochain document. Presque tout ce que vous ajoutez reste modifiable, vous pouvez donc déplacer, redimensionner, recolorer, réorganiser et affiner votre travail plus tard au lieu de recommencer.
+
+Vos fichiers restent sous votre contrôle. Travaillez hors ligne, stockez des documents sur votre appareil, choisissez un autre répertoire de données ou connectez WebDAV et Nextcloud si vous souhaitez votre propre configuration de synchronisation. Il n'y a aucun compte requis, aucun abonnement requis et aucun cloud propriétaire requis.
+
+Butterfly est gratuit, traduit par la communauté, disponible sur téléphones, tablettes, ordinateurs de bureau et sur le Web, et développé en public sous la licence AGPL-3.0.

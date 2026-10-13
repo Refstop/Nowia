@@ -1,0 +1,16 @@
+{
+  "command": [
+    "flutter",
+    "build",
+    "apk",
+    "--debug",
+    "--flavor",
+    "production",
+    "--no-pub"
+  ],
+  "cwd": "/workspace/Nowia/app",
+  "started_utc": "2026-10-13T07:28:58.568462+00:00",
+  "dependency_resolution": "../pub/resolve.exit=0; --enforce-lockfile",
+  "exit_code": 0,
+  "finished_utc": "2026-10-13T07:36:29.775634+00:00"
+}

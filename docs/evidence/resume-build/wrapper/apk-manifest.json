@@ -1,0 +1,16 @@
+{
+  "stage": "apk-manifest",
+  "command": [
+    "/workspace/toolchains/android-sdk/build-tools/36.0.0/aapt",
+    "dump",
+    "badging",
+    "/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk"
+  ],
+  "cwd": "/workspace/Nowia",
+  "started_utc": "2026-10-13T07:37:07.238302+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "apk-manifest.log",
+  "ended_utc": "2026-10-13T07:37:07.246025+00:00"
+}

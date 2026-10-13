@@ -1,0 +1,16 @@
+{
+  "command": [
+    "curl",
+    "-fSL",
+    "--retry",
+    "2",
+    "--max-time",
+    "300",
+    "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_x64_linux_hotspot_21.0.12.1_1.tar.gz.sha256.txt",
+    "-o",
+    "/workspace/build-resume-evidence/android/jdk21-sha256.txt"
+  ],
+  "exit_code": 0,
+  "seconds": 0.36507201194763184,
+  "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n\n100   118  100   118    0     0    335      0 --:--:-- --:--:-- --:--:--   335\n100   118  100   118    0     0    335      0 --:--:-- --:--:-- --:--:--     0\n"
+}

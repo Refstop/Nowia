@@ -1,0 +1,23 @@
+{
+  "upstream_repository": "https://github.com/LinwoodDev/Butterfly.git",
+  "tag": "v2.6.0",
+  "upstream_commit": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "tag_object": "68cb06f1aeb6562977ed0a796eed2fba12cb7448",
+  "import_commit": "aad94d6f5d5de8f984ca90e3665895feeb092779",
+  "flutter_version": "3.47.5",
+  "flutter_revision": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+  "jdk_major": 21,
+  "rust_version": "1.98.1",
+  "gradle_version": "9.7.1",
+  "agp_version": "9.4.0",
+  "kotlin_version": "2.4.20",
+  "compile_sdk": 36,
+  "target_sdk": 36,
+  "min_sdk": 24,
+  "ndk_version": "28.2.13676358",
+  "source_trees": {
+    "app": "ff163eaaab6fbf214b87f76c1edb133cc9edd4d6",
+    "api": "3d0f3e16e0f55ad4c593568dae8262f3ffbad55d"
+  },
+  "evidence_level": "source declarations; actual build results in docs/build-baseline.md"
+}

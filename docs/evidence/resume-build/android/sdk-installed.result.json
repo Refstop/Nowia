@@ -1,0 +1,11 @@
+{
+  "command": [
+    "/workspace/toolchains/android-sdk/cmdline-tools/latest/bin/android",
+    "--no-metrics",
+    "--sdk=/workspace/toolchains/android-sdk",
+    "sdk",
+    "list"
+  ],
+  "exit_code": 0,
+  "seconds": 1.053272008895874
+}

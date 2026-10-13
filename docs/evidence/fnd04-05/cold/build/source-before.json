@@ -1,0 +1,14 @@
+{
+  "stage": "source-before",
+  "command": [
+    "python3",
+    "tools/nowia/verify_baseline.py"
+  ],
+  "cwd": "/work/Nowia",
+  "started_utc": "2026-10-13T08:03:12.556484+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "source-before.log",
+  "ended_utc": "2026-10-13T08:03:12.620479+00:00"
+}

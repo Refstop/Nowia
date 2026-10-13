@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/workspace/toolchains/flutter/bin/flutter",
+    "--version"
+  ],
+  "env": {
+    "TAR_OPTIONS": "--no-same-owner",
+    "CI": "true",
+    "FLUTTER_SUPPRESS_ANALYTICS": "true"
+  },
+  "started_utc": "2026-10-13T07:25:32.003204+00:00"
+}

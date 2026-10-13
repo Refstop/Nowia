@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: 在无边界的工作空间中记录笔记、自由绘制，并整理你的想法
+template: splash
+hero:
+  tagline: Your ideas should not have to fit inside a page. 你的想法不必局限在一页之内。手写、速写、批注和整理，都可以在属于你的无限画布上完成。
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: 下载 Butterfly
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: 试用网页版
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: 文件
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="带有手写笔记、图表和尺子的 Butterfly 画布">
+
+
+
+
+  ## 为视觉思考者打造的工作空间
+
+  用触控笔记录课程笔记、批注 PDF、勾勒界面、创建图表、规划项目，或把它们全部放进同一份文档中。
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Butterfly 绘图工具的画笔设置" reverse>
+
+
+
+
+
+  ## 精调每一笔
+
+  Draw with a stylus, touch, or mouse. Adjust stroke width, color, smoothing, and texture. If a mark is not quite right, edit it instead of starting over.
+</LandingFeature>
+
+## 项目成长，能力随之扩展
+
+<CardGrid stagger>
+  <Card title="每个元素始终可编辑" icon="pencil">
+    内容放置后，仍可移动、调整大小与颜色，或重新编排。第一次尝试不必就是最终版本。 Your first attempt never has to be your final one.
+  </Card>
+  <Card title="常见媒体汇集于一份文档" icon="document">
+    导入相机照片、图库图片、PDF 和 SVG，与自己的笔记结合，并以常用格式导出整洁的成果。 Combine them with your own notes and export clean results in common formats.
+  </Card>
+  <Card title="Reusable building blocks" icon="puzzle">
+    将喜爱的布局制成模板，将常用内容变成资源包、印章、调色板和样式，供所有文档使用。
+  </Card>
+  <Card title="适合每个想法的工具" icon="open-book">
+    Go beyond pen and eraser with labels, shapes, polygons, rulers, grids, textures, stamps, a laser pointer, presentation tools, and more.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="带有可复用画布样式的 Butterfly 模板和资源包">
+
+
+
+
+  ## 让 Butterfly 适应你的工作流程
+
+  Start with a template that brings together your favorite backgrounds, tools, layers, areas, and pages. Save reusable content in packs so your next project starts with everything you need.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="在手机和台式电脑上显示的手写 Butterfly 文档" reverse>
+
+
+
+
+
+  ## Works everywhere
+
+  Take your canvas from your desk to your next class or meeting. Butterfly runs on Android, Windows, macOS, Linux, and in your browser, with an iOS preview also available.
+
+</LandingFeature>
+
+## 你的作品属于你
+
+<CardGrid>
+  <Card title="默认保存到本地" icon="laptop">
+    Keep working without an internet connection. 即使没有网络连接也能继续工作。除非你选择保存到其他位置，文档都会留在自己的设备上。
+  </Card>
+  <Card title="使用自己的云端" icon="rocket">
+    连接 Nextcloud 等 WebDAV 服务，随时随地同步、备份和编辑笔记。
+  </Card>
+  <Card title="开源软件" icon="code-branch">
+    Butterfly 在 GNU AGPL-3.0 许可下免费开源。可将文档保存在有完整文档说明的 `.bfly` 和 `.tbfly` 格式中。 Keep your documents in its documented `.bfly` and `.tbfly` formats.
+  </Card>
+  <Card title="一起创作" icon="comment">
+    实验性的协作功能支持通过 Swamp 或自行托管的 WebSocket 服务器进行端到端加密会话。
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly，让视觉思考不受限的画布。</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="下载 Butterfly" description="在手机、平板或电脑上安装应用。" href="/downloads/" />
+  <LinkCard title="试用网页版" description="无需安装，直接在浏览器中开启画布。建议使用基于 Chromium 的浏览器。 Chromium-based browsers are recommended." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="阅读 Butterfly 博客" description="关注发布版本、项目新闻与开发故事。" href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="了解基础功能" description="创建第一份文档，探索完整工具箱。" href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly 以开放方式开发，并提供多种语言版本。[加入社区](/community/)，分享反馈、协助翻译或为项目贡献力量。 [Join the community](/community/) to share feedback, help with translations, or contribute to the project.

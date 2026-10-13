@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Dělejte si poznámky, kreslete bez omezení a organizujte nápady na nekonečné pracovní ploše
+template: splash
+hero:
+  tagline: Your ideas should not have to fit inside a page. Handwrite, sketch, annotate, and organize on an infinite canvas that stays yours.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Stáhnout Butterfly
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Vyzkoušet webovou aplikaci
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Dokumentace
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Plátno Butterfly s ručně psanými poznámkami, diagramy a pravítkem">
+
+
+
+
+  ## Pracovní plocha pro vizuální myslitele
+
+  Zapisujte si poznámky z přednášek stylusem, komentujte PDF, načrtněte rozhraní, vytvořte diagram, naplánujte projekt — nebo vše spojte v jednom dokumentu.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Nastavení pera pro nástroj kreslení v Butterfly" reverse>
+
+
+
+
+
+  ## Vylaďte každý tah
+
+  Draw with a stylus, touch, or mouse. Adjust stroke width, color, smoothing, and texture. If a mark is not quite right, edit it instead of starting over.
+</LandingFeature>
+
+## Výkonné řešení pro rostoucí projekty
+
+<CardGrid stagger>
+  <Card title="Každý prvek zůstává upravitelný" icon="pencil">
+    Move, resize, recolor, and reorganize content after placing it. Your first attempt never has to be your final one.
+  </Card>
+  <Card title="Běžná média v jednom dokumentu" icon="document">
+    Import camera photos, gallery images, PDFs, and SVGs. Combine them with your own notes and export clean results in common formats.
+  </Card>
+  <Card title="Znovupoužitelné stavební bloky" icon="puzzle">
+    Oblíbená rozvržení proměňte v šablony a často používaný obsah v balíčky, razítka, palety a styly dostupné napříč dokumenty.
+  </Card>
+  <Card title="Nástroje pro každý nápad" icon="open-book">
+    Kromě pera a gumy můžete použít popisky, tvary, mnohoúhelníky, pravítka, mřížky, textury, razítka, laserové ukazovátko, prezentační nástroje a mnoho dalšího.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Šablony a balíčky Butterfly se znovupoužitelnými styly plátna">
+
+
+
+
+  ## Přizpůsobte Butterfly svému způsobu práce
+
+  Start with a template that brings together your favorite backgrounds, tools, layers, areas, and pages. Save reusable content in packs so your next project starts with everything you need.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Ručně psaný dokument Butterfly na telefonu a stolním počítači" reverse>
+
+
+
+
+
+  ## Funguje všude
+
+  Take your canvas from your desk to your next class or meeting. Butterfly runs on Android, Windows, macOS, Linux, and in your browser, with an iOS preview also available.
+
+</LandingFeature>
+
+## Vaše práce patří vám
+
+<CardGrid>
+  <Card title="Ve výchozím nastavení lokálně" icon="laptop">
+    Keep working without an internet connection. Your documents live on your device unless you choose to save them somewhere else.
+  </Card>
+  <Card title="Použijte vlastní cloud" icon="rocket">
+    Připojte služby WebDAV, například Nextcloud, a synchronizujte, zálohujte a upravujte své poznámky odkudkoli.
+  </Card>
+  <Card title="Software s otevřeným zdrojovým kódem" icon="code-branch">
+    Butterfly is free and open source under the GNU AGPL-3.0 license. Keep your documents in its documented `.bfly` and `.tbfly` formats.
+  </Card>
+  <Card title="Tvořte společně" icon="comment">
+    Experimentální spolupráce podporuje relace šifrované mezi koncovými body prostřednictvím Swampu nebo vlastního serveru WebSocket.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly, nekonečné plátno pro vizuální myšlení.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Stáhnout Butterfly" description="Nainstalujte si aplikaci do telefonu, tabletu nebo počítače." href="/downloads/" />
+  <LinkCard title="Vyzkoušet webovou aplikaci" description="Start a canvas in your browser without installing anything. Chromium-based browsers are recommended." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Číst blog Butterfly" description="Sledujte vydání, novinky z projektu i příběhy z vývoje." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Poznejte základy" description="Vytvořte první dokument a prozkoumejte celou sadu nástrojů." href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly is built in the open and available in many languages. [Join the community](/community/) to share feedback, help with translations, or contribute to the project.

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "/workspace/scratch/26e6ed352677/toolchains/flutter/bin/flutter",
+    "build",
+    "apk",
+    "--debug",
+    "--flavor",
+    "production"
+  ],
+  "cwd": "/workspace/scratch/26e6ed352677/butterfly-baseline/app",
+  "environment_change": {
+    "TAR_OPTIONS": "--no-same-owner"
+  },
+  "start": "2026-10-12T16:13:54.616724+00:00",
+  "end": "2026-10-12T16:18:54.625171+00:00",
+  "exit_code": 0,
+  "harness_timeout": true
+}

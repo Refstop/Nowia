@@ -1,0 +1,63 @@
+---
+title: Hintergrund
+---
+
+import {Wrench,
+	Book,
+	Image,
+	Globe,
+	Gear,
+	Plus,
+	Trash,
+	ArrowLeft,
+	ArrowRight
+	
+} from "@phosphor-icons/react";
+import logo from '/public/img/logo.svg';
+
+Um den Hintergrund einer Seite zu bearbeiten, klicken Sie auf die <img alt="logo" src={logo.src} className="inline-icon" width="16"/> Butterfly-Schaltfläche und wählen Sie dann <Image className="inline-icon"/> Hintergrund aus. Auf einem Computer können Sie auch die Tastenkombination `Strg+B` verwenden.
+
+Hintergründe können aus mehreren Hintergrundebenen bestehen, die übereinander gezeichnet werden.
+
+For a pattern limited to a rectangular part of the canvas, use the [Texture tool](../tools/texture/). For patterns inside pen or shape strokes and fills, see [Paints](../paints/).
+
+## Hintergrundebenen konfigurieren
+
+Auf dem Hintergrundbildschirm zeigt die erste Gruppe von Tabs die Ebenen des Hintergrunds.
+
+Verwende die Schaltfläche <Plus className="inline-icon"/>, um eine neue Ebene hinzuzufügen.
+
+Verwende die Schaltfläche <Trash className="inline-icon"/>, um die ausgewählte Ebene zu löschen.
+
+Verwende die Schaltflächen <ArrowLeft className="inline-icon"/> und <ArrowRight className="inline-icon"/>, um die Ebenen neu anzuordnen. Ebenen werden von links nach rechts gezeichnet; Ebenen rechts erscheinen daher über den Ebenen links.
+
+## Arten von Hintergrundebenen
+
+Es gibt zwei Arten von Hintergrundebenen: Muster und Bilder/SVGs.
+
+### Pattern Layers \{#pattern-layers\}
+
+Es stehen viele verschiedene Mustervorlagen zur Auswahl. Nach Auswahl einer Mustervorlage können Sie Folgendes konfigurieren:
+
+#### Hintergrund
+
+- Farbe – Die Hintergrundfarbe des Musters.
+- Alpha – Die Alpha-/Deckkraft des Musterhintergrunds.
+
+#### Horizontal / Vertikal
+
+In diesen Abschnitten können Sie das Aussehen der Rasterlinien konfigurieren.
+
+- Farbe – Die Farbe der Rasterlinien.
+- Alpha – Die Alpha-/Deckkraft der Rasterlinien.
+- Breite – Der Abstand zwischen den Rasterlinien.
+- Anzahl – Die Anzahl der Rasterlinien in einer Gruppe. Verwende `1`, um eine Gruppierung zu verhindern.
+- Abstand – Der Abstand zwischen den Gruppen von Rasterlinien.
+- Strichbreite – Die Stärke der Rasterlinien.
+
+Um zum Beispiel Notenlinien zu erstellen, können Sie die folgende Konfiguration verwenden:
+`Breite: 40`, `Anzahl: 5`, `Abstand: 80`
+
+### Bild- und SVG-Ebenen
+
+Mit diesen Hintergrundebenentypen können Sie ein Bild hochladen und als Seitenhintergrund verwenden. Bilder werden auf der Leinwand gekachelt; über die Skalierung können Sie die Kacheln größer oder kleiner machen. To place an image as a movable canvas element instead, see [Importing](../importing/).

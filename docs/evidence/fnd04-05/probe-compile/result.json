@@ -1,0 +1,103 @@
+{
+  "started_utc": "2026-10-13T07:53:39.286795+00:00",
+  "probe": "compile",
+  "upstream_commit": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "stages": [
+    {
+      "stage": "commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:39.286908+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "commit.log",
+      "ended_utc": "2026-10-13T07:53:39.290802+00:00"
+    },
+    {
+      "stage": "source-before",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:39.291071+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-before.log",
+      "ended_utc": "2026-10-13T07:53:39.355078+00:00"
+    },
+    {
+      "stage": "flutter-version",
+      "command": [
+        "flutter",
+        "--version",
+        "--machine"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:39.355463+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "flutter-version.log",
+      "ended_utc": "2026-10-13T07:53:39.469861+00:00"
+    },
+    {
+      "stage": "dart-version",
+      "command": [
+        "dart",
+        "--version"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:39.470324+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "dart-version.log",
+      "ended_utc": "2026-10-13T07:53:39.534801+00:00"
+    },
+    {
+      "stage": "probe-compile",
+      "command": [
+        "dart",
+        "compile",
+        "exe",
+        "/tmp/nowia-failure-probe-91_v4yu2/compile_error.dart",
+        "-o",
+        "/tmp/nowia-failure-probe-91_v4yu2/must-not-exist"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:39.535657+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 254,
+      "log": "probe-compile.log",
+      "ended_utc": "2026-10-13T07:53:39.700844+00:00"
+    },
+    {
+      "stage": "source-after",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:39.701478+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-after.log",
+      "ended_utc": "2026-10-13T07:53:39.768743+00:00"
+    }
+  ],
+  "quality": "NOT_RUN",
+  "source_after": "PASS",
+  "expected_failure_observed": true,
+  "error": "Expected compile failure propagated to CI",
+  "ended_utc": "2026-10-13T07:53:39.769134+00:00",
+  "exit_code": 254
+}

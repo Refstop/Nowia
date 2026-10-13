@@ -1,0 +1,504 @@
+part of 'handler.dart';
+
+// This class represents the handler for the PenTool.
+class PenHandler extends Handler<PenTool> with ColoredHandler {
+  bool _hideCursorWhileDrawing = false;
+  // Map to store the PenElements.
+  final Map<int, PenElement> elements = {};
+  final Map<int, List<PathPoint>> _elementPoints = {};
+  final List<PenElement> _submittedElements = [];
+  // Map to store the last positions of each element.
+  final Map<int, Offset> lastPosition = {};
+  // List for shapeDetection
+  final points = <Offset>[];
+  // For control if the pointer has not moved
+  bool isDrawing = false;
+  // Timer to initiate shape detection after a period of inactivity
+  Timer? _positionCheckTimer;
+  // Variable to store the current position of the pointer
+  Offset? lastPosit;
+  Offset? localPos;
+
+  PenHandler(super.data);
+
+  // Create foregrounds for rendering the PenRendere
+  @override
+  List<Renderer> createForegrounds(
+    EditorController editorController,
+    NoteData document,
+    DocumentPage page,
+    DocumentInfo info, [
+    Area? currentArea,
+  ]) => [...elements.values, ..._submittedElements]
+      .map(
+        (e) => e.points.length > 1
+            ? PenRenderer(e.copyWith(id: createUniqueId()))
+            : null,
+      )
+      .whereType<Renderer>()
+      .toList();
+
+  // Reset the input for the handler.
+  @override
+  void resetInput(DocumentBloc bloc) {
+    submitElements(bloc, elements.keys.toList());
+    _positionCheckTimer?.cancel();
+    _positionCheckTimer = null;
+    elements.clear();
+    _elementPoints.clear();
+    lastPosition.clear();
+    points.clear();
+    lastPosit = null;
+  }
+
+  // Handle the pointer release event.
+  @override
+  void onPointerUp(PointerUpEvent event, EventContext context) {
+    isDrawing = false;
+    // Cancel the timer when the pointer is lifted, preventing shape detection
+    _positionCheckTimer?.cancel();
+    _positionCheckTimer = null;
+    addPoint(
+      context.buildContext,
+      event.pointer,
+      event.localPosition,
+      context.viewportSize,
+      getPressureOfEvent(event),
+      event.kind,
+      refresh: false,
+    );
+    lastPosition.remove(event.pointer);
+    submitElements(context.getDocumentBloc(), [event.pointer]);
+    points.clear();
+    lastPosit = null;
+  }
+
+  DocumentBloc? _bloc;
+
+  // Submit elements for processing and rendering.
+  Future<void> submitElements(DocumentBloc bloc, List<int> indexes) async {
+    _bloc = bloc;
+    final elements = indexes
+        .map((e) {
+          final element = this.elements.remove(e);
+          final points = _elementPoints.remove(e);
+          if (element == null) return null;
+          return points == null
+              ? element
+              : element.copyWith(points: List<PathPoint>.of(points));
+        })
+        .nonNulls
+        .toList();
+    if (elements.isEmpty) return;
+    _submittedElements.addAll(elements);
+    lastPosition.removeWhere((key, value) => indexes.contains(key));
+    bloc.add(ElementsCreated(elements));
+    bloc.refresh(allowBake: false);
+  }
+
+  @override
+  bool onRenderersCreated(DocumentPage page, List<Renderer> renderers) {
+    if (_submittedElements.isEmpty) return false;
+    final createdIds = renderers
+        .map((renderer) => renderer.element)
+        .whereType<PenElement>()
+        .map((element) => element.id)
+        .nonNulls
+        .toSet();
+    if (createdIds.isEmpty) return false;
+    final previousLength = _submittedElements.length;
+    _submittedElements.removeWhere((e) => createdIds.contains(e.id));
+    final changed = previousLength != _submittedElements.length;
+    if (changed && _submittedElements.isEmpty && elements.isEmpty) {
+      unawaited(_bloc?.delayedBake());
+    }
+    return changed;
+  }
+
+  @override
+  Future<void> onViewportUpdated(
+    CameraViewport currentViewport,
+    CameraViewport newViewport,
+  ) async {
+    if (_submittedElements.isEmpty) return;
+    final submittedIds = _submittedElements.map((e) => e.id).nonNulls.toSet();
+    final viewportIds = [
+      ...newViewport.bakedElements,
+      ...newViewport.unbakedElements,
+    ].map((renderer) => renderer.element.id).nonNulls.toSet();
+    // Renderer creation is the authoritative handoff from the foreground
+    // preview to the document. A rapid sequence can produce an intermediate
+    // viewport containing only some submitted strokes; clearing all previews
+    // then makes the remaining strokes disappear until their events finish.
+    if (submittedIds.intersection(viewportIds).isNotEmpty) return;
+    _submittedElements.clear();
+    await _bloc?.refresh(allowBake: false);
+    // If already started a new element, we don't bake yet
+    if (elements.isEmpty) {
+      await _bloc?.delayedBake();
+    }
+  }
+
+  // Add a point to the element.
+  void addPoint(
+    BuildContext context,
+    int pointer,
+    Offset localPos,
+    Size viewportSize,
+    double pressure,
+    PointerDeviceKind kind, {
+    bool refresh = true,
+    bool shouldCreate = false,
+  }) {
+    final bloc = context.read<DocumentBloc>();
+    final editorController = context.read<EditorController>();
+    final transform = context.read<TransformCubit>().state;
+    localPos = PointerManipulationHandler.calculatePointerPosition(
+      editorController.toolCubit.state,
+      localPos,
+      viewportSize,
+      transform,
+    );
+    final globalPos = transform.localToGlobal(localPos);
+    if (!bloc.isInBounds(globalPos)) return;
+    final state = bloc.state as DocumentLoadSuccess;
+    final settings = context.read<SettingsCubit>().state;
+    final penOnlyInput = editorController.inputCubit.effectivePenOnlyInput;
+    if (lastPosition[pointer] == localPos) return;
+    lastPosition[pointer] = localPos;
+    if (penOnlyInput && (kind != .stylus && kind != .invertedStylus)) {
+      return;
+    }
+    if (settings.ignorePressure == .always) {
+      pressure = 1;
+    }
+    double zoom = data.zoomDependent ? transform.size : 1;
+    final createNew = !elements.containsKey(pointer);
+    if (createNew && !shouldCreate) return;
+    final element = elements[pointer];
+    final point = PathPoint.fromPoint(globalPos.toPoint(), pressure);
+    if (element != null) {
+      final points = _elementPoints[pointer] ?? element.points.toList();
+      points.add(point);
+      if (points.length == 2 && settings.ignorePressure == .first) {
+        points[0] = points[0].copyWith(pressure: pressure);
+      }
+      _elementPoints[pointer] = points;
+      elements[pointer] = element.copyWith(points: points);
+    } else {
+      final points = [point];
+      _elementPoints[pointer] = points;
+      elements[pointer] = PenElement(
+        id: createUniqueId(),
+        zoom: transform.size,
+        combineId: data.combinePaths ? data.id : null,
+        collection: state.currentCollection,
+        property: data.property.copyWith(
+          strokeWidth: data.property.strokeWidth / zoom,
+        ),
+        points: points,
+      );
+    }
+    if (refresh) unawaited(bloc.delayedRefreshForegrounds());
+  }
+
+  // This function is called when the pointer is pressed down.
+  @override
+  void onPointerDown(PointerDownEvent event, EventContext context) {
+    final cubit = context.getEditorController();
+    cubit.rendererCubit.cancelDelayedBake();
+    isDrawing = true;
+    changeStartedDrawing(context);
+    _hideCursorWhileDrawing = context.getSettings().hideCursorWhileDrawing;
+    if (cubit.inputCubit.moveEnabled && event.kind != .stylus) {
+      elements.clear();
+      context.refreshForegrounds();
+      return;
+    }
+    elements.remove(event.pointer);
+    _elementPoints.remove(event.pointer);
+    addPoint(
+      context.buildContext,
+      event.pointer,
+      event.localPosition,
+      context.viewportSize,
+      getPressureOfEvent(event),
+      event.kind,
+      shouldCreate: true,
+    );
+  }
+
+  @override
+  void onPointerMove(PointerMoveEvent event, EventContext context) {
+    if (!isDrawing) return;
+    // Check if the pointer has not moved
+    if (lastPosit == event.localPosition) return;
+    // Update the current position with the new position of the pointer
+    lastPosit = event.localPosition;
+    // Cancel any existing timer
+    _positionCheckTimer?.cancel();
+    // Start a new timer that will call the shape detection after a delay by data.shapeDetectionTime
+    _positionCheckTimer = Timer(
+      Duration(milliseconds: (data.shapeDetectionTime * 1000).round()),
+      () {
+        _tickShapeDetection(event.pointer, context, event.localPosition);
+      },
+    );
+    // Call the addPoint function to add a point to the current brush stroke.
+    addPoint(
+      context.buildContext,
+      event.pointer,
+      event.localPosition,
+      context.viewportSize,
+      getPressureOfEvent(event),
+      event.kind,
+    );
+    points.add(event.localPosition);
+  }
+
+  void showMessage(EventContext context, String recognizedShape) {
+    // show SnackBar with recognized shape
+    ScaffoldMessenger.of(context.buildContext).showSnackBar(
+      SnackBar(
+        width: MediaQuery.sizeOf(context.buildContext).width * 0.1,
+        behavior: SnackBarBehavior.floating,
+        content: Text(textAlign: .center, recognizedShape),
+        duration: const Duration(milliseconds: 300),
+      ),
+    );
+  }
+
+  // Detects shapes and draws them
+  void _tickShapeDetection(
+    int pointer,
+    EventContext context,
+    Offset localPosition,
+  ) {
+    if (!data.shapeDetectionEnabled) return;
+    final element = elements[pointer];
+    if (element == null || points.length > 600 || points.isEmpty) {
+      return;
+    }
+
+    final transform = context.getCameraTransform();
+    final creationTransform = CameraTransform(
+      transform.pixelRatio,
+      transform.position.rotate(Offset.zero, transform.rotation),
+      transform.size,
+    );
+    // Create recognizeUnistroke
+    final recognized = recognizeUnistroke(points);
+    final state = context.getState();
+    final currentCollection = state!.currentCollection;
+
+    if (recognized == null) {
+      return;
+    }
+    PadElement? shapeElement;
+    switch (recognized.name) {
+      case .line:
+        double startX = points.first.dx;
+        double startY = points.first.dy;
+        double endX = points.last.dx;
+        double endY = points.last.dy;
+
+        Point<double> firstPosition = Point(startX, startY);
+        Point<double> secondPosition = Point(endX, endY);
+
+        // Convert coordinates from the document coordinate system to the view coordinate system
+        Offset firstPositionInView = creationTransform.localToGlobal(
+          firstPosition.toOffset(),
+        );
+        Offset secondPositionInView = creationTransform.localToGlobal(
+          secondPosition.toOffset(),
+        );
+
+        // Create new shape element
+        shapeElement = PadElement.shape(
+          id: createUniqueId(),
+          firstPosition: firstPositionInView.toPoint(),
+          secondPosition: secondPositionInView.toPoint(),
+          property: ShapeProperty(
+            shape: const LineShape(),
+            paint: data.property.paint,
+            strokeWidth: data.property.strokeWidth,
+          ),
+          collection: currentCollection,
+        );
+
+        // Show dialog
+        showMessage(context, AppLocalizations.of(context.buildContext).line);
+      case .circle:
+        // Calculate the center of the circle as the average of the points
+        double centerX =
+            points.map((p) => p.dx).reduce((a, b) => a + b) / points.length;
+        double centerY =
+            points.map((p) => p.dy).reduce((a, b) => a + b) / points.length;
+        Offset center = .new(centerX, centerY);
+
+        // Calculate the radius as the average of the distances of the points from the center
+        double radius =
+            points.map((p) => (p - center).distance).reduce((a, b) => a + b) /
+            points.length;
+
+        Point<double> firstPosition = Point<double>(
+          center.dx - radius,
+          center.dy - radius,
+        );
+        Point<double> secondPosition = Point<double>(
+          center.dx + radius,
+          center.dy + radius,
+        );
+
+        // Convert coordinates from the document coordinate system to the view coordinate system
+        Offset firstPositionInView = creationTransform.localToGlobal(
+          firstPosition.toOffset(),
+        );
+        Offset secondPositionInView = creationTransform.localToGlobal(
+          secondPosition.toOffset(),
+        );
+
+        // Create new ShapeElement
+        shapeElement = PadElement.shape(
+          id: createUniqueId(),
+          firstPosition: firstPositionInView.toPoint(),
+          secondPosition: secondPositionInView.toPoint(),
+          property: ShapeProperty(
+            shape: const CircleShape(),
+            paint: data.property.paint,
+            strokeWidth: data.property.strokeWidth,
+          ),
+          collection: currentCollection,
+        );
+
+        // Show dialog
+        showMessage(context, AppLocalizations.of(context.buildContext).circle);
+      case .rectangle:
+        double minX = points.map((p) => p.dx).reduce(min);
+        double maxX = points.map((p) => p.dx).reduce(max);
+        double minY = points.map((p) => p.dy).reduce(min);
+        double maxY = points.map((p) => p.dy).reduce(max);
+
+        Point<double> firstPosition = Point(minX, minY);
+        Point<double> secondPosition = Point(maxX, maxY);
+
+        // Convert coordinates from the document coordinate system to the view coordinate system
+        Offset firstPositionInView = creationTransform.localToGlobal(
+          firstPosition.toOffset(),
+        );
+        Offset secondPositionInView = creationTransform.localToGlobal(
+          secondPosition.toOffset(),
+        );
+
+        // Create new ShapeElement
+        shapeElement = PadElement.shape(
+          id: createUniqueId(),
+          firstPosition: firstPositionInView.toPoint(),
+          secondPosition: secondPositionInView.toPoint(),
+          property: ShapeProperty(
+            shape: const RectangleShape(),
+            paint: data.property.paint,
+            strokeWidth: data.property.strokeWidth,
+          ),
+          collection: currentCollection,
+        );
+      case .triangle:
+        double minX = points.map((p) => p.dx).reduce(min);
+        double maxX = points.map((p) => p.dx).reduce(max);
+        double minY = points.map((p) => p.dy).reduce(min);
+        double maxY = points.map((p) => p.dy).reduce(max);
+
+        Point<double> firstPosition = Point(minX, minY);
+        Point<double> secondPosition = Point(maxX, maxY);
+
+        // Convert coordinates from the document coordinate system to the view coordinate system
+        Offset firstPositionInView = creationTransform.localToGlobal(
+          firstPosition.toOffset(),
+        );
+        Offset secondPositionInView = creationTransform.localToGlobal(
+          secondPosition.toOffset(),
+        );
+
+        // Create new ShapeElement
+        shapeElement = PadElement.shape(
+          id: createUniqueId(),
+          firstPosition: firstPositionInView.toPoint(),
+          secondPosition: secondPositionInView.toPoint(),
+          property: ShapeProperty(
+            shape: const TriangleShape(),
+            paint: data.property.paint,
+            strokeWidth: data.property.strokeWidth,
+          ),
+          collection: currentCollection,
+        );
+      default:
+    }
+    if (shapeElement != null) {
+      // Add element on document
+      context.getDocumentBloc().add(
+        ElementsCreated([
+          orientCreatedElement(shapeElement, transform.rotation),
+        ]),
+      );
+
+      elements.clear();
+      context.refresh();
+    }
+    // Reset the points list for the next shape detection
+    points.clear();
+  }
+
+  @override
+  void onScaleStartAbort(ScaleStartDetails details, EventContext context) {
+    _positionCheckTimer?.cancel();
+    _positionCheckTimer = null;
+    elements.clear();
+    points.clear();
+    lastPosition.clear();
+    lastPosit = null;
+    context.refresh();
+  }
+
+  @override
+  void dispose(DocumentBloc bloc) {
+    _positionCheckTimer?.cancel();
+    _positionCheckTimer = null;
+    elements.clear();
+    _submittedElements.clear();
+    lastPosition.clear();
+    points.clear();
+    isDrawing = false;
+    lastPosit = null;
+    _bloc = null;
+  }
+
+  @override
+  SRGBColor getColor() => data.property.paint.previewColor;
+
+  @override
+  PenTool setColor(SRGBColor color) => data.copyWith(
+    property: data.property.copyWith(
+      paint: ElementPaint.solid(
+        color: color.withValues(a: getColor().a),
+        blur: data.property.paint.blur,
+      ),
+    ),
+  );
+
+  @override
+  double getStrokeWidth() => data.property.strokeWidth;
+
+  @override
+  PenTool setStrokeWidth(double width) =>
+      data.copyWith(property: data.property.copyWith(strokeWidth: width));
+
+  @override
+  MouseCursor get cursor => (_hideCursorWhileDrawing && elements.isNotEmpty)
+      ? SystemMouseCursors.none
+      : SystemMouseCursors.precise;
+
+  @override
+  Map<String, RendererState> get rendererStates => Map.fromEntries(
+    _submittedElements.map((e) => MapEntry(e.id!, RendererState.hidden)),
+  );
+}

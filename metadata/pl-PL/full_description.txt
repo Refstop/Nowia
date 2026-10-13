@@ -1,0 +1,11 @@
+Butterfly to aplikacja open source, która daje pomysłom przestrzeń do rozwoju. Rób notatki, szkicuj, twórz diagramy i swobodnie rozmieszczaj obrazy oraz dokumenty na przestrzeni roboczej, która rośnie razem z Twoją pracą.
+
+Używaj go do notatek z zajęć, notatek ze spotkań, badań, matematyki, arkuszy ćwiczeń, planowania, tworzenia tablicy, scenorysów, szkiców produktów lub dowolnego projektu, który zaczyna się niechlujnie i potrzebuje miejsca na rozwój. Pisz ręcznie za pomocą rysika, dotyku lub myszy, wpisz tekst i Markdown, dodawaj kształty i linie, umieszczaj obrazy i zdjęcia, importuj pliki PDF, SVG i pliki obrazów, a następnie eksportuj swoją pracę jako PDF, SVG, obrazy lub przenośne pliki Butterfly.
+
+Butterfly stara się nie wchodzić Ci w drogę podczas pracy. Najnowsze pliki, szablony szybkiego startu, wyszukiwanie, foldery, importy, nawigacja po stronach i ustawienia narzędzi są dostępne, gdy ich potrzebujesz, ale dokument pozostaje w centrum uwagi. Możesz zacząć od zwykłej strony, papieru w linie, siatki, papieru w kropki, papieru nutowego lub własnego szablonu.
+
+W miarę powiększania się dokumentu Butterfly udostępnia sposoby na zapewnienie jego zrozumiałości. Dziel pracę na strony i foldery stron, korzystaj z warstw, oznaczaj ważne miejsca obszarami i punktami orientacyjnymi, zapisuj części do wielokrotnego użytku w paczkach oraz przechowuj palety i style tekstu gotowe do użycia w następnym dokumencie. Prawie wszystko, co dodasz, pozostaje edytowalne, więc możesz przenosić, zmieniać rozmiar, kolorować, porządkować i udoskonalać swoją pracę później, zamiast zaczynać od nowa.
+
+Twoje pliki pozostają pod Twoją kontrolą. Pracuj offline, przechowuj dokumenty na swoim urządzeniu, wybierz inny katalog danych lub połącz WebDAV i Nextcloud, jeśli chcesz mieć własną konfigurację synchronizacji. Nie jest wymagane konto, wymagana subskrypcja ani zastrzeżona chmura.
+
+Butterfly jest darmowy, przetłumaczony przez społeczność, dostępny na telefony, tablety, komputery stacjonarne i w Internecie i opracowany publicznie na licencji AGPL-3.0.

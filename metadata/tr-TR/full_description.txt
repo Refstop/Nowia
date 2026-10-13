@@ -1,0 +1,11 @@
+Butterfly, fikirlerinize gelişebilecekleri alanı sunan açık kaynaklı bir uygulamadır. Not alın, taslaklar ve diyagramlar çizin; resim ve belgeleri çalışmanıza uyum sağlayan bir çalışma alanına özgürce yerleştirin.
+
+Ders notları, toplantı notları, araştırma, matematik, çalışma sayfaları, planlama, beyaz tahta, storyboard'lar, ürün taslakları veya dağınık başlayan ve büyümek için alana ihtiyaç duyan herhangi bir proje için kullanın. Kalemle, dokunarak veya fareyle elle yazın, metin yazın ve İşaretleyin, şekiller ve çizgiler ekleyin, görüntüler ve fotoğraflar yerleştirin, PDF'leri, SVG'leri ve görüntü dosyalarını içe aktarın, ardından çalışmanızı PDF, SVG, görüntüler veya taşınabilir Butterfly dosyaları olarak dışa aktarın.
+
+Kelebek siz çalışırken önünüzden çekilmeye çalışır. Son dosyalar, hızlı başlangıç ​​şablonları, arama, klasörler, içe aktarmalar, sayfada gezinme ve araç ayarları, ihtiyaç duyduğunuzda yakınınızdadır ancak belge merkezde kalır. Düz bir sayfa, çizgili kağıt, ızgara, noktalı kağıt, müzik kağıdı veya kendi şablonunuzla başlayabilirsiniz.
+
+Belgeniz büyüdükçe Butterfly size onu anlaşılır kılmanın yollarını sunar. Çalışmayı sayfalara ve sayfa klasörlerine bölün, katmanları kullanın, önemli yerleri alanlar ve ara noktalarla işaretleyin, yeniden kullanılabilir parçaları paketlere kaydedin ve paletleri ve metin stillerini bir sonraki belge için hazır tutun. Eklediğiniz hemen hemen her şey düzenlenebilir durumda kalır; böylece çalışmanızı daha sonra baştan başlamak yerine taşıyabilir, yeniden boyutlandırabilir, yeniden renklendirebilir, yeniden sıralayabilir ve hassaslaştırabilirsiniz.
+
+Dosyalarınız kontrolünüz altında kalır. Çevrimdışı çalışın, belgeleri cihazınızda saklayın, farklı bir veri dizini seçin veya kendi senkronizasyon kurulumunuzu istiyorsanız WebDAV ile Nextcloud'u bağlayın. Gerekli bir hesap, gerekli bir abonelik ve gerekli özel bir bulut yoktur.
+
+Butterfly ücretsizdir, topluluğa tercüme edilmiştir, telefonlarda, tabletlerde, masaüstü bilgisayarlarda ve web'de mevcuttur ve AGPL-3.0 lisansı altında halka açık olarak geliştirilmiştir.

@@ -1,0 +1,416 @@
+EVIDENCE: /workspace/build-resume-evidence/wrapper
+START source-before: ['python3', 'tools/nowia/verify_baseline.py']
+PASS app unchanged tree ff163eaaab6fbf214b87f76c1edb133cc9edd4d6
+PASS api unchanged tree 3d0f3e16e0f55ad4c593568dae8262f3ffbad55d
+UPSTREAM 1e4c86b91f4d64361a73598bda0acc587f9381b0
+NOWIA d1feecc5beecc21bb30901135f6d9eca04b9c94c
+END source-before: exit=0 timeout=False
+START commit-before: ['git', 'rev-parse', 'HEAD']
+d1feecc5beecc21bb30901135f6d9eca04b9c94c
+END commit-before: exit=0 timeout=False
+START status-before: ['git', 'status', '--porcelain=v1']
+ M AGENTS.md
+ M docs/agent-handoff.md
+ M docs/evidence/FND-03.md
+ M docs/project-inputs.md
+ M tools/nowia/build-baseline.sh
+?? docs/evidence/resume-build/
+?? docs/runbooks/cloud-apk-build.md
+?? tools/nowia/build-cloud.sh
+?? tools/nowia/setup-android-toolchain.sh
+END status-before: exit=0 timeout=False
+START lockfiles-before: ['sha256sum', 'app/pubspec.lock', 'api/pubspec.lock']
+fbc231cdef6548052a57a9809a070e6682ce6fe156e39984a40ea552ef6e490a  app/pubspec.lock
+e5fa6063dc3c9d0781d5630775eb068f6cd3a6498f694c4f62f7af3b2ab27e24  api/pubspec.lock
+END lockfiles-before: exit=0 timeout=False
+START flutter-before: ['flutter', '--version', '--machine']
+{
+  "frameworkVersion": "3.47.5",
+  "channel": "[user-branch]",
+  "repositoryUrl": "https://github.com/flutter/flutter.git",
+  "frameworkRevision": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+  "frameworkCommitDate": "2026-09-17 14:13:22 -0400",
+  "engineRevision": "af7e796e161ae0bb1ff0758c71a7105418bd9ded",
+  "engineCommitDate": "2026-09-16 18:35:09.000Z",
+  "engineContentHash": "ab598368592da0064197e2bc15c7f5b0a2c6bb1f",
+  "engineBuildDate": "2026-09-16 19:35:21.428",
+  "dartSdkVersion": "3.13.4",
+  "devToolsVersion": "2.60.0",
+  "flutterVersion": "3.47.5",
+  "flutterRoot": "/workspace/toolchains/flutter"
+}
+END flutter-before: exit=0 timeout=False
+START dart-before: ['dart', '--version']
+Dart SDK version: 3.13.4 (stable) (Tue Sep 15 01:01:15 2026 -0700) on "linux_x64"
+END dart-before: exit=0 timeout=False
+START java-before: ['java', '-version']
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+openjdk version "21.0.12.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)
+END java-before: exit=0 timeout=False
+START javac-before: ['javac', '-version']
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+javac 21.0.12.1
+END javac-before: exit=0 timeout=False
+START rust-before: ['rustc', '--version']
+rustc 1.98.1 (48a229cea 2026-09-01)
+END rust-before: exit=0 timeout=False
+START flutter-doctor: ['flutter', 'doctor', '-v']
+[!] Flutter (Channel [user-branch], 3.47.5, on Debian GNU/Linux 13 (trixie) 6.18.44, locale C.UTF-8) [41ms]
+    ! Flutter version 3.47.5 on channel [user-branch] at /workspace/toolchains/flutter
+      Currently on an unknown channel. Run `flutter channel` to switch to an official channel.
+      If that doesn't fix the issue, try deleting the 'bin/cache/flutter.version.json' file in your Flutter SDK directory and then reinstall Flutter by following instructions at https://flutter.dev/setup.
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 6a19cca564 (4 weeks ago), 2026-09-17 14:13:22 -0400
+    • Engine revision af7e796e16
+    • Dart version 3.13.4
+    • DevTools version 2.60.0
+    • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, enable-record-use, enable-swift-package-manager, omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration, enable-riscv64
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 36.0.0) [126ms]
+    • Android SDK at /workspace/toolchains/android-sdk
+    • Emulator version unknown
+    • Platform android-36, build-tools 36.0.0
+    • ANDROID_HOME = /workspace/toolchains/android-sdk
+    • ANDROID_SDK_ROOT = /workspace/toolchains/android-sdk
+    • Java binary at: /workspace/toolchains/jdk-21/bin/java
+      This JDK is specified by the JAVA_HOME environment variable.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+    • All Android licenses accepted.
+
+[✗] Chrome - develop for the web (Cannot find Chrome executable at google-chrome) [54ms]
+    ! Cannot find Chrome. Try setting CHROME_EXECUTABLE to a Chrome executable.
+
+[✗] Linux toolchain - develop for Linux desktop [117ms]
+    ✗ clang++ is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install clang), or can be downloaded from https://releases.llvm.org/
+    ✗ CMake is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install cmake), or can be downloaded from https://cmake.org/download/
+    ✗ ninja is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install ninja-build), or can be downloaded from https://github.com/ninja-build/ninja/releases
+    • pkg-config version 1.8.1
+    ✗ GTK 3.0 development libraries are required for Linux development.
+      They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
+    ! Unable to access driver information using 'eglinfo'.
+      It is likely available from your distribution (e.g.: apt install mesa-utils)
+
+[✓] Proxy Configuration [73ms]
+    • HTTP_PROXY is set
+    • NO_PROXY is localhost,127.0.0.1,::1
+    • NO_PROXY contains localhost
+    • NO_PROXY contains 127.0.0.1
+    • NO_PROXY contains ::1
+
+[✓] Connected device (1 available) [111ms]
+    • Linux (desktop) • linux • linux-x64 • Debian GNU/Linux 13 (trixie) 6.18.44
+
+[!] Network resources [2.7s]
+    ✗ An HTTP error occurred while checking "https://maven.google.com/": Proxy failed to establish tunnel (403 Forbidden)
+    ✗ An HTTP error occurred while checking "https://cocoapods.org/": Proxy failed to establish tunnel (403 Forbidden)
+
+! Doctor found issues in 4 categories.
+END flutter-doctor: exit=0 timeout=False
+START sdk-packages: ['/workspace/toolchains/android-sdk/cmdline-tools/latest/bin/sdkmanager', '--list_installed']
+WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+Installed packages:
+  build-tools/36.0.0           36.0.0                            Android SDK Build-Tools 36             
+  cmake/3.22.1                 3.22.1                            CMake 3.22.1                           
+  cmdline-tools/latest         unknown         ->        23.0.0  Android SDK Command-line Tools (latest)
+  ndk/28.2.13676358            28.2.13676358                     NDK (Side by side) 28.2.13676358       
+  platform-tools               37.0.1                            Android SDK Platform-Tools             
+  platforms/android-35         2.0.0                             Android SDK Platform 35                
+  platforms/android-36         2.0.0                             Android SDK Platform 36                
+END sdk-packages: exit=0 timeout=False
+START pub-get: ['flutter', 'pub', 'get', '--enforce-lockfile']
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 108.0.0 (109.0.0 available)
+  analyzer 14.4.0 (14.5.0 available)
+  android_file_picker 1.1.1 (2.1.0 available)
+  animations 2.2.0 (3.0.0 available)
+  archive 4.3.0 (4.5.2 available)
+  build_runner 2.16.1 (2.16.2 available)
+  built_collection 5.1.1 (5.1.2 available)
+  camera_android_camerax 0.7.5 (0.7.5+1 available)
+  camera_avfoundation 0.10.3+1 (0.11.0 available)
+  camera_platform_interface 2.14.0 (2.15.0 available)
+  camera_windows 0.2.6+5 (0.3.0 available)
+  connectivity_plus 7.3.1 (7.3.2 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+  dbus 0.7.15 (0.8.0 available)
+  dynamic_color 1.9.0 (2.1.0 available)
+  file_picker 12.3.0 (13.1.0 available)
+  file_picker_darwin 1.2.0 (2.3.0 available)
+  file_picker_linux 1.1.0 (2.0.2 available)
+  file_picker_platform_interface 3.4.0 (4.2.0 available)
+  file_picker_web 3.1.0 (4.1.0 available)
+  flex_color_scheme 8.4.0 (9.0.0 available)
+  flex_seed_scheme 4.0.1 (5.0.1 available)
+  flutter_secure_storage 10.3.4 (11.2.0 available)
+  flutter_secure_storage_darwin 0.3.2 (0.4.3 available)
+  go_router 17.5.0 (18.0.2 available)
+  idb_shim 2.9.9 (2.9.11 available)
+  image 4.10.1 (4.12.0 available)
+  jni 1.0.3 (1.1.0 available)
+  jni_flutter 1.0.3 (1.0.4+1 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  network_info_plus 8.2.1 (8.2.2 available)
+  nm 0.5.0 (0.6.0 available)
+  objective_c 9.6.0 (9.6.2 available)
+  package_info_plus 10.2.1 (10.2.2 available)
+  pdfium_dart 0.2.5 (0.3.1 available)
+  pdfium_flutter 0.2.3 (0.3.1 available)
+  pdfrx 2.4.8 (2.6.5 available)
+  pdfrx_engine 0.4.7 (0.6.1 available)
+  popover 0.4.0 (0.5.1 available)
+  qr 3.0.2 (4.0.0 available)
+  screen_retriever 0.2.2 (0.3.0 available)
+  share_plus 13.3.0 (13.3.1 available)
+  shared_preferences 2.5.5 (2.5.6 available)
+  test_api 0.7.12 (0.7.15 available)
+  url_launcher 6.3.2 (6.3.3 available)
+  vector_graphics_compiler 1.3.0 (1.3.1 available)
+  windows_file_picker 1.3.0 (2.0.1 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+48 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+END pub-get: exit=0 timeout=False
+START source-after-pub: ['python3', 'tools/nowia/verify_baseline.py']
+PASS app unchanged tree ff163eaaab6fbf214b87f76c1edb133cc9edd4d6
+PASS api unchanged tree 3d0f3e16e0f55ad4c593568dae8262f3ffbad55d
+UPSTREAM 1e4c86b91f4d64361a73598bda0acc587f9381b0
+NOWIA d1feecc5beecc21bb30901135f6d9eca04b9c94c
+END source-after-pub: exit=0 timeout=False
+START build-apk: ['flutter', 'build', 'apk', '--debug', '--flavor', 'production', '--no-pub']
+Running Gradle task 'assembleProductionDebug'...                
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+WARNING: Your Android app project: app located at: /workspace/Nowia/app/android/app/build.gradle.kts
+applies the Kotlin Gradle Plugin, which will cause build failures in future versions of Flutter.
+Please migrate your app to Built-in Kotlin using this guide: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-app-developers
+
+Running Gradle task 'assembleProductionDebug'...                    9.4s
+✓ Built build/app/outputs/flutter-apk/app-production-debug.apk
+END build-apk: exit=0 timeout=False
+START apk-sha256: ['sha256sum', '/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk']
+da100dbcde47a4b8d03c3ef1e0cbce869146a5ca2beaf929babf2bedf1263c5b  /workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk
+END apk-sha256: exit=0 timeout=False
+START apk-signature: ['/workspace/toolchains/android-sdk/build-tools/36.0.0/apksigner', 'verify', '--verbose', '--print-certs', '/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk']
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): false
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+Signer #1 certificate DN: C=US, O=Android, CN=Android Debug
+Signer #1 certificate SHA-256 digest: f8653120416ed6cd01f0af3b1e2241078690a56ed45246c2aadd02bc925ea9ce
+Signer #1 certificate SHA-1 digest: 9350cd1cadc0615d18f1507a02f1ad23ce121cff
+Signer #1 certificate MD5 digest: 0b5df01370b626fbc14caaaddcba2f17
+Signer #1 key algorithm: RSA
+Signer #1 key size (bits): 2048
+Signer #1 public key SHA-256 digest: 357a379744993750c2f198ec2daa66b3f670aa056d0f5d30b472a2f5337162e0
+Signer #1 public key SHA-1 digest: 6b9745b31ccf802d47e83da247ec569eb2e8001a
+Signer #1 public key MD5 digest: 772bad10ded996e561415477c8ce753d
+END apk-signature: exit=0 timeout=False
+START apk-manifest: ['/workspace/toolchains/android-sdk/build-tools/36.0.0/aapt', 'dump', 'badging', '/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk']
+package: name='dev.linwood.butterfly' versionCode='199' versionName='2.6.0' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'
+sdkVersion:'24'
+targetSdkVersion:'36'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.DISABLE_KEYGUARD'
+uses-permission: name='android.permission.WAKE_LOCK'
+uses-permission: name='android.permission.WRITE_EXTERNAL_STORAGE' maxSdkVersion='28'
+uses-permission: name='android.permission.READ_EXTERNAL_STORAGE'
+uses-permission: name='android.permission.CHANGE_CONFIGURATION'
+uses-permission: name='android.permission.DUMP'
+uses-permission: name='android.permission.CAMERA'
+uses-permission: name='android.permission.RECORD_AUDIO'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='android.permission.ACCESS_WIFI_STATE'
+uses-permission: name='dev.linwood.butterfly.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION'
+application-label:'Butterfly'
+application-label-af:'Butterfly'
+application-label-am:'Butterfly'
+application-label-ar:'Butterfly'
+application-label-as:'Butterfly'
+application-label-az:'Butterfly'
+application-label-be:'Butterfly'
+application-label-bg:'Butterfly'
+application-label-bn:'Butterfly'
+application-label-bs:'Butterfly'
+application-label-ca:'Butterfly'
+application-label-cs:'Butterfly'
+application-label-da:'Butterfly'
+application-label-de:'Butterfly'
+application-label-el:'Butterfly'
+application-label-en-AU:'Butterfly'
+application-label-en-CA:'Butterfly'
+application-label-en-GB:'Butterfly'
+application-label-en-IN:'Butterfly'
+application-label-en-XC:'Butterfly'
+application-label-es:'Butterfly'
+application-label-es-419:'Butterfly'
+application-label-es-US:'Butterfly'
+application-label-et:'Butterfly'
+application-label-eu:'Butterfly'
+application-label-fa:'Butterfly'
+application-label-fi:'Butterfly'
+application-label-fr:'Butterfly'
+application-label-fr-CA:'Butterfly'
+application-label-gl:'Butterfly'
+application-label-gu:'Butterfly'
+application-label-hi:'Butterfly'
+application-label-hr:'Butterfly'
+application-label-hu:'Butterfly'
+application-label-hy:'Butterfly'
+application-label-in:'Butterfly'
+application-label-is:'Butterfly'
+application-label-it:'Butterfly'
+application-label-iw:'Butterfly'
+application-label-ja:'Butterfly'
+application-label-ka:'Butterfly'
+application-label-kk:'Butterfly'
+application-label-km:'Butterfly'
+application-label-kn:'Butterfly'
+application-label-ko:'Butterfly'
+application-label-ky:'Butterfly'
+application-label-lo:'Butterfly'
+application-label-lt:'Butterfly'
+application-label-lv:'Butterfly'
+application-label-mk:'Butterfly'
+application-label-ml:'Butterfly'
+application-label-mn:'Butterfly'
+application-label-mr:'Butterfly'
+application-label-ms:'Butterfly'
+application-label-my:'Butterfly'
+application-label-nb:'Butterfly'
+application-label-ne:'Butterfly'
+application-label-nl:'Butterfly'
+application-label-or:'Butterfly'
+application-label-pa:'Butterfly'
+application-label-pl:'Butterfly'
+application-label-pt:'Butterfly'
+application-label-pt-BR:'Butterfly'
+application-label-pt-PT:'Butterfly'
+application-label-ro:'Butterfly'
+application-label-ru:'Butterfly'
+application-label-si:'Butterfly'
+application-label-sk:'Butterfly'
+application-label-sl:'Butterfly'
+application-label-sq:'Butterfly'
+application-label-sr:'Butterfly'
+application-label-sr-Latn:'Butterfly'
+application-label-sv:'Butterfly'
+application-label-sw:'Butterfly'
+application-label-ta:'Butterfly'
+application-label-te:'Butterfly'
+application-label-th:'Butterfly'
+application-label-tl:'Butterfly'
+application-label-tr:'Butterfly'
+application-label-uk:'Butterfly'
+application-label-ur:'Butterfly'
+application-label-uz:'Butterfly'
+application-label-vi:'Butterfly'
+application-label-zh-CN:'Butterfly'
+application-label-zh-HK:'Butterfly'
+application-label-zh-TW:'Butterfly'
+application-label-zu:'Butterfly'
+application-icon-160:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-240:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-320:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-480:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-640:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application-icon-65534:'res/mipmap-anydpi-v26/ic_launcher.xml'
+application: label='Butterfly' icon='res/mipmap-anydpi-v26/ic_launcher.xml'
+application-debuggable
+launchable-activity: name='dev.linwood.butterfly.MainActivity'  label='' icon=''
+uses-library-not-required:'androidx.window.extensions'
+uses-library-not-required:'androidx.window.sidecar'
+feature-group: label=''
+  uses-feature: name='android.hardware.camera.any'
+  uses-feature: name='android.hardware.camera'
+  uses-implied-feature: name='android.hardware.camera' reason='requested android.permission.CAMERA permission'
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+  uses-feature: name='android.hardware.microphone'
+  uses-implied-feature: name='android.hardware.microphone' reason='requested android.permission.RECORD_AUDIO permission'
+  uses-feature: name='android.hardware.wifi'
+  uses-implied-feature: name='android.hardware.wifi' reason='requested android.permission.ACCESS_WIFI_STATE permission'
+main
+other-activities
+other-receivers
+other-services
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--' 'af' 'am' 'ar' 'as' 'az' 'be' 'bg' 'bn' 'bs' 'ca' 'cs' 'da' 'de' 'el' 'en-AU' 'en-CA' 'en-GB' 'en-IN' 'en-XC' 'es' 'es-419' 'es-US' 'et' 'eu' 'fa' 'fi' 'fr' 'fr-CA' 'gl' 'gu' 'hi' 'hr' 'hu' 'hy' 'in' 'is' 'it' 'iw' 'ja' 'ka' 'kk' 'km' 'kn' 'ko' 'ky' 'lo' 'lt' 'lv' 'mk' 'ml' 'mn' 'mr' 'ms' 'my' 'nb' 'ne' 'nl' 'or' 'pa' 'pl' 'pt' 'pt-BR' 'pt-PT' 'ro' 'ru' 'si' 'sk' 'sl' 'sq' 'sr' 'sr-Latn' 'sv' 'sw' 'ta' 'te' 'th' 'tl' 'tr' 'uk' 'ur' 'uz' 'vi' 'zh-CN' 'zh-HK' 'zh-TW' 'zu'
+densities: '160' '240' '320' '480' '640' '65534'
+native-code: 'arm64-v8a' 'armeabi-v7a' 'x86_64'
+END apk-manifest: exit=0 timeout=False
+START source-after: ['python3', 'tools/nowia/verify_baseline.py']
+PASS app unchanged tree ff163eaaab6fbf214b87f76c1edb133cc9edd4d6
+PASS api unchanged tree 3d0f3e16e0f55ad4c593568dae8262f3ffbad55d
+UPSTREAM 1e4c86b91f4d64361a73598bda0acc587f9381b0
+NOWIA d1feecc5beecc21bb30901135f6d9eca04b9c94c
+END source-after: exit=0 timeout=False
+START commit-after: ['git', 'rev-parse', 'HEAD']
+d1feecc5beecc21bb30901135f6d9eca04b9c94c
+END commit-after: exit=0 timeout=False
+START status-after: ['git', 'status', '--porcelain=v1']
+ M AGENTS.md
+ M docs/agent-handoff.md
+ M docs/evidence/FND-03.md
+ M docs/project-inputs.md
+ M tools/nowia/build-baseline.sh
+?? docs/evidence/resume-build/
+?? docs/runbooks/cloud-apk-build.md
+?? tools/nowia/build-cloud.sh
+?? tools/nowia/setup-android-toolchain.sh
+END status-after: exit=0 timeout=False
+START lockfiles-after: ['sha256sum', 'app/pubspec.lock', 'api/pubspec.lock']
+fbc231cdef6548052a57a9809a070e6682ce6fe156e39984a40ea552ef6e490a  app/pubspec.lock
+e5fa6063dc3c9d0781d5630775eb068f6cd3a6498f694c4f62f7af3b2ab27e24  api/pubspec.lock
+END lockfiles-after: exit=0 timeout=False
+START flutter-after: ['flutter', '--version', '--machine']
+{
+  "frameworkVersion": "3.47.5",
+  "channel": "[user-branch]",
+  "repositoryUrl": "https://github.com/flutter/flutter.git",
+  "frameworkRevision": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+  "frameworkCommitDate": "2026-09-17 14:13:22 -0400",
+  "engineRevision": "af7e796e161ae0bb1ff0758c71a7105418bd9ded",
+  "engineCommitDate": "2026-09-16 18:35:09.000Z",
+  "engineContentHash": "ab598368592da0064197e2bc15c7f5b0a2c6bb1f",
+  "engineBuildDate": "2026-09-16 19:35:21.428",
+  "dartSdkVersion": "3.13.4",
+  "devToolsVersion": "2.60.0",
+  "flutterVersion": "3.47.5",
+  "flutterRoot": "/workspace/toolchains/flutter"
+}
+END flutter-after: exit=0 timeout=False
+START dart-after: ['dart', '--version']
+Dart SDK version: 3.13.4 (stable) (Tue Sep 15 01:01:15 2026 -0700) on "linux_x64"
+END dart-after: exit=0 timeout=False
+START java-after: ['java', '-version']
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+openjdk version "21.0.12.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+OpenJDK 64-Bit Server VM Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS, mixed mode, sharing)
+END java-after: exit=0 timeout=False
+START javac-after: ['javac', '-version']
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+javac 21.0.12.1
+END javac-after: exit=0 timeout=False
+START rust-after: ['rustc', '--version']
+rustc 1.98.1 (48a229cea 2026-09-01)
+END rust-after: exit=0 timeout=False
+RESULT: exit=0; evidence=/workspace/build-resume-evidence/wrapper

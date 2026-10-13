@@ -1,0 +1,309 @@
+import 'package:butterfly/actions/new.dart';
+import 'package:butterfly/actions/settings.dart';
+import 'package:butterfly/api/file_system.dart';
+import 'package:butterfly/api/open.dart';
+import 'package:butterfly/cubits/settings.dart';
+import 'package:butterfly/dialogs/template.dart';
+import 'package:butterfly/models/defaults.dart';
+import 'package:butterfly/settings/home.dart';
+import 'package:butterfly/views/files/card.dart';
+import 'package:butterfly/views/files/recent.dart';
+import 'package:butterfly_api/butterfly_api.dart';
+import 'package:collection/collection.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:butterfly/src/generated/i18n/app_localizations.dart';
+import 'package:lw_file_system/lw_file_system.dart';
+import 'package:material_leap/material_leap.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
+
+import '../../main.dart';
+import '../files/view.dart';
+
+part 'start.dart';
+part 'header.dart';
+
+class HomePage extends StatefulWidget {
+  final AssetLocation? selectedAsset;
+
+  const HomePage({super.key, this.selectedAsset});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+enum _MobileTab { home, files, settings }
+
+class _HomePageState extends State<HomePage> {
+  final GlobalKey<FilesViewState> _filesViewKey = GlobalKey();
+  ExternalStorage? _remote;
+  _MobileTab _tab = _MobileTab.home;
+
+  @override
+  void initState() {
+    super.initState();
+    _remote = context.read<SettingsCubit>().state.getDefaultRemote();
+  }
+
+  void updateRemote(ExternalStorage? remote) {
+    setState(() {
+      _remote = remote;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
+    final isMobile = size.shortestSide < LeapBreakpoints.compact;
+    final isMobileLandscape = isMobile && size.width > size.height;
+    final isDesktop = !isMobile && size.width > LeapBreakpoints.expanded;
+    return BlocBuilder<SettingsCubit, ButterflySettings>(
+      buildWhen: (previous, current) =>
+          previous.bannerVisibility != current.bannerVisibility ||
+          previous.lastVersion != current.lastVersion,
+      builder: (context, settings) {
+        return FutureBuilder<bool>(
+          future: context.read<SettingsCubit>().hasNewerVersion(),
+          builder: (context, snapshot) {
+            final hasNewerVersion = snapshot.data ?? false;
+            final showBanner =
+                settings.bannerVisibility == .always ||
+                (settings.bannerVisibility == .onlyOnUpdates &&
+                    hasNewerVersion);
+            final appBar = WindowTitleBar<SettingsCubit, ButterflySettings>(
+              title: isMobile || !showBanner
+                  ? Column(
+                      crossAxisAlignment: .start,
+                      children: [
+                        Text(shortApplicationName),
+                        Text(
+                          applicationVersionName,
+                          style: TextTheme.of(context).labelMedium,
+                        ),
+                      ],
+                    )
+                  : Text(applicationName),
+              onlyShowOnDesktop: showBanner && isDesktop,
+              actions: [
+                if (isMobile || !showBanner) ...[
+                  if (isMobile)
+                    IconButton(
+                      icon: const PhosphorIcon(PhosphorIconsLight.shootingStar),
+                      selectedIcon: const PhosphorIcon(
+                        PhosphorIconsFill.shootingStar,
+                      ),
+                      tooltip: AppLocalizations.of(context).whatsNew,
+                      isSelected: hasNewerVersion,
+                      onPressed: () {
+                        openReleaseNotes();
+                        context.read<SettingsCubit>().updateLastVersion();
+                      },
+                    ),
+                  IconButton(
+                    icon: const PhosphorIcon(PhosphorIconsLight.bookOpen),
+                    tooltip: AppLocalizations.of(context).documentation,
+                    onPressed: () => openHelp(['intro']),
+                  ),
+                  if (!isMobile)
+                    IconButton(
+                      icon: const PhosphorIcon(PhosphorIconsLight.gear),
+                      tooltip: AppLocalizations.of(context).settings,
+                      onPressed: () => openSettings(context),
+                    ),
+                  if (!isMobile) _getBannerVisibilityWidget(context, settings),
+                ],
+              ],
+            );
+            return Scaffold(
+              appBar: isMobile ? null : appBar,
+              bottomNavigationBar: isMobile && !isMobileLandscape
+                  ? NavigationBar(
+                      destinations: [
+                        NavigationDestination(
+                          icon: const Icon(PhosphorIconsLight.house),
+                          selectedIcon: const Icon(PhosphorIconsFill.house),
+                          label: AppLocalizations.of(context).home,
+                        ),
+                        NavigationDestination(
+                          icon: const Icon(
+                            PhosphorIconsLight.folder,
+                            textDirection: .ltr,
+                          ),
+                          selectedIcon: const Icon(
+                            PhosphorIconsFill.folder,
+                            textDirection: .ltr,
+                          ),
+                          label: AppLocalizations.of(context).files,
+                        ),
+                        NavigationDestination(
+                          icon: const Icon(PhosphorIconsLight.gear),
+                          selectedIcon: const Icon(PhosphorIconsFill.gear),
+                          label: AppLocalizations.of(context).settings,
+                        ),
+                      ],
+                      onDestinationSelected: (index) {
+                        setState(() {
+                          _tab = _MobileTab.values[index];
+                        });
+                      },
+                      selectedIndex: _tab.index,
+                    )
+                  : null,
+              body: isMobile
+                  ? Row(
+                      children: [
+                        if (isMobileLandscape) ...[
+                          NavigationRail(
+                            destinations: [
+                              NavigationRailDestination(
+                                icon: const Icon(PhosphorIconsLight.house),
+                                selectedIcon: const Icon(
+                                  PhosphorIconsFill.house,
+                                ),
+                                label: Text(AppLocalizations.of(context).home),
+                              ),
+                              NavigationRailDestination(
+                                icon: const Icon(
+                                  PhosphorIconsLight.folder,
+                                  textDirection: .ltr,
+                                ),
+                                selectedIcon: const Icon(
+                                  PhosphorIconsFill.folder,
+                                  textDirection: .ltr,
+                                ),
+                                label: Text(AppLocalizations.of(context).files),
+                              ),
+                              NavigationRailDestination(
+                                icon: const Icon(PhosphorIconsLight.gear),
+                                selectedIcon: const Icon(
+                                  PhosphorIconsFill.gear,
+                                ),
+                                label: Text(
+                                  AppLocalizations.of(context).settings,
+                                ),
+                              ),
+                            ],
+                            onDestinationSelected: (index) {
+                              setState(() {
+                                _tab = _MobileTab.values[index];
+                              });
+                            },
+                            selectedIndex: _tab.index,
+                            labelType: NavigationRailLabelType.selected,
+                          ),
+                          const VerticalDivider(width: 1),
+                        ],
+                        Expanded(
+                          child: DefaultTabController(
+                            length: 1,
+                            child: switch (_tab) {
+                              _MobileTab.home => Scaffold(
+                                appBar: appBar,
+                                body: ListView(
+                                  children: [
+                                    _QuickstartHomeView(
+                                      remote: _remote,
+                                      isMobile: true,
+                                      onReload: () => setState(
+                                        () => _filesViewKey.currentState
+                                            ?.reloadFileSystem(),
+                                      ),
+                                    ),
+                                    RecentFilesView(
+                                      replace: false,
+                                      asGrid: true,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              _MobileTab.files => FilesView(
+                                activeAsset: widget.selectedAsset,
+                                remote: _remote,
+                                isMobile: true,
+                                isPage: true,
+                                key: _filesViewKey,
+                                onRemoteChanged: (value) => updateRemote(value),
+                              ),
+                              _MobileTab.settings => SettingsPage(),
+                            },
+                          ),
+                        ),
+                      ],
+                    )
+                  : SingleChildScrollView(
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Container(
+                          margin: const EdgeInsets.symmetric(horizontal: 16),
+                          constraints: const BoxConstraints(maxWidth: 1400),
+                          child: Column(
+                            crossAxisAlignment: .stretch,
+                            children: [
+                              _HeaderHomeView(
+                                hasNewerVersion: hasNewerVersion,
+                                isDesktop: isDesktop,
+                                showBanner: showBanner,
+                              ),
+                              const SizedBox(height: 16),
+                              if (isDesktop)
+                                Row(
+                                  crossAxisAlignment: .start,
+                                  children: [
+                                    Expanded(
+                                      child: FilesView(
+                                        activeAsset: widget.selectedAsset,
+                                        remote: _remote,
+                                        isMobile: false,
+                                        key: _filesViewKey,
+                                        onRemoteChanged: (value) =>
+                                            updateRemote(value),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 16),
+                                    SizedBox(
+                                      width: 350,
+                                      child: _QuickstartHomeView(
+                                        remote: _remote,
+                                        isMobile: false,
+                                        onReload: () => setState(
+                                          () => _filesViewKey.currentState
+                                              ?.reloadFileSystem(),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                )
+                              else
+                                Column(
+                                  children: [
+                                    _QuickstartHomeView(
+                                      remote: _remote,
+                                      isMobile: true,
+                                      onReload: () => setState(
+                                        () => _filesViewKey.currentState
+                                            ?.reloadFileSystem(),
+                                      ),
+                                    ),
+                                    const SizedBox(height: 32),
+                                    FilesView(
+                                      activeAsset: widget.selectedAsset,
+                                      remote: _remote,
+                                      isMobile: true,
+                                      key: _filesViewKey,
+                                      onRemoteChanged: (value) =>
+                                          updateRemote(value),
+                                    ),
+                                  ],
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+            );
+          },
+        );
+      },
+    );
+  }
+}

@@ -1,0 +1,18 @@
+[1/4] Android SDK
+  ├─ [1/6] android-arm-profile/linux-x64                           245ms
+  ├─ [2/6] android-arm-release/linux-x64                           158ms
+  ├─ [3/6] android-arm64-profile/linux-x64                         213ms
+  ├─ [4/6] android-arm64-release/linux-x64                         125ms
+  ├─ [5/6] android-x64-profile/linux-x64                           131ms
+  └─ [6/6] android-x64-release/linux-x64                           143ms
+[2/4] Android Internal Build Artifacts
+  ├─ [1/10] android-x86                                          2,457ms
+  ├─ [2/10] android-x64                                          2,303ms
+  ├─ [3/10] android-arm                                          2,763ms
+  ├─ [4/10] android-arm-profile                                  1,242ms
+  ├─ [5/10] android-arm-release                                  1,011ms
+  ├─ [6/10] android-arm64                                           3.4s
+  ├─ [7/10] android-arm64-profile                                1,161ms
+  ├─ [8/10] android-arm64-release                                1,055ms
+  ├─ [9/10] android-x64-profile                                    951ms
+  └─ [10/10] android-x64-release                                   945ms

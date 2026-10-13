@@ -1,0 +1,1 @@
+bash tools/nowia/quality-gate.sh --evidence /evidence/quality 

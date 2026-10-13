@@ -1,0 +1,15 @@
+{
+  "stage": "lockfiles-after",
+  "command": [
+    "sha256sum",
+    "app/pubspec.lock",
+    "api/pubspec.lock"
+  ],
+  "cwd": "/workspace/Nowia",
+  "started_utc": "2026-10-13T07:37:07.331229+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "lockfiles-after.log",
+  "ended_utc": "2026-10-13T07:37:07.334872+00:00"
+}

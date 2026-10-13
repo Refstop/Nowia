@@ -1,0 +1,12 @@
+# Editor related
+.idea
+.vscode
+*.iml
+\#*\#
+.\#*f
+.zed
+
+# Temporary files
+docs_old/
+./snap/
+

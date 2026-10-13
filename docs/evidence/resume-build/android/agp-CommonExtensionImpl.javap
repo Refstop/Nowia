@@ -1,0 +1,591 @@
+Compiled from "CommonExtensionImpl.kt"
+public abstract class com.android.build.gradle.internal.dsl.CommonExtensionImpl<BuildTypeT extends com.android.build.api.dsl.BuildType, DefaultConfigT extends com.android.build.api.dsl.DefaultConfig, ProductFlavorT extends com.android.build.api.dsl.ProductFlavor> implements com.android.build.gradle.internal.dsl.InternalCommonExtension {
+  private final com.android.build.gradle.internal.services.DslServices dslServices;
+
+  private final com.android.build.gradle.internal.dependency.SourceSetManager sourceSetManager;
+
+  private com.android.repository.Revision buildToolsRevision;
+
+  private final kotlin.Lazy sdkComponents$delegate;
+
+  private final org.gradle.api.NamedDomainObjectContainer<? extends BuildTypeT> buildTypes;
+
+  private final DefaultConfigT defaultConfig;
+
+  private final org.gradle.api.NamedDomainObjectContainer<? extends ProductFlavorT> productFlavors;
+
+  private final org.gradle.api.NamedDomainObjectContainer<com.android.build.gradle.internal.dsl.SigningConfig> signingConfigs;
+
+  private final com.android.build.gradle.internal.dsl.CompileSdkDelegate compileSdkDelegate;
+
+  private java.lang.String ndkVersion;
+
+  private boolean enableKotlin;
+
+  private final java.util.Map<java.lang.String, java.lang.Object> experimentalProperties;
+
+  public com.android.build.gradle.internal.dsl.CommonExtensionImpl(com.android.build.gradle.internal.services.DslServices, com.android.build.gradle.internal.plugins.DslContainerProvider<DefaultConfigT, BuildTypeT, ProductFlavorT, com.android.build.gradle.internal.dsl.SigningConfig>);
+    Code:
+       0: aload_1
+       1: ldc           #13                 // String dslServices
+       3: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       6: aload_2
+       7: ldc           #21                 // String dslContainers
+       9: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+      12: aload_0
+      13: invokespecial #24                 // Method java/lang/Object."<init>":()V
+      16: aload_0
+      17: aload_1
+      18: putfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      21: aload_0
+      22: aload_2
+      23: invokeinterface #33,  1           // InterfaceMethod com/android/build/gradle/internal/plugins/DslContainerProvider.getSourceSetManager:()Lcom/android/build/gradle/internal/dependency/SourceSetManager;
+      28: putfield      #37                 // Field sourceSetManager:Lcom/android/build/gradle/internal/dependency/SourceSetManager;
+      31: aload_0
+      32: getstatic     #43                 // Field com/android/builder/core/ToolsRevisionUtils.DEFAULT_BUILD_TOOLS_REVISION:Lcom/android/repository/Revision;
+      35: dup
+      36: ldc           #44                 // String DEFAULT_BUILD_TOOLS_REVISION
+      38: invokestatic  #47                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      41: putfield      #50                 // Field buildToolsRevision:Lcom/android/repository/Revision;
+      44: aload_0
+      45: aload_0
+      46: invokedynamic #70,  0             // InvokeDynamic #0:invoke:(Lcom/android/build/gradle/internal/dsl/CommonExtensionImpl;)Lkotlin/jvm/functions/Function0;
+      51: invokestatic  #76                 // Method kotlin/LazyKt.lazy:(Lkotlin/jvm/functions/Function0;)Lkotlin/Lazy;
+      54: putfield      #80                 // Field sdkComponents$delegate:Lkotlin/Lazy;
+      57: aload_0
+      58: aload_2
+      59: invokeinterface #84,  1           // InterfaceMethod com/android/build/gradle/internal/plugins/DslContainerProvider.getBuildTypeContainer:()Lorg/gradle/api/NamedDomainObjectContainer;
+      64: putfield      #88                 // Field buildTypes:Lorg/gradle/api/NamedDomainObjectContainer;
+      67: aload_0
+      68: aload_2
+      69: invokeinterface #92,  1           // InterfaceMethod com/android/build/gradle/internal/plugins/DslContainerProvider.getDefaultConfig:()Lcom/android/build/api/dsl/DefaultConfig;
+      74: putfield      #96                 // Field defaultConfig:Lcom/android/build/api/dsl/DefaultConfig;
+      77: aload_0
+      78: aload_2
+      79: invokeinterface #99,  1           // InterfaceMethod com/android/build/gradle/internal/plugins/DslContainerProvider.getProductFlavorContainer:()Lorg/gradle/api/NamedDomainObjectContainer;
+      84: putfield      #102                // Field productFlavors:Lorg/gradle/api/NamedDomainObjectContainer;
+      87: aload_0
+      88: aload_2
+      89: invokeinterface #105,  1          // InterfaceMethod com/android/build/gradle/internal/plugins/DslContainerProvider.getSigningConfigContainer:()Lorg/gradle/api/NamedDomainObjectContainer;
+      94: putfield      #108                // Field signingConfigs:Lorg/gradle/api/NamedDomainObjectContainer;
+      97: aload_0
+      98: new           #110                // class com/android/build/gradle/internal/dsl/CompileSdkDelegate
+     101: dup
+     102: aload_0
+     103: invokedynamic #118,  0            // InvokeDynamic #1:invoke:(Lcom/android/build/gradle/internal/dsl/CommonExtensionImpl;)Lkotlin/jvm/functions/Function0;
+     108: aload_0
+     109: invokedynamic #130,  0            // InvokeDynamic #2:invoke:(Lcom/android/build/gradle/internal/dsl/CommonExtensionImpl;)Lkotlin/jvm/functions/Function1;
+     114: aload_0
+     115: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+     118: invokeinterface #136,  1          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.getIssueReporter:()Lcom/android/builder/errors/IssueReporter;
+     123: aload_0
+     124: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+     127: invokespecial #139                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate."<init>":(Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function1;Lcom/android/builder/errors/IssueReporter;Lcom/android/build/gradle/internal/services/DslServices;)V
+     130: putfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+     133: aload_0
+     134: ldc           #145                // String 28.2.13676358
+     136: putfield      #149                // Field ndkVersion:Ljava/lang/String;
+     139: aload_0
+     140: iconst_1
+     141: putfield      #153                // Field enableKotlin:Z
+     144: aload_0
+     145: new           #155                // class java/util/LinkedHashMap
+     148: dup
+     149: invokespecial #156                // Method java/util/LinkedHashMap."<init>":()V
+     152: checkcast     #158                // class java/util/Map
+     155: putfield      #162                // Field experimentalProperties:Ljava/util/Map;
+     158: return
+
+  protected final com.android.build.gradle.internal.services.DslServices getDslServices();
+    Code:
+       0: aload_0
+       1: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+       4: areturn
+
+  protected final com.android.build.gradle.internal.dependency.SourceSetManager getSourceSetManager();
+    Code:
+       0: aload_0
+       1: getfield      #37                 // Field sourceSetManager:Lcom/android/build/gradle/internal/dependency/SourceSetManager;
+       4: areturn
+
+  public abstract java.util.List<com.android.builder.core.LibraryRequest> getLibraryRequests();
+
+  public com.android.build.api.dsl.SdkComponents getSdkComponents();
+    Code:
+       0: aload_0
+       1: getfield      #80                 // Field sdkComponents$delegate:Lkotlin/Lazy;
+       4: astore_1
+       5: aload_1
+       6: invokeinterface #177,  1          // InterfaceMethod kotlin/Lazy.getValue:()Ljava/lang/Object;
+      11: checkcast     #179                // class com/android/build/api/dsl/SdkComponents
+      14: areturn
+
+  public org.gradle.api.NamedDomainObjectContainer<? extends BuildTypeT> getBuildTypes();
+    Code:
+       0: aload_0
+       1: getfield      #88                 // Field buildTypes:Lorg/gradle/api/NamedDomainObjectContainer;
+       4: areturn
+
+  public DefaultConfigT getDefaultConfig();
+    Code:
+       0: aload_0
+       1: getfield      #96                 // Field defaultConfig:Lcom/android/build/api/dsl/DefaultConfig;
+       4: areturn
+
+  public org.gradle.api.NamedDomainObjectContainer<? extends ProductFlavorT> getProductFlavors();
+    Code:
+       0: aload_0
+       1: getfield      #102                // Field productFlavors:Lorg/gradle/api/NamedDomainObjectContainer;
+       4: areturn
+
+  public org.gradle.api.NamedDomainObjectContainer<com.android.build.gradle.internal.dsl.SigningConfig> getSigningConfigs();
+    Code:
+       0: aload_0
+       1: getfield      #108                // Field signingConfigs:Lorg/gradle/api/NamedDomainObjectContainer;
+       4: areturn
+
+  protected abstract java.lang.String get_namespace();
+
+  protected abstract void set_namespace(java.lang.String);
+
+  public java.lang.String getNamespace();
+    Code:
+       0: aload_0
+       1: invokevirtual #194                // Method get_namespace:()Ljava/lang/String;
+       4: areturn
+
+  public void setNamespace(java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #197                // Method set_namespace:(Ljava/lang/String;)V
+       5: aload_1
+       6: invokestatic  #203                // Method com/android/build/gradle/internal/utils/SdkUtilsKt.validateNamespaceValue:(Ljava/lang/String;)Ljava/lang/String;
+       9: astore_2
+      10: aload_2
+      11: dup
+      12: ifnull        43
+      15: astore_3
+      16: iconst_0
+      17: istore        4
+      19: aload_0
+      20: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      23: invokeinterface #136,  1          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.getIssueReporter:()Lcom/android/builder/errors/IssueReporter;
+      28: getstatic     #209                // Field com/android/builder/errors/IssueReporter$Type.NAMESPACE_INVALID:Lcom/android/builder/errors/IssueReporter$Type;
+      31: aload_3
+      32: aconst_null
+      33: aconst_null
+      34: bipush        12
+      36: aconst_null
+      37: invokestatic  #215                // Method com/android/builder/errors/IssueReporter.reportError$default:(Lcom/android/builder/errors/IssueReporter;Lcom/android/builder/errors/IssueReporter$Type;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)V
+      40: goto          45
+      43: pop
+      44: nop
+      45: return
+
+  protected abstract com.android.build.api.dsl.CompileSdkVersion get_compileSdk();
+
+  protected abstract void set_compileSdk(com.android.build.api.dsl.CompileSdkVersion);
+
+  public java.lang.String getCompileSdkVersion();
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: invokevirtual #228                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.getCompileSdkVersion:()Ljava/lang/String;
+       7: areturn
+
+  public void setCompileSdkVersion(java.lang.String);
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: aload_1
+       5: invokevirtual #231                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.setCompileSdkVersion:(Ljava/lang/String;)V
+       8: return
+
+  public java.lang.Integer getCompileSdk();
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: invokevirtual #235                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.getCompileSdk:()Ljava/lang/Integer;
+       7: areturn
+
+  public void setCompileSdk(java.lang.Integer);
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: aload_1
+       5: invokevirtual #239                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.setCompileSdk:(Ljava/lang/Integer;)V
+       8: return
+
+  public java.lang.Integer getCompileSdkExtension();
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: invokevirtual #243                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.getCompileSdkExtension:()Ljava/lang/Integer;
+       7: areturn
+
+  public void setCompileSdkExtension(java.lang.Integer);
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: aload_1
+       5: invokevirtual #246                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.setCompileSdkExtension:(Ljava/lang/Integer;)V
+       8: return
+
+  public java.lang.String getCompileSdkPreview();
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: invokevirtual #249                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.getCompileSdkPreview:()Ljava/lang/String;
+       7: areturn
+
+  public void setCompileSdkPreview(java.lang.String);
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: aload_1
+       5: invokevirtual #252                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.setCompileSdkPreview:(Ljava/lang/String;)V
+       8: return
+
+  public java.lang.Integer getCompileSdkMinor();
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: invokevirtual #255                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.getCompileSdkMinor:()Ljava/lang/Integer;
+       7: areturn
+
+  public void setCompileSdkMinor(java.lang.Integer);
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: aload_1
+       5: invokevirtual #258                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.setCompileSdkMinor:(Ljava/lang/Integer;)V
+       8: return
+
+  public void compileSdkAddon(java.lang.String, java.lang.String, int);
+    Code:
+       0: aload_1
+       1: ldc_w         #262                // String vendor
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_2
+       8: ldc_w         #264                // String name
+      11: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+      14: aload_0
+      15: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+      18: aload_1
+      19: aload_2
+      20: iload_3
+      21: invokevirtual #266                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.compileSdkAddon:(Ljava/lang/String;Ljava/lang/String;I)V
+      24: return
+
+  public void compileSdk(kotlin.jvm.functions.Function1<? super com.android.build.api.dsl.CompileSdkSpec, kotlin.Unit>);
+    Code:
+       0: aload_1
+       1: ldc_w         #272                // String action
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+      11: aload_1
+      12: invokevirtual #274                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.compileSdk:(Lkotlin/jvm/functions/Function1;)V
+      15: return
+
+  public void compileSdk(org.gradle.api.Action<com.android.build.api.dsl.CompileSdkSpec>);
+    Code:
+       0: aload_1
+       1: ldc_w         #272                // String action
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+      11: aload_1
+      12: invokevirtual #279                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.compileSdk:(Lorg/gradle/api/Action;)V
+      15: return
+
+  public void compileSdkVersion(int);
+    Code:
+       0: aload_0
+       1: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+       4: iload_1
+       5: invokevirtual #284                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.compileSdkVersion:(I)V
+       8: return
+
+  public void compileSdkVersion(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc_w         #286                // String version
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: getfield      #143                // Field compileSdkDelegate:Lcom/android/build/gradle/internal/dsl/CompileSdkDelegate;
+      11: aload_1
+      12: invokevirtual #288                // Method com/android/build/gradle/internal/dsl/CompileSdkDelegate.compileSdkVersion:(Ljava/lang/String;)V
+      15: return
+
+  public com.android.build.gradle.internal.dsl.PackagingOptions getPackagingOptions();
+    Code:
+       0: aload_0
+       1: invokevirtual #294                // Method getPackaging:()Lcom/android/build/api/dsl/Packaging;
+       4: dup
+       5: ldc_w         #296                // String null cannot be cast to non-null type com.android.build.gradle.internal.dsl.PackagingOptions
+       8: invokestatic  #299                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+      11: checkcast     #301                // class com/android/build/gradle/internal/dsl/PackagingOptions
+      14: areturn
+
+  public java.lang.String getBuildToolsVersion();
+    Code:
+       0: aload_0
+       1: getfield      #50                 // Field buildToolsRevision:Lcom/android/repository/Revision;
+       4: invokevirtual #307                // Method com/android/repository/Revision.toString:()Ljava/lang/String;
+       7: dup
+       8: ldc_w         #309                // String toString(...)
+      11: invokestatic  #47                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      14: areturn
+
+  public void setBuildToolsVersion(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc_w         #286                // String version
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: aload_1
+       9: getstatic     #316                // Field com/android/repository/Revision$Precision.MICRO:Lcom/android/repository/Revision$Precision;
+      12: invokestatic  #320                // Method com/android/repository/Revision.parseRevision:(Ljava/lang/String;Lcom/android/repository/Revision$Precision;)Lcom/android/repository/Revision;
+      15: dup
+      16: ldc_w         #322                // String parseRevision(...)
+      19: invokestatic  #47                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      22: putfield      #50                 // Field buildToolsRevision:Lcom/android/repository/Revision;
+      25: return
+
+  public java.lang.String getNdkVersion();
+    Code:
+       0: aload_0
+       1: getfield      #149                // Field ndkVersion:Ljava/lang/String;
+       4: areturn
+
+  public void setNdkVersion(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc_w         #326                // String <set-?>
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: aload_1
+       9: putfield      #149                // Field ndkVersion:Ljava/lang/String;
+      12: return
+
+  public void buildToolsVersion(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc_w         #328                // String buildToolsVersion
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: aload_1
+       9: invokevirtual #330                // Method setBuildToolsVersion:(Ljava/lang/String;)V
+      12: return
+
+  public void useLibrary(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc_w         #264                // String name
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: aload_1
+       9: iconst_1
+      10: invokevirtual #334                // Method useLibrary:(Ljava/lang/String;Z)V
+      13: return
+
+  public void useLibrary(java.lang.String, boolean);
+    Code:
+       0: aload_1
+       1: ldc_w         #264                // String name
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: invokevirtual #336                // Method getLibraryRequests:()Ljava/util/List;
+      11: new           #338                // class com/android/builder/core/LibraryRequest
+      14: dup
+      15: aload_1
+      16: iload_2
+      17: invokespecial #340                // Method com/android/builder/core/LibraryRequest."<init>":(Ljava/lang/String;Z)V
+      20: invokeinterface #346,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      25: pop
+      26: return
+
+  public java.io.File getDefaultProguardFile(java.lang.String);
+    Code:
+       0: aload_1
+       1: ldc_w         #264                // String name
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      11: invokeinterface #353,  1          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.getProjectOptions:()Lcom/android/build/gradle/options/ProjectOptions;
+      16: getstatic     #359                // Field com/android/build/gradle/options/BooleanOption.R8_PROGUARD_ANDROID_TXT_DISALLOWED:Lcom/android/build/gradle/options/BooleanOption;
+      19: invokevirtual #365                // Method com/android/build/gradle/options/ProjectOptions.get:(Lcom/android/build/gradle/options/BooleanOption;)Z
+      22: ifeq          61
+      25: aload_1
+      26: getstatic     #371                // Field com/android/build/gradle/ProguardFiles$ProguardFile.DONT_OPTIMIZE:Lcom/android/build/gradle/ProguardFiles$ProguardFile;
+      29: getfield      #374                // Field com/android/build/gradle/ProguardFiles$ProguardFile.fileName:Ljava/lang/String;
+      32: invokestatic  #378                // Method kotlin/jvm/internal/Intrinsics.areEqual:(Ljava/lang/Object;Ljava/lang/Object;)Z
+      35: ifeq          61
+      38: aload_0
+      39: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      42: invokeinterface #136,  1          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.getIssueReporter:()Lcom/android/builder/errors/IssueReporter;
+      47: getstatic     #381                // Field com/android/builder/errors/IssueReporter$Type.PROGUARD_FILE_INVALID:Lcom/android/builder/errors/IssueReporter$Type;
+      50: ldc_w         #383                // String `getDefaultProguardFile(\'proguard-android.txt\')` is no longer supported since it includes `-dontoptimize`, which prevents R8 from performing many optimizations. Instead use `getDefaultProguardFile(\'proguard-android-optimize.txt)`, and if needed, temporarily use `-dontoptimize` in a custom keep rule file while fixing breakages.
+      53: aconst_null
+      54: aconst_null
+      55: bipush        12
+      57: aconst_null
+      58: invokestatic  #215                // Method com/android/builder/errors/IssueReporter.reportError$default:(Lcom/android/builder/errors/IssueReporter;Lcom/android/builder/errors/IssueReporter$Type;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)V
+      61: getstatic     #389                // Field com/android/build/gradle/ProguardFiles.KNOWN_FILE_NAMES:Ljava/util/Set;
+      64: aload_1
+      65: invokeinterface #394,  2          // InterfaceMethod java/util/Set.contains:(Ljava/lang/Object;)Z
+      70: ifne          103
+      73: aload_0
+      74: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      77: invokeinterface #136,  1          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.getIssueReporter:()Lcom/android/builder/errors/IssueReporter;
+      82: getstatic     #381                // Field com/android/builder/errors/IssueReporter$Type.PROGUARD_FILE_INVALID:Lcom/android/builder/errors/IssueReporter$Type;
+      85: getstatic     #397                // Field com/android/build/gradle/ProguardFiles.UNKNOWN_FILENAME_MESSAGE:Ljava/lang/String;
+      88: dup
+      89: ldc_w         #398                // String UNKNOWN_FILENAME_MESSAGE
+      92: invokestatic  #47                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+      95: aconst_null
+      96: aconst_null
+      97: bipush        12
+      99: aconst_null
+     100: invokestatic  #215                // Method com/android/builder/errors/IssueReporter.reportError$default:(Lcom/android/builder/errors/IssueReporter;Lcom/android/builder/errors/IssueReporter$Type;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;ILjava/lang/Object;)V
+     103: aload_1
+     104: aload_0
+     105: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+     108: dup
+     109: ldc_w         #400                // String null cannot be cast to non-null type com.android.build.gradle.internal.services.DslServicesImpl
+     112: invokestatic  #299                // Method kotlin/jvm/internal/Intrinsics.checkNotNull:(Ljava/lang/Object;Ljava/lang/String;)V
+     115: checkcast     #402                // class com/android/build/gradle/internal/services/DslServicesImpl
+     118: invokevirtual #406                // Method com/android/build/gradle/internal/services/DslServicesImpl.getBuildDirectory:()Lorg/gradle/api/file/DirectoryProperty;
+     121: invokestatic  #409                // Method com/android/build/gradle/ProguardFiles.getDefaultProguardFile:(Ljava/lang/String;Lorg/gradle/api/file/DirectoryProperty;)Ljava/io/File;
+     124: dup
+     125: ldc_w         #411                // String getDefaultProguardFile(...)
+     128: invokestatic  #47                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullExpressionValue:(Ljava/lang/Object;Ljava/lang/String;)V
+     131: areturn
+
+  public boolean getEnableKotlin();
+    Code:
+       0: aload_0
+       1: getfield      #153                // Field enableKotlin:Z
+       4: ireturn
+
+  public void setEnableKotlin(boolean);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: putfield      #153                // Field enableKotlin:Z
+       5: return
+
+  public java.util.Map<java.lang.String, java.lang.Object> getExperimentalProperties();
+    Code:
+       0: aload_0
+       1: getfield      #162                // Field experimentalProperties:Ljava/util/Map;
+       4: areturn
+
+  public final void flavorDimensions(java.lang.String...);
+    Code:
+       0: aload_1
+       1: ldc_w         #422                // String dimensions
+       4: invokestatic  #19                 // Method kotlin/jvm/internal/Intrinsics.checkNotNullParameter:(Ljava/lang/Object;Ljava/lang/String;)V
+       7: aload_0
+       8: invokevirtual #425                // Method getFlavorDimensions:()Ljava/util/List;
+      11: invokeinterface #428,  1          // InterfaceMethod java/util/List.clear:()V
+      16: aload_0
+      17: invokevirtual #425                // Method getFlavorDimensions:()Ljava/util/List;
+      20: checkcast     #430                // class java/util/Collection
+      23: aload_1
+      24: invokestatic  #436                // Method kotlin/collections/CollectionsKt.addAll:(Ljava/util/Collection;[Ljava/lang/Object;)Z
+      27: pop
+      28: return
+
+  public void compileSdk(int);
+    Code:
+       0: aload_0
+       1: iload_1
+       2: invokestatic  #446                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+       5: invokevirtual #447                // Method setCompileSdk:(Ljava/lang/Integer;)V
+       8: return
+
+  public void setCompileSdkVersion(java.lang.Integer);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #447                // Method setCompileSdk:(Ljava/lang/Integer;)V
+       5: return
+
+  private static final com.android.build.gradle.internal.dsl.SdkComponentsImpl sdkComponents_delegate$lambda$0(com.android.build.gradle.internal.dsl.CommonExtensionImpl);
+    Code:
+       0: aload_0
+       1: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+       4: ldc_w         #450                // class com/android/build/gradle/internal/dsl/SdkComponentsImpl
+       7: iconst_5
+       8: anewarray     #5                  // class java/lang/Object
+      11: astore_1
+      12: aload_1
+      13: iconst_0
+      14: aload_0
+      15: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      18: aastore
+      19: aload_1
+      20: iconst_1
+      21: aload_0
+      22: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      25: ldc           #222                // class java/lang/String
+      27: aload_0
+      28: invokevirtual #451                // Method getCompileSdkVersion:()Ljava/lang/String;
+      31: invokeinterface #455,  3          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.provider:(Ljava/lang/Class;Ljava/lang/Object;)Lorg/gradle/api/provider/Provider;
+      36: aastore
+      37: aload_1
+      38: iconst_2
+      39: aload_0
+      40: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      43: ldc_w         #304                // class com/android/repository/Revision
+      46: aload_0
+      47: getfield      #50                 // Field buildToolsRevision:Lcom/android/repository/Revision;
+      50: invokeinterface #455,  3          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.provider:(Ljava/lang/Class;Ljava/lang/Object;)Lorg/gradle/api/provider/Provider;
+      55: aastore
+      56: aload_1
+      57: iconst_3
+      58: aload_0
+      59: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      62: ldc           #222                // class java/lang/String
+      64: aload_0
+      65: invokevirtual #457                // Method getNdkVersion:()Ljava/lang/String;
+      68: invokeinterface #455,  3          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.provider:(Ljava/lang/Class;Ljava/lang/Object;)Lorg/gradle/api/provider/Provider;
+      73: aastore
+      74: aload_1
+      75: iconst_4
+      76: aload_0
+      77: getfield      #27                 // Field dslServices:Lcom/android/build/gradle/internal/services/DslServices;
+      80: ldc           #222                // class java/lang/String
+      82: aload_0
+      83: invokevirtual #460                // Method getNdkPath:()Ljava/lang/String;
+      86: invokeinterface #455,  3          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.provider:(Ljava/lang/Class;Ljava/lang/Object;)Lorg/gradle/api/provider/Provider;
+      91: aastore
+      92: aload_1
+      93: invokeinterface #464,  3          // InterfaceMethod com/android/build/gradle/internal/services/DslServices.newInstance:(Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+      98: checkcast     #450                // class com/android/build/gradle/internal/dsl/SdkComponentsImpl
+     101: areturn
+
+  private static final com.android.build.api.dsl.CompileSdkVersion compileSdkDelegate$lambda$2(com.android.build.gradle.internal.dsl.CommonExtensionImpl);
+    Code:
+       0: aload_0
+       1: invokevirtual #467                // Method get_compileSdk:()Lcom/android/build/api/dsl/CompileSdkVersion;
+       4: areturn
+
+  private static final kotlin.Unit compileSdkDelegate$lambda$3(com.android.build.gradle.internal.dsl.CommonExtensionImpl, com.android.build.api.dsl.CompileSdkVersion);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #469                // Method set_compileSdk:(Lcom/android/build/api/dsl/CompileSdkVersion;)V
+       5: getstatic     #475                // Field kotlin/Unit.INSTANCE:Lkotlin/Unit;
+       8: areturn
+
+  public com.android.build.api.dsl.Packaging getPackagingOptions();
+    Code:
+       0: aload_0
+       1: invokevirtual #478                // Method getPackagingOptions:()Lcom/android/build/gradle/internal/dsl/PackagingOptions;
+       4: checkcast     #480                // class com/android/build/api/dsl/Packaging
+       7: areturn
+}

@@ -1,0 +1,5 @@
+824d4b9f09ab453b4c8513a75029ba9824b09d79b716a6c56a1f15d8dc0b9aa9  tools/nowia/build-baseline.sh
+50045e8cebf704d49318b08acad9026bed200a5a8d27c958a801975d5ddde7a3  tools/nowia/build-cloud.sh
+bddf9c3589b8334c98d0e67a565bc00b7865fc707df9afe7213d9e86e3ad4571  tools/nowia/setup-android-toolchain.sh
+1a75b2ab374fd2ea9bea6cadc6e613a15282a05bf1e633c3f98b0772e86343ff  tools/nowia/baseline.json
+8e0236be94c46c6b1c526f3dc81897b0f076b641e95433b1fd452d553a331fbc  tools/nowia/verify_baseline.py

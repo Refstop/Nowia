@@ -1,0 +1,14 @@
+{
+  "stage": "rust-before",
+  "command": [
+    "rustc",
+    "--version"
+  ],
+  "cwd": "/work/Nowia/app",
+  "started_utc": "2026-10-13T08:03:13.156216+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "rust-before.log",
+  "ended_utc": "2026-10-13T08:03:13.172307+00:00"
+}

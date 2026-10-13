@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Machen Sie Notizen, zeichnen Sie frei und organisieren Sie Ihre Ideen auf einer unendlichen Arbeitsfläche
+template: splash
+hero:
+  tagline: Ihre Ideen müssen nicht auf eine Seite passen. Schreiben, skizzieren, kommentieren und organisieren Sie auf einer unendlichen Arbeitsfläche, die Ihnen gehört.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Butterfly herunterladen
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Web-App ausprobieren
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Dokumentation lesen
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Eine Butterfly-Arbeitsfläche mit handschriftlichen Notizen, Diagrammen und einem Lineal">
+
+
+
+
+  ## Eine Arbeitsfläche für visuelle Denker
+
+  Erfassen Sie Vorlesungsnotizen mit einem Stift, kommentieren Sie ein PDF, skizzieren Sie eine Benutzeroberfläche, erstellen Sie ein Diagramm, planen Sie ein Projekt oder verbinden Sie all das in einem Dokument.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Stifteinstellungen für ein Butterfly-Zeichenwerkzeug" reverse>
+
+
+
+
+
+  ## Tune every stroke
+
+  Zeichnen Sie mit Stift, Finger oder Maus. Passen Sie Breite, Farbe, Glättung und Textur der Striche an. Wenn eine Linie noch nicht passt, bearbeiten Sie sie einfach, statt neu anzufangen.
+</LandingFeature>
+
+## Leistungsstark, wenn Ihre Projekte wachsen
+
+<CardGrid stagger>
+  <Card title="Jedes Element bleibt bearbeitbar" icon="pencil">
+    Verschieben, skalieren, färben und ordnen Sie Inhalte auch nach dem Platzieren neu. Ihr erster Entwurf muss nie der letzte sein.
+  </Card>
+  <Card title="Gängige Medien in einem Dokument" icon="document">
+    Importieren Sie Kamerafotos, Galeriebilder, PDFs und SVGs. Kombinieren Sie sie mit Ihren Notizen und exportieren Sie saubere Ergebnisse in gängigen Formaten.
+  </Card>
+  <Card title="Wiederverwendbare Bausteine" icon="puzzle">
+    Machen Sie aus bevorzugten Layouts Vorlagen und speichern Sie häufig verwendete Inhalte als Pakete, Stempel, Paletten und Stile für mehrere Dokumente.
+  </Card>
+  <Card title="Werkzeuge für jede Idee" icon="open-book">
+    Nutzen Sie neben Stift und Radierer auch Beschriftungen, Formen, Polygone, Lineale, Raster, Texturen, Stempel, einen Laserpointer, Präsentationswerkzeuge und vieles mehr.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Butterfly-Vorlagen und Pakete mit wiederverwendbaren Arbeitsflächen-Stilen">
+
+
+
+
+  ## Passen Sie Butterfly an Ihren Arbeitsablauf an
+
+  Beginnen Sie mit einer Vorlage, die Ihre bevorzugten Hintergründe, Werkzeuge, Ebenen, Bereiche und Seiten zusammenbringt. Speichern Sie wiederverwendbare Inhalte in Paketen, damit Ihr nächstes Projekt sofort alles Nötige enthält.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Ein handschriftliches Butterfly-Dokument auf einem Smartphone und einem Desktop-Computer" reverse>
+
+
+
+
+
+  ## Works everywhere
+
+  Nehmen Sie Ihre Arbeitsfläche vom Schreibtisch mit in den Unterricht oder in die nächste Besprechung. Butterfly läuft auf Android, Windows, macOS, Linux und im Browser; eine iOS-Vorschau ist ebenfalls verfügbar.
+
+</LandingFeature>
+
+## Ihre Arbeit bleibt Ihre
+
+<CardGrid>
+  <Card title="Standardmäßig lokal" icon="laptop">
+    Arbeiten Sie ohne Internetverbindung weiter. Ihre Dokumente bleiben auf Ihrem Gerät, solange Sie keinen anderen Speicherort wählen.
+  </Card>
+  <Card title="Ihre eigene Cloud" icon="rocket">
+    Verbinden Sie WebDAV-Dienste wie Nextcloud, um Ihre Notizen überall zu synchronisieren, zu sichern und zu bearbeiten.
+  </Card>
+  <Card title="Open-Source-Software" icon="code-branch">
+    Butterfly ist kostenlos und steht unter der GNU-AGPL-3.0-Lizenz als Open Source zur Verfügung. Speichern Sie Ihre Dokumente in den dokumentierten Formaten `.bfly` und `.tbfly`.
+  </Card>
+  <Card title="Gemeinsam gestalten" icon="comment">
+    Die experimentelle Zusammenarbeit unterstützt Ende-zu-Ende-verschlüsselte Sitzungen über Swamp oder einen WebSocket-Server, den Sie selbst hosten.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly – die grenzenlose Arbeitsfläche für visuelles Denken.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Butterfly herunterladen" description="Installieren Sie die App auf Ihrem Smartphone, Tablet oder Computer." href="/downloads/" />
+  <LinkCard title="Web-App ausprobieren" description="Starten Sie eine Arbeitsfläche im Browser, ohne etwas zu installieren. Chromium-basierte Browser werden empfohlen." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Butterfly-Blog lesen" description="Verfolgen Sie Veröffentlichungen, Projektnachrichten und Geschichten aus der Entwicklung." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Die Grundlagen kennenlernen" description="Erstellen Sie Ihr erstes Dokument und entdecken Sie den vollständigen Werkzeugkasten." href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly wird offen entwickelt und ist in vielen Sprachen verfügbar. [Werden Sie Teil der Community](/community/), geben Sie Feedback, helfen Sie bei Übersetzungen oder tragen Sie zum Projekt bei.

@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Tome notas, desenhe livremente e organize ideias num espaço de trabalho sem fim
+template: splash
+hero:
+  tagline: As suas ideias não têm de caber numa página. Escreva à mão, faça esboços, anote e organize tudo numa tela infinita que continua a ser sua.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Transferir o Butterfly
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Experimentar a aplicação web
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Documentação
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Uma tela Butterfly com notas manuscritas, diagramas e uma régua">
+
+
+
+
+  ## Um espaço de trabalho para quem pensa visualmente
+
+  Tome apontamentos com uma caneta digital, anote um PDF, esboce uma interface, crie um diagrama, planeie um projeto ou misture tudo no mesmo documento.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Definições da caneta numa ferramenta de desenho Butterfly" reverse>
+
+
+
+
+
+  ## Afine cada traço
+
+  Desenhe com caneta digital, toque ou rato. Ajuste a espessura, a cor, a suavização e a textura do traço. Se uma marca não ficar bem, edite-a em vez de recomeçar.
+</LandingFeature>
+
+## Potente à medida que os seus projetos crescem
+
+<CardGrid stagger>
+  <Card title="Cada elemento continua editável" icon="pencil">
+    Mova, redimensione, altere a cor e reorganize o conteúdo depois de o colocar. A primeira tentativa não tem de ser a definitiva.
+  </Card>
+  <Card title="Multimédia comum num só documento" icon="document">
+    Importe fotografias da câmara, imagens da galeria, PDF e SVG. Combine-os com as suas notas e exporte resultados limpos em formatos correntes.
+  </Card>
+  <Card title="Blocos reutilizáveis" icon="puzzle">
+    Transforme os esquemas favoritos em modelos e o conteúdo frequente em pacotes, carimbos, paletas e estilos disponíveis em todos os documentos.
+  </Card>
+  <Card title="Ferramentas para cada ideia" icon="open-book">
+    Vá além da caneta e da borracha com etiquetas, formas, polígonos, réguas, grelhas, texturas, carimbos, ponteiro laser, ferramentas de apresentação e muito mais.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Modelos e pacotes Butterfly com estilos de tela reutilizáveis">
+
+
+
+
+  ## Adapte o Butterfly ao seu fluxo de trabalho
+
+  Comece com um modelo que reúne os seus fundos, ferramentas, camadas, áreas e páginas favoritos. Guarde conteúdo reutilizável em pacotes para que o próximo projeto comece com tudo o que precisa.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Um documento Butterfly manuscrito num telemóvel e num computador de secretária" reverse>
+
+
+
+
+
+  ## Funciona em todo o lado
+
+  Leve a sua tela da secretária para a próxima aula ou reunião. O Butterfly funciona em Android, Windows, macOS, Linux e no navegador; também está disponível uma pré-visualização para iOS.
+
+</LandingFeature>
+
+## O seu trabalho pertence-lhe
+
+<CardGrid>
+  <Card title="Local por predefinição" icon="laptop">
+    Continue a trabalhar sem ligação à Internet. Os documentos ficam no seu dispositivo, salvo se optar por os guardar noutro local.
+  </Card>
+  <Card title="Use a sua própria nuvem" icon="rocket">
+    Ligue serviços WebDAV, como o Nextcloud, para sincronizar, criar cópias de segurança e editar as suas notas em qualquer lugar.
+  </Card>
+  <Card title="Software de código aberto" icon="code-branch">
+    O Butterfly é gratuito e de código aberto sob a licença GNU AGPL-3.0. Mantenha os documentos nos formatos documentados `.bfly` e `.tbfly`.
+  </Card>
+  <Card title="Criem em conjunto" icon="comment">
+    A colaboração experimental suporta sessões encriptadas de ponta a ponta através do Swamp ou de um servidor WebSocket que aloje.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly, a tela sem limites para pensar visualmente.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Transferir o Butterfly" description="Instale a aplicação no telemóvel, tablet ou computador." href="/downloads/" />
+  <LinkCard title="Experimentar a aplicação web" description="Inicie uma tela no navegador sem instalar nada. Recomendam-se navegadores baseados em Chromium." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Ler o blog do Butterfly" description="Acompanhe lançamentos, notícias do projeto e histórias do desenvolvimento." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Aprender o essencial" description="Crie o primeiro documento e explore toda a caixa de ferramentas." href="/docs/v2/intro/" />
+</CardGrid>
+
+O Butterfly é desenvolvido abertamente e está disponível em muitas línguas. [Junte-se à comunidade](/community/) para partilhar comentários, ajudar nas traduções ou contribuir para o projeto.

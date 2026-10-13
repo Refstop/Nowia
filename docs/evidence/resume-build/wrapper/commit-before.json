@@ -1,0 +1,15 @@
+{
+  "stage": "commit-before",
+  "command": [
+    "git",
+    "rev-parse",
+    "HEAD"
+  ],
+  "cwd": "/workspace/Nowia",
+  "started_utc": "2026-10-13T07:36:49.698684+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "commit-before.log",
+  "ended_utc": "2026-10-13T07:36:49.700219+00:00"
+}
