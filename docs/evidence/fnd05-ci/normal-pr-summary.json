@@ -1,0 +1,32 @@
+{
+  "run_id": 38382751680,
+  "run_head": "de79ee491bc95938357689ab3053537f215ef01e",
+  "checkout_commit": "6f83f51a65938fe5535ef865ff25fd4141bc3120",
+  "quality_stages": 12,
+  "build_stages": 26,
+  "tests": 409,
+  "api_tests": 46,
+  "app_tests": 363,
+  "apk": {
+    "path": "/home/runner/work/Nowia/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk",
+    "bytes": 219409992,
+    "sha256": "ab5d88c3cc614e152431da8a14fa5f73839f4e2378fdd56073899fd1df47a4de"
+  },
+  "source_after": "PASS",
+  "signature": "PASS",
+  "artifact_zip_sha256": "1730842d35889400091d9ca96b86be92174b314e8a405a83baa00edb9f84f2b2",
+  "runner_disk": {
+    "minimum_free_bytes": 25769803776,
+    "volumes": [
+      {
+        "path": "/home/runner/work/_temp",
+        "free_bytes": 116511637504
+      },
+      {
+        "path": "/home/runner/work/Nowia/Nowia",
+        "free_bytes": 116511637504
+      }
+    ],
+    "pass": true
+  }
+}

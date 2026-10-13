@@ -1,0 +1,29 @@
+Compiled from "ToolsRevisionUtils.java"
+public class com.android.builder.core.ToolsRevisionUtils {
+  public static final com.android.repository.Revision MIN_BUILD_TOOLS_REV;
+
+  public static final com.android.repository.Revision DEFAULT_BUILD_TOOLS_REVISION;
+
+  public static final com.android.sdklib.AndroidVersion MAX_RECOMMENDED_COMPILE_SDK_VERSION;
+
+  public com.android.builder.core.ToolsRevisionUtils();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  static {};
+    Code:
+       0: ldc           #9                  // String 36.0.0
+       2: invokestatic  #11                 // Method com/android/repository/Revision.parseRevision:(Ljava/lang/String;)Lcom/android/repository/Revision;
+       5: putstatic     #17                 // Field MIN_BUILD_TOOLS_REV:Lcom/android/repository/Revision;
+       8: getstatic     #17                 // Field MIN_BUILD_TOOLS_REV:Lcom/android/repository/Revision;
+      11: putstatic     #23                 // Field DEFAULT_BUILD_TOOLS_REVISION:Lcom/android/repository/Revision;
+      14: new           #26                 // class com/android/sdklib/AndroidVersion
+      17: dup
+      18: bipush        37
+      20: iconst_2
+      21: invokespecial #28                 // Method com/android/sdklib/AndroidVersion."<init>":(II)V
+      24: putstatic     #31                 // Field MAX_RECOMMENDED_COMPILE_SDK_VERSION:Lcom/android/sdklib/AndroidVersion;
+      27: return
+}

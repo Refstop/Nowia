@@ -1,0 +1,75 @@
+{
+  "recorded_utc": "2026-10-13T07:56:08.643523+00:00",
+  "nowia_head": "79fb88c223bb42bce1ec153b977f07aabb8400d4",
+  "note": "Commands executed individually before the combined quality wrapper; exit codes observed from command sessions. Full wrapper verification belongs to separate isolated run.",
+  "toolchain_root": "/workspace/toolchains",
+  "flutter_version": "3.47.5",
+  "dart_version": "3.13.4",
+  "stages": [
+    {
+      "stage": "app-analyze",
+      "command": [
+        "flutter",
+        "analyze",
+        "--no-pub"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "exit_code": 0,
+      "log": "app-analyze.log",
+      "diagnostics": 0
+    },
+    {
+      "stage": "api-pub-get",
+      "command": [
+        "dart",
+        "pub",
+        "get",
+        "--enforce-lockfile"
+      ],
+      "cwd": "/workspace/Nowia/api",
+      "exit_code": 0,
+      "log": "api-pub-get.log"
+    },
+    {
+      "stage": "api-analyze",
+      "command": [
+        "dart",
+        "analyze",
+        "--fatal-infos"
+      ],
+      "cwd": "/workspace/Nowia/api",
+      "exit_code": 0,
+      "log": "api-analyze.log",
+      "diagnostics": 0
+    },
+    {
+      "stage": "api-test",
+      "command": [
+        "dart",
+        "test",
+        "--reporter",
+        "expanded",
+        "--concurrency=2"
+      ],
+      "cwd": "/workspace/Nowia/api",
+      "exit_code": 0,
+      "log": "api-test.log",
+      "passed_tests": 46
+    },
+    {
+      "stage": "app-test",
+      "command": [
+        "flutter",
+        "test",
+        "--no-pub",
+        "--reporter",
+        "expanded",
+        "--concurrency=2"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "exit_code": 0,
+      "log": "app-test.log",
+      "passed_tests": 363
+    }
+  ]
+}

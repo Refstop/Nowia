@@ -1,0 +1,15 @@
+{
+  "stage": "lockfiles-before",
+  "command": [
+    "sha256sum",
+    "app/pubspec.lock",
+    "api/pubspec.lock"
+  ],
+  "cwd": "/workspace/Nowia",
+  "started_utc": "2026-10-13T07:36:49.716837+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "lockfiles-before.log",
+  "ended_utc": "2026-10-13T07:36:49.720474+00:00"
+}

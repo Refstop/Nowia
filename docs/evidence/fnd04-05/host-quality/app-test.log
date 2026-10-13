@@ -1,0 +1,1275 @@
+00:00 +0: loading /workspace/Nowia/app/test/api/connection_encryption_test.dart
+00:00 +0: /workspace/Nowia/app/test/api/connection_encryption_test.dart: connection note data uses the same native encryption password
+00:00 +1: /workspace/Nowia/app/test/api/connection_encryption_test.dart: connection note data uses the same native encryption password
+00:00 +2: /workspace/Nowia/app/test/api/connection_encryption_test.dart: connection note data uses the same native encryption password
+00:00 +3: /workspace/Nowia/app/test/api/connection_encryption_test.dart: connection note data uses the same native encryption password
+00:00 +4: /workspace/Nowia/app/test/api/connection_encryption_test.dart: connection note data uses the same native encryption password
+00:00 +5: /workspace/Nowia/app/test/api/connection_encryption_test.dart: connection note data uses the same native encryption password
+00:00 +6: /workspace/Nowia/app/test/api/connection_encryption_test.dart: plaintext connection note data stays unencrypted when decoded
+00:00 +7: /workspace/Nowia/app/test/api/connection_encryption_test.dart: connection password is added only to plaintext files on create
+00:06 +8: /workspace/Nowia/app/test/selections/document_test.dart: camera sliders follow transform changes
+00:07 +9: /workspace/Nowia/app/test/selections/document_test.dart: camera sliders follow transform changes
+00:07 +10: /workspace/Nowia/app/test/selections/document_test.dart: camera sliders follow transform changes
+00:07 +11: /workspace/Nowia/app/test/selections/document_test.dart: camera sliders follow transform changes
+00:07 +12: /workspace/Nowia/app/test/selections/document_test.dart: camera sliders follow transform changes
+00:08 +13: /workspace/Nowia/app/test/selections/document_test.dart: encryption tile follows document encryption changes
+00:08 +14: /workspace/Nowia/app/test/selections/document_test.dart: encryption tile follows document encryption changes
+00:08 +15: /workspace/Nowia/app/test/selections/document_test.dart: encryption tile follows document encryption changes
+00:08 +16: /workspace/Nowia/app/test/selections/document_test.dart: encryption tile follows document encryption changes
+00:08 +17: /workspace/Nowia/app/test/selections/document_test.dart: encryption tile follows document encryption changes
+00:08 +18: /workspace/Nowia/app/test/selections/document_test.dart: encryption tile follows document encryption changes
+00:09 +19: /workspace/Nowia/app/test/cubits/editor_session_test.dart: PersistedDocumentState remote state keys do not depend on local connection names
+00:09 +20: /workspace/Nowia/app/test/cubits/editor_session_test.dart: PersistedDocumentState uses schema defaults for sparse json
+00:09 +21: /workspace/Nowia/app/test/cubits/editor_session_test.dart: PersistedDocumentState initial camera belongs to the selected page
+00:09 +22: /workspace/Nowia/app/test/cubits/editor_session_test.dart: PersistedDocumentState new sessions use configured default locks
+00:09 +23: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage path match wins over content hash match
+00:09 +24: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage falls back to path when content hash is missing
+00:09 +25: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage returns null when no fingerprints match
+00:09 +26: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage ignores unavailable remote state when opening offline
+[38;5;3m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;3m│ [warning] | 7:49:25 58ms | Failed to load document state[0m
+[38;5;3m│ NetworkException: Offline (type: NetworkErrorType.connection)[0m
+[38;5;3m│ StackTrace: #0      When.thenThrow.<anonymous closure> (package:mocktail/src/mocktail.dart:249:7)[0m
+[38;5;3m│ #1      Mock.noSuchMethod (package:mocktail/src/mocktail.dart:131:37)[0m
+[38;5;3m│ #2      _MockDocumentStateFileSystem.getFile (file:///workspace/Nowia/app/test/cubits/editor_session_test.dart:18:7)[0m
+[38;5;3m│ #3      DocumentStateService._getFileOrNull (package:butterfly/services/document_state.dart:256:31)[0m
+[38;5;3m│ #4      DocumentStateService.load.<anonymous closure> (package:butterfly/services/document_state.dart:42:32)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #5      BasicLock.synchronized (package:synchronized/src/basic_lock.dart:38:16)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #6      main.<anonymous closure>.<anonymous closure> (file:///workspace/Nowia/app/test/cubits/editor_session_test.dart:149:22)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #7      Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #8      Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #9      Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ [0m
+[38;5;3m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:09 +27: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage ignores invalid optional WebDAV state while opening a note
+[38;5;3m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;3m│ [warning] | 7:49:25 81ms | Failed to read document state at path/a[0m
+[38;5;3m│ FileSystemException: WebDAV response did not contain the requested asset, path = 'path/a'[0m
+[38;5;3m│ StackTrace: #0      When.thenThrow.<anonymous closure> (package:mocktail/src/mocktail.dart:249:7)[0m
+[38;5;3m│ #1      Mock.noSuchMethod (package:mocktail/src/mocktail.dart:131:37)[0m
+[38;5;3m│ #2      _MockDocumentStateFileSystem.getFile (file:///workspace/Nowia/app/test/cubits/editor_session_test.dart:18:7)[0m
+[38;5;3m│ #3      DocumentStateService._getFileOrNull (package:butterfly/services/document_state.dart:256:31)[0m
+[38;5;3m│ #4      DocumentStateService.load.<anonymous closure> (package:butterfly/services/document_state.dart:42:32)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #5      BasicLock.synchronized (package:synchronized/src/basic_lock.dart:38:16)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #6      main.<anonymous closure>.<anonymous closure> (file:///workspace/Nowia/app/test/cubits/editor_session_test.dart:171:24)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #7      Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #8      Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #9      Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ [0m
+[38;5;3m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;3m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;3m│ [warning] | 7:49:25 85ms | Failed to read document state at content/hash-a[0m
+[38;5;3m│ FileSystemException: WebDAV response did not contain the requested asset, path = 'path/a'[0m
+[38;5;3m│ StackTrace: #0      When.thenThrow.<anonymous closure> (package:mocktail/src/mocktail.dart:249:7)[0m
+[38;5;3m│ #1      Mock.noSuchMethod (package:mocktail/src/mocktail.dart:131:37)[0m
+[38;5;3m│ #2      _MockDocumentStateFileSystem.getFile (file:///workspace/Nowia/app/test/cubits/editor_session_test.dart:18:7)[0m
+[38;5;3m│ #3      DocumentStateService._getFileOrNull (package:butterfly/services/document_state.dart:256:31)[0m
+[38;5;3m│ #4      DocumentStateService.load.<anonymous closure> (package:butterfly/services/document_state.dart:46:35)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #5      BasicLock.synchronized (package:synchronized/src/basic_lock.dart:38:16)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #6      main.<anonymous closure>.<anonymous closure> (file:///workspace/Nowia/app/test/cubits/editor_session_test.dart:171:24)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #7      Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #8      Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #9      Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ [0m
+[38;5;3m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:09 +28: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage does not load or save when persistence is disabled
+00:09 +29: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage filters disabled categories on load
+00:09 +30: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage preserves disabled categories on save
+00:09 +31: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage cleanup removes old and overflowing records
+00:09 +32: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage restores each page camera after switching and reopening
+00:09 +33: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage disabled viewport persistence switches to origin
+00:09 +34: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage writes session state to content and path keys
+00:09 +35: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage writes session state to updated document identity
+00:09 +36: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage rewrites state when document identity and state changed
+00:09 +37: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage renames content identity without leaving old content key
+00:09 +38: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +39: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +40: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +41: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +42: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +43: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +44: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +45: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +46: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +47: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +48: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +49: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +50: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +51: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +52: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage camera changes stay in memory until session is flushed
+00:09 +53: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage does not modify document files when session state changes
+00:09 +54: /workspace/Nowia/app/test/cubits/editor_session_test.dart: EditorSessionCubit storage close flushes unsaved session state
+00:10 +55: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Zero Size Shapes zero-size shape exposes a non-empty selection rectangle
+00:10 +56: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Zero Size Shapes zero-size shape is hit by rectangle selection
+00:10 +57: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Zero Size Shapes zero-size shape is hit by lasso selection
+00:10 +58: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test rotation past a quarter turn does not introduce a reflection
+00:10 +59: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test non-uniform scaling preserves the affine shape of a rotation
+00:10 +60: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test horizontal flip keeps signed width without adding a half turn
+00:10 +61: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test flip mirrors the renderer inside the selection bounds
+00:10 +62: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test horizontal flip keeps a rotated element in the target bounds
+00:10 +63: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test documents without shear keep the identity default
+00:10 +64: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test negative horizontal scale mirrors the element
+00:10 +65: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test negative scale positions from the original transformed origin
+00:10 +66: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test negative vertical scale mirrors a triangle
+00:10 +67: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test negative pen scale keeps valid cached bounds
+00:10 +68: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test rotated pen stroke is hit outside its original bounds
+00:10 +69: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test rotated shape is hit outside its original bounds
+00:10 +70: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: rotation test default rotated renderer is hit outside its original bounds
+00:10 +71: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Circle Element Mode Hits HitElementMode.none returns false
+00:10 +72: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Circle Element Mode Hits HitElementMode.full
+00:10 +73: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Circle Element Mode Hits HitElementMode.touchAnywhere
+00:10 +74: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Circle Element Mode Hits HitElementMode.touchEdges
+00:10 +75: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Rectangle Element Mode Hits HitElementMode.none returns false
+00:10 +76: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Rectangle Element Mode Hits HitElementMode.full
+00:10 +77: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Rectangle Element Mode Hits HitElementMode.touchAnywhere
+00:10 +78: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Rectangle Element Mode Hits HitElementMode.touchEdges
+00:10 +79: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Triangle Element Mode Hits HitElementMode.none returns false
+00:10 +80: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Triangle Element Mode Hits HitElementMode.full
+00:10 +81: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Triangle Element Mode Hits HitElementMode.touchAnywhere
+00:10 +82: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Triangle Element Mode Hits HitElementMode.touchEdges
+00:10 +83: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Line Element Mode Hits HitElementMode.none returns false
+00:10 +84: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Line Element Mode Hits HitElementMode.full
+00:10 +85: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Line Element Mode Hits HitElementMode.touchAnywhere
+00:10 +86: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Shape Interaction Tests by HitElementMode Line Element Mode Hits HitElementMode.touchEdges
+00:10 +87: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Lasso / Polygon Interaction Tests Lasso Full selection contains shape entirely
+00:10 +88: /workspace/Nowia/app/test/renderers/shape_renderer_test.dart: Lasso / Polygon Interaction Tests Lasso Partial selection returns false for full but true for TouchAnywhere
+00:10 +89: /workspace/Nowia/app/test/renderers/svg_renderer_test.dart: transformed SVG renderer does not own shared picture info
+00:11 +90: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: cell range includes all cells in either drag direction
+00:11 +91: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: cell drag clamps to edges and includes cells on grid lines
+00:11 +92: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: table hit targets are immutable Freezed values
+00:11 +93: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: table renderer exposes its bounds including its border
+00:11 +94: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: table renderer preserves layout while transforming geometry
+00:11 +95: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: table renderer resolves hovered cells through element transforms
+00:11 +96: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: table renderer resolves individual borders through transforms
+00:11 +97: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: table renderer resolves the final row and column boundaries
+00:11 +98: /workspace/Nowia/app/test/renderers/table_renderer_test.dart: table renderer lays out independently sized rows and columns
+00:11 +99: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: polygon hits include crossing edges and point clicks
+00:11 +100: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: ellipse point hits are exact between polygon approximation vertices
+00:11 +101: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon rejects disjoint dense polygons with linear point access
+00:11 +102: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon hits contained polygons, lines, and points in either order
+00:11 +103: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon hits shared edges and corners
+00:11 +104: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon hits crossing and overlapping lines with zero-sized bounds
+00:11 +105: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon rejects empty and non-finite polygons
+00:11 +106: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon repeated vertices do not hit a line outside a concave polygon
+00:11 +107: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon does not hit a polygon in the hollow of a concave lasso
+00:11 +108: /workspace/Nowia/app/test/renderers/hit_calculator_test.dart: HitCalculator.isPolygonInPolygon hits intersecting polygons
+00:12 +109: /workspace/Nowia/app/test/renderers/element_paint_renderer_test.dart: radial element paint renders its focal point
+00:12 +110: /workspace/Nowia/app/test/renderers/element_paint_renderer_test.dart: radial element paint renders its focal radius
+00:12 +111: /workspace/Nowia/app/test/renderers/pdf_renderer_test.dart: negative PDF scale keeps mirrored bounds
+00:12 +112: /workspace/Nowia/app/test/renderers/pdf_renderer_test.dart: mirrored PDF remains stable through a subsequent transform
+00:13 +113: /workspace/Nowia/app/test/renderers/markdown_renderer_test.dart: extracts GitHub Markdown tables for native rendering
+00:13 +114: /workspace/Nowia/app/test/renderers/markdown_renderer_test.dart: ignores pipe text that is not a Markdown table
+00:13 +115: /workspace/Nowia/app/test/renderers/markdown_renderer_test.dart: paints Markdown table cell text
+00:13 +116: /workspace/Nowia/app/test/renderers/highlighter_renderer_test.dart: combined highlights do not darken their overlap
+00:14 +117: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: resize cursor follows viewport rotation
+00:14 +118: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: tiny selections keep a usable interaction target
+00:14 +119: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: overlapping transform handles resolve to nearest handle
+00:14 +120: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: dragging a handle across an axis keeps a valid mirrored selection
+00:14 +121: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: proportional negative scale keeps the opposite corner anchored
+00:14 +122: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: proportional modifier preserves the aspect ratio
+00:14 +123: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: centered modifier keeps the selection center fixed
+00:14 +124: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: centered modifier does not affect moving a selection
+00:14 +125: /workspace/Nowia/app/test/renderers/select_foreground_test.dart: negative scale uses the opposite element corner for placement
+00:15 +126: /workspace/Nowia/app/test/renderers/image_renderer_test.dart: hidden image renderer unloads decoded image outside viewport
+00:15 +127: /workspace/Nowia/app/test/renderers/image_renderer_test.dart: negative image scale keeps mirrored bounds
+00:15 +128: /workspace/Nowia/app/test/renderers/image_renderer_test.dart: flipped rotated image stays in the target bounds
+00:15 +129: /workspace/Nowia/app/test/renderers/image_renderer_test.dart: negative image scale mirrors pixels
+00:15 +130: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: SVG export preserves polygon curves and paint
+00:15 +131: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: negative scale keeps valid polygon bounds
+00:15 +132: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: No Bezier HitElementMode.none returns false
+00:15 +133: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: No Bezier HitElementMode.full
+00:15 +134: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: No Bezier HitElementMode.touchAnywhere partial
+00:15 +135: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: No Bezier closed concave polygon does not use its bounding box for hits
+00:15 +136: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: Bezier HitElementMode.full
+00:15 +137: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: Bezier HitElementMode.touchAnywhere
+00:15 +138: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: Lasso tests Lasso full selection
+00:15 +139: /workspace/Nowia/app/test/renderers/polygon_renderer_test.dart: Lasso tests Lasso partial selection
+00:15 +140: /workspace/Nowia/app/test/models/viewport_test.dart: viewport snapshots use identity equality
+00:15 +141: /workspace/Nowia/app/test/models/viewport_test.dart: baked image uses its exact fractional content extent
+00:16 +142: /workspace/Nowia/app/test/models/label_rotation_test.dart: text layout changes preserve the rotated anchor (markdown: false)
+00:16 +143: /workspace/Nowia/app/test/models/label_rotation_test.dart: text layout changes preserve the rotated anchor (markdown: true)
+00:16 +144: /workspace/Nowia/app/test/widgets/number_input_test.dart: rejects a number outside the allowed range
+00:17 +145: /workspace/Nowia/app/test/widgets/file_name_pattern_field_test.dart: filename pattern dialog shows full help and a live preview
+00:17 +146: /workspace/Nowia/app/test/widgets/file_name_pattern_field_test.dart: filename pattern dialog shows full help and a live preview
+00:17 +147: /workspace/Nowia/app/test/widgets/file_name_pattern_field_test.dart: filename pattern dialog shows full help and a live preview
+00:17 +148: /workspace/Nowia/app/test/widgets/file_name_pattern_field_test.dart: filename pattern dialog shows full help and a live preview
+00:18 +149: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+00:19 +150: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:35 747ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:20 +151: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+00:20 +152: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+00:20 +153: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+00:20 +154: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+00:20 +155: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+00:20 +156: /workspace/Nowia/app/test/dialogs/collection_regression_test.dart: move to layer keeps the layer picker open
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:35 821ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:21 +157: /workspace/Nowia/app/test/handlers/stamp_handler_test.dart: stamp placement preserves drag direction for flipping
+00:21 +158: /workspace/Nowia/app/test/handlers/stamp_handler_test.dart: stamp placement only keeps its original size for a tap
+00:21 +159: /workspace/Nowia/app/test/handlers/barcode_handler_test.dart: barcode placement preserves drag direction for flipping
+00:21 +160: /workspace/Nowia/app/test/handlers/barcode_handler_test.dart: barcode placement only keeps its original size for a tap
+00:21 +161: /workspace/Nowia/app/test/handlers/select_handler_test.dart: (setUpAll)
+00:21 +161: /workspace/Nowia/app/test/handlers/select_handler_test.dart: clicking outside a selection removes its transform hit target
+00:22 +162: /workspace/Nowia/app/test/handlers/select_handler_test.dart: rotated rectangle preview and hit test match both drag directions
+00:22 +163: /workspace/Nowia/app/test/handlers/select_handler_test.dart: (tearDownAll)
+00:22 +163: /workspace/Nowia/app/test/handlers/shape_handler_test.dart: snaps line endpoints to 45 degree increments
+00:22 +164: /workspace/Nowia/app/test/handlers/shape_handler_test.dart: does not create shapes with zero size
+00:22 +165: /workspace/Nowia/app/test/handlers/shape_handler_test.dart: still creates horizontal and vertical lines
+00:22 +166: /workspace/Nowia/app/test/handlers/shape_handler_test.dart: triangle creation preserves negative drag dimensions
+00:23 +167: /workspace/Nowia/app/test/handlers/table_handler_test.dart: (setUpAll)
+00:23 +167: /workspace/Nowia/app/test/handlers/table_handler_test.dart: table gestures outside press deselects without creating a table; next tap creates
+00:23 +168: /workspace/Nowia/app/test/handlers/table_handler_test.dart: table gestures touch drag selects a range from the press position without creating
+00:23 +169: /workspace/Nowia/app/test/handlers/table_handler_test.dart: table gestures border drag starts without hover and never creates another table
+00:23 +170: /workspace/Nowia/app/test/handlers/table_handler_test.dart: table gestures reset clears the selected range and properties
+00:23 +171: /workspace/Nowia/app/test/handlers/table_handler_test.dart: table gestures border selection does not carry over to a different table
+00:23 +172: /workspace/Nowia/app/test/handlers/table_handler_test.dart: does not create a table with zero size
+00:23 +173: /workspace/Nowia/app/test/handlers/table_handler_test.dart: creates a table with the configured layout and appearance
+00:23 +174: /workspace/Nowia/app/test/handlers/table_handler_test.dart: keeps secondary mouse clicks on the table handler
+00:23 +175: /workspace/Nowia/app/test/handlers/table_handler_test.dart: selects a whole border line before narrowing to one segment
+00:23 +176: /workspace/Nowia/app/test/handlers/table_handler_test.dart: keeps the targeted property view when replacing its renderer
+00:23 +177: /workspace/Nowia/app/test/handlers/table_handler_test.dart: (tearDownAll)
+00:23 +177: /workspace/Nowia/app/test/handlers/ruler_handler_test.dart: ruler bounds follow a rotated viewport
+00:23 +178: /workspace/Nowia/app/test/handlers/ruler_handler_test.dart: default ruler pivots around the center of the viewport
+00:23 +179: /workspace/Nowia/app/test/handlers/ruler_handler_test.dart: transformed ruler pivots around the center of the viewport
+00:23 +180: /workspace/Nowia/app/test/handlers/ruler_handler_test.dart: ruler rotation snaps to horizontal and vertical quarter turns
+00:23 +181: /workspace/Nowia/app/test/handlers/ruler_handler_test.dart: ruler rotation keeps angles outside the snap threshold
+00:23 +182: /workspace/Nowia/app/test/handlers/ruler_handler_test.dart: ruler foreground contrasts with its background when unset
+00:23 +183: /workspace/Nowia/app/test/handlers/ruler_handler_test.dart: ruler foreground uses the configured color
+00:24 +184: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: (setUpAll)
+00:24 +184: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping cuts sparse segments exactly and interpolates pressure
+00:24 +185: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping small cuts on long strokes need only two new points
+00:24 +186: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping preserves untouched, tangent, and boundary-only strokes
+00:24 +187: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping handles isolated points, repeated points, and complete removal
+00:24 +188: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping handles strokes starting or ending inside the eraser
+00:24 +189: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping keeps separate fragments on repeated crossings
+00:24 +190: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping preserves points far from a cut without resampling them
+00:24 +191: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping ignores invalid eraser sizes
+00:24 +192: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: stroke clipping clips vertical and diagonal strokes at the circle boundary
+00:24 +193: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input release waits for queued work and processes its final position
+00:24 +194: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input recovers after a ray cast fails, including the same position
+00:24 +195: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input reset ignores in-flight hits and queued moves
+00:24 +196: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input dispose ignores in-flight hits and queued moves
+00:24 +197: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input repeated hits do not refresh the canvas again
+00:24 +198: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input coalesces queued moves and keeps callers waiting for the drain
+00:24 +199: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input a stale drain cannot clear a new gesture or submit its changes
+00:24 +200: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: eraser input stroke mode commits compact fragments with preserved metadata
+00:24 +201: /workspace/Nowia/app/test/handlers/eraser_handler_test.dart: (tearDownAll)
+00:24 +201: /workspace/Nowia/app/test/handlers/polygon_handler_test.dart: toolbar changes update edited polygon element
+00:24 +202: /workspace/Nowia/app/test/handlers/polygon_handler_test.dart: toolbar changes keep edited polygon visible in foregrounds
+00:24 +203: /workspace/Nowia/app/test/handlers/polygon_handler_test.dart: toolbar changes keep edited polygon visible in foregrounds
+00:24 +204: /workspace/Nowia/app/test/handlers/polygon_handler_test.dart: toolbar changes keep edited polygon visible in foregrounds
+00:24 +205: /workspace/Nowia/app/test/handlers/polygon_handler_test.dart: toolbar changes keep edited polygon visible in foregrounds
+00:24 +206: /workspace/Nowia/app/test/handlers/polygon_handler_test.dart: toolbar changes keep edited polygon visible in foregrounds
+00:25 +207: /workspace/Nowia/app/test/helpers/async_test.dart: throttled runner is not postponed by continuous scheduling
+00:25 +208: /workspace/Nowia/app/test/helpers/async_test.dart: slow throttled work does not add another delay
+00:25 +209: /workspace/Nowia/app/test/helpers/async_test.dart: default runner retains debounce behavior
+00:26 +210: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: (setUpAll)
+00:26 +210: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: rectangle ray casts rotate around their center and preserve spacer queries
+00:26 +211: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: spacer moves the viewport-facing side along its rotated axis
+00:26 +212: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: spacer moves text outside the current collection when unlocked
+00:26 +213: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: selection handles resize along viewport axes with the opposite edge fixed
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 210ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +214: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: slow visibility update cannot discard a new stroke
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 241ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 243ms | Updating visible elements: 2 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +215: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: slow initialization cannot replace a newer camera cache
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 256ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +216: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: initial bake exposes content before slow PDF rendering finishes
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 272ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 275ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +217: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: visible loading batch repaints once after all elements finish
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 289ms | Updating visible elements: 2 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +218: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: empty initial viewport skips image rasterization
+00:26 +219: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: direct rendering preserves visible elements during initial measurement
+00:26 +220: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: initial tool setup does not queue another viewport bake
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 341ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 342ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +221: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: renaming non-active page keeps active page and preserves page contents
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 368ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 370ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +222: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: force saving an already saved document does not write again
+00:26 +223: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: duplicating area adds it to selected pages
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 432ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 435ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +224: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: removing areas can target multiple pages
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 455ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 458ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 464ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +225: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: unmatched single tool change does not overwrite active tool
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 484ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +226: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: replacing toolbar synchronizes the active tool handler
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 503ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 506ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +227: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: ruler runtime survives toggling and property updates
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 526ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +228: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: reset state change waits for reload to finish
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 558ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +229: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:26 +229: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: current index close disposes initially loaded renderers
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 576ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +230: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:26 +230: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: renderer reload reuses identity and restores page order
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 591ms | Updating visible elements: 2 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +231: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:26 +231: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: failed visible renderer is retried
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 606ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m│ [error] | 7:49:42 608ms | Failed to initialize visible renderer Instance of '_ThrowingVisibleRenderer'[0m
+[38;5;1m│ Bad state: blocked[0m
+[38;5;1m│ StackTrace: #0      _ThrowingVisibleRenderer.onVisible (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:240:5)[0m
+[38;5;1m│ #1      RendererCubit.updateOnVisible.<anonymous closure>.<anonymous closure> (package:butterfly/cubits/editor_renderer.dart:424:29)[0m
+[38;5;1m│ #2      new Future.sync (dart:async/future.dart:325:27)[0m
+[38;5;1m│ #3      RendererCubit.updateOnVisible.<anonymous closure> (package:butterfly/cubits/editor_renderer.dart:423:26)[0m
+[38;5;1m│ #4      MappedListIterable.elementAt (dart:_internal/iterable.dart:443:31)[0m
+[38;5;1m│ #5      ListIterator.moveNext (dart:_internal/iterable.dart:372:26)[0m
+[38;5;1m│ #6      Future.wait (dart:async/future.dart:565:26)[0m
+[38;5;1m│ #7      RendererCubit.updateOnVisible (package:butterfly/cubits/editor_renderer.dart:420:40)[0m
+[38;5;1m│ #8      RendererCubit.loadElements (package:butterfly/cubits/editor_renderer.dart:1243:25)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #9      main.<anonymous closure> (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:1271:5)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #10     Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #11     Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #12     Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ [0m
+[38;5;1m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 609ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m│ [error] | 7:49:42 609ms | Failed to initialize visible renderer Instance of '_ThrowingVisibleRenderer'[0m
+[38;5;1m│ Bad state: blocked[0m
+[38;5;1m│ StackTrace: #0      _ThrowingVisibleRenderer.onVisible (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:240:5)[0m
+[38;5;1m│ #1      RendererCubit.updateOnVisible.<anonymous closure>.<anonymous closure> (package:butterfly/cubits/editor_renderer.dart:424:29)[0m
+[38;5;1m│ #2      new Future.sync (dart:async/future.dart:325:27)[0m
+[38;5;1m│ #3      RendererCubit.updateOnVisible.<anonymous closure> (package:butterfly/cubits/editor_renderer.dart:423:26)[0m
+[38;5;1m│ #4      MappedListIterable.elementAt (dart:_internal/iterable.dart:443:31)[0m
+[38;5;1m│ #5      ListIterator.moveNext (dart:_internal/iterable.dart:372:26)[0m
+[38;5;1m│ #6      Future.wait (dart:async/future.dart:565:26)[0m
+[38;5;1m│ #7      RendererCubit.updateOnVisible (package:butterfly/cubits/editor_renderer.dart:420:40)[0m
+[38;5;1m│ #8      RendererCubit.loadElements (package:butterfly/cubits/editor_renderer.dart:1243:25)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #9      main.<anonymous closure> (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:1275:5)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #10     Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #11     Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #12     Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ [0m
+[38;5;1m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +232: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:26 +232: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: pdf renderer catches document load failures
+[38;5;1m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m│ [error] | 7:49:42 620ms | Failed to render PDF element test.pdf[0m
+[38;5;1m│ Bad state: blocked pdf[0m
+[38;5;1m│ StackTrace: #0      _ThrowingPdfAssetService.getPdfDocument (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:278:5)[0m
+[38;5;1m│ #1      PdfRenderer._renderImage (package:butterfly/renderers/elements/pdf.dart:198:39)[0m
+[38;5;1m│ #2      PdfRenderer.onVisible (package:butterfly/renderers/elements/pdf.dart:164:12)[0m
+[38;5;1m│ #3      main.<anonymous closure> (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:1318:20)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #4      Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #5      Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #6      Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ [0m
+[38;5;1m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:26 +233: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +233: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: failed pdf document future is not cached
+[38;5;1m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m│ [error] | 7:49:42 631ms | Failed to load PDF document test.pdf[0m
+[38;5;1m│ Bad state: blocked pdf data[0m
+[38;5;1m│ StackTrace: #0      _FailingPdfDataAssetService.computeDataFromSource (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:291:5)[0m
+[38;5;1m│ #1      AssetService._loadPdfDocument (package:butterfly/services/asset.dart:134:24)[0m
+[38;5;1m│ #2      AssetService.getPdfDocument (package:butterfly/services/asset.dart:113:14)[0m
+[38;5;1m│ #3      main.<anonymous closure> (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:1334:31)[0m
+[38;5;1m│ #4      Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:25)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #5      Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #6      Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ [0m
+[38;5;1m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m│ [error] | 7:49:42 632ms | Failed to load PDF document test.pdf[0m
+[38;5;1m│ Bad state: blocked pdf data[0m
+[38;5;1m│ StackTrace: #0      _FailingPdfDataAssetService.computeDataFromSource (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:291:5)[0m
+[38;5;1m│ #1      AssetService._loadPdfDocument (package:butterfly/services/asset.dart:134:24)[0m
+[38;5;1m│ #2      AssetService.getPdfDocument (package:butterfly/services/asset.dart:113:14)[0m
+[38;5;1m│ #3      main.<anonymous closure> (file:///workspace/Nowia/app/test/bloc/document_bloc_test.dart:1335:31)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #4      Declarer.test.<anonymous closure>.<anonymous closure> (package:test_api/src/backend/declarer.dart:253:15)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #5      Declarer.test.<anonymous closure> (package:test_api/src/backend/declarer.dart:250:11)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ #6      Invoker._waitForOutstandingCallbacks.<anonymous closure> (package:test_api/src/backend/invoker.dart:318:9)[0m
+[38;5;1m│ <asynchronous suspension>[0m
+[38;5;1m│ [0m
+[38;5;1m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +234: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +235: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +236: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +237: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +237: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: adding a combined highlight immediately unbakes its group
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 701ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 703ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 706ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +238: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +238: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: embedded replacement rebakes the updated element
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 721ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 722ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 724ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 726ms | Baking viewport (reset: true, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +239: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +239: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: page navigation keeps the shared asset service alive
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 742ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 744ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +240: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +241: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +241: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: switching pages reloads the renderer in embeds
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 884ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:42 887ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +242: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +242: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: partial pen viewport update keeps previews until each renderer is reported
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 3ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 6ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +243: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +243: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: bake records only elements visible in the current viewport
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 37ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 39ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +244: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +244: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: changing the current layer rebuilds the layer caches
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 67ms | Updating visible elements: 2 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 71ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 87ms | Baking viewport (reset: true, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 90ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +245: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +245: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: deleting an element from another layer rebuilds its cache
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 114ms | Updating visible elements: 2 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 117ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 124ms | Baking viewport (reset: true, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +246: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +246: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: incremental bake does not rebuild already baked renderers
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 148ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 150ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 152ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 154ms | Baking viewport (reset: false, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +247: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +247: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: submitting a stroke at fractional zoom keeps existing document pixels
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 182ms | Changing tool to index: null[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 184ms | Updating visible elements: 2 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 186ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 197ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 200ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 200ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 304ms | Baking viewport (reset: false, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +248: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +248: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: tool refresh without temporary handler does not reset bake
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 553ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 555ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 556ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:27 +249: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:27 +249: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: creating pen stroke through bloc keeps the next bake incremental
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 573ms | Changing tool to index: null[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 574ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 576ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 577ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 578ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 579ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 681ms | Baking viewport (reset: false, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:28 +250: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +250: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: bake refreshes cached viewport when pixel ratio changes
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 747ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 749ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 751ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:28 +251: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +251: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: bake snaps cached viewport to screen pixels at fractional zoom
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 767ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:28 +252: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +253: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +253: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: renderImage does not hide already tracked visible renderers
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 794ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 796ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 800ms | Baking viewport (reset: true, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:28 +254: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +255: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +256: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +256: /workspace/Nowia/app/test/bloc/document_bloc_test.dart: renderImage refreshes initialized renderers at export quality
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 901ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:43 903ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:28 +257: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +258: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +259: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:28 +260: /workspace/Nowia/app/test/actions/settings_test.dart: dialog settings pages do not replace the document route
+00:29 +261: /workspace/Nowia/app/test/actions/new_test.dart: (setUpAll)
+00:29 +261: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +262: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +263: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +264: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +265: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +266: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +267: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +268: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +269: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +270: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +271: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +272: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +273: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +274: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +275: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:29 +276: /workspace/Nowia/app/test/actions/new_test.dart: template file name creates the document before opening it
+00:30 +277: /workspace/Nowia/app/test/actions/new_test.dart: template without a name delegates to the file system default
+00:30 +278: /workspace/Nowia/app/test/actions/new_test.dart: template file name overrides the settings default
+00:30 +279: /workspace/Nowia/app/test/actions/new_test.dart: remote template keeps the selected remote identifier
+00:30 +280: /workspace/Nowia/app/test/actions/new_test.dart: write failure still opens the document unsaved
+[38;5;3m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;3m│ [warning] | 7:49:45 894ms | Failed to create document from filename pattern[0m
+[38;5;3m│ Bad state: Storage unavailable[0m
+[38;5;3m│ StackTrace: #0      When.thenThrow.<anonymous closure> (package:mocktail/src/mocktail.dart:249:7)[0m
+[38;5;3m│ #1      Mock.noSuchMethod (package:mocktail/src/mocktail.dart:131:37)[0m
+[38;5;3m│ #2      _MockDocumentFileSystem.createFileWithName (file:///workspace/Nowia/app/test/actions/new_test.dart:17:7)[0m
+[38;5;3m│ #3      openNewDocument (package:butterfly/actions/new.dart:105:44)[0m
+[38;5;3m│ #4      main.buildApp.<anonymous closure>.<anonymous closure> (file:///workspace/Nowia/app/test/actions/new_test.dart:69:32)[0m
+[38;5;3m│ #5      _InkResponseState.handleTap (package:flutter/src/material/ink_well.dart:1224:21)[0m
+[38;5;3m│ #6      GestureRecognizer.invokeCallback (package:flutter/src/gestures/recognizer.dart:362:24)[0m
+[38;5;3m│ #7      TapGestureRecognizer.handleTapUp (package:flutter/src/gestures/tap.dart:758:11)[0m
+[38;5;3m│ #8      BaseTapGestureRecognizer._checkUp (package:flutter/src/gestures/tap.dart:383:5)[0m
+[38;5;3m│ #9      BaseTapGestureRecognizer.handlePrimaryPointer (package:flutter/src/gestures/tap.dart:314:7)[0m
+[38;5;3m│ #10     PrimaryPointerGestureRecognizer.handleEvent (package:flutter/src/gestures/recognizer.dart:738:9)[0m
+[38;5;3m│ #11     PointerRouter._dispatch (package:flutter/src/gestures/pointer_router.dart:97:12)[0m
+[38;5;3m│ #12     PointerRouter._dispatchEventToRoutes.<anonymous closure> (package:flutter/src/gestures/pointer_router.dart:140:9)[0m
+[38;5;3m│ #13     _LinkedHashMapMixin.forEach (dart:_compact_hash:721:13)[0m
+[38;5;3m│ #14     PointerRouter._dispatchEventToRoutes (package:flutter/src/gestures/pointer_router.dart:138:18)[0m
+[38;5;3m│ #15     PointerRouter.route (package:flutter/src/gestures/pointer_router.dart:128:7)[0m
+[38;5;3m│ #16     GestureBinding.handleEvent (package:flutter/src/gestures/binding.dart:538:19)[0m
+[38;5;3m│ #17     GestureBinding.dispatchEvent (package:flutter/src/gestures/binding.dart:508:22)[0m
+[38;5;3m│ #18     RendererBinding.dispatchEvent (package:flutter/src/rendering/binding.dart:473:11)[0m
+[38;5;3m│ #19     GestureBinding._handlePointerEventImmediately (package:flutter/src/gestures/binding.dart:447:7)[0m
+[38;5;3m│ #20     GestureBinding.handlePointerEvent (package:flutter/src/gestures/binding.dart:404:5)[0m
+[38;5;3m│ #21     TestWidgetsFlutterBinding.handlePointerEventForSource.<anonymous closure> (package:flutter_test/src/binding.dart:1571:42)[0m
+[38;5;3m│ #22     TestWidgetsFlutterBinding.withPointerEventSource (package:flutter_test/src/binding.dart:1581:11)[0m
+[38;5;3m│ #23     TestWidgetsFlutterBinding.handlePointerEventForSource (package:flutter_test/src/binding.dart:1571:5)[0m
+[38;5;3m│ #24     WidgetTester.sendEventToBinding.<anonymous closure> (package:flutter_test/src/widget_tester.dart:869:15)[0m
+[38;5;3m│ #25     _rootRun (dart:async/zone_root.dart:35:13)[0m
+[38;5;3m│ #26     _CustomZone.run (dart:async/zone.dart:810:35)[0m
+[38;5;3m│ #27     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)[0m
+[38;5;3m│ #28     WidgetTester.sendEventToBinding (package:flutter_test/src/widget_tester.dart:868:27)[0m
+[38;5;3m│ #29     TestGesture.up.<anonymous closure> (package:flutter_test/src/test_pointer.dart:587:26)[0m
+[38;5;3m│ #30     _rootRun (dart:async/zone_root.dart:35:13)[0m
+[38;5;3m│ #31     _CustomZone.run (dart:async/zone.dart:810:35)[0m
+[38;5;3m│ #32     TestAsyncUtils.guard (package:flutter_test/src/test_async_utils.dart:74:41)[0m
+[38;5;3m│ #33     TestGesture.up (package:flutter_test/src/test_pointer.dart:580:27)[0m
+[38;5;3m│ #34     WidgetController.tapAt.<anonymous closure> (package:flutter_test/src/controller.dart:1155:21)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #35     TestAsyncUtils.guard.<anonymous closure> (package:flutter_test/src/test_async_utils.dart:130:27)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #36     main.<anonymous closure> (file:///workspace/Nowia/app/test/actions/new_test.dart:273:5)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #37     testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #38     TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ #39     StackZoneSpecification._registerCallback.<anonymous closure> (package:stack_trace/src/stack_zone_specification.dart:114:42)[0m
+[38;5;3m│ <asynchronous suspension>[0m
+[38;5;3m│ [0m
+[38;5;3m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:30 +281: /workspace/Nowia/app/test/actions/new_test.dart: quick start uses the template name without saving
+00:30 +282: /workspace/Nowia/app/test/actions/new_test.dart: (tearDownAll)
+00:30 +282: /workspace/Nowia/app/test/services/network_test.dart: connection technology recognizes websocket schemes
+00:30 +283: /workspace/Nowia/app/test/services/network_test.dart: setName updates the name used for presence messages
+00:30 +284: /workspace/Nowia/app/test/services/network_test.dart: a socket host uses server-side RPC routing
+00:30 +285: /workspace/Nowia/app/test/services/network_test.dart: a socket client accepts the authority handshake
+00:30 +286: /workspace/Nowia/app/test/services/network_test.dart: a client handshake timeout closes the partial session
+00:30 +287: /workspace/Nowia/app/test/services/network_test.dart: a disconnected client stays read-only
+00:31 +288: /workspace/Nowia/app/test/services/pdf_import_test.dart: PDF opening shows loading before the engine completes
+Setting PdfrxEntryFunctions instance: _Engine
+00:32 +289: /workspace/Nowia/app/test/services/pdf_import_test.dart: PDF opening shows loading before the engine completes
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:32 +290: /workspace/Nowia/app/test/services/pdf_import_test.dart: preview failure closes loading and allows retry
+Setting PdfrxEntryFunctions instance: _Engine
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:32 +291: /workspace/Nowia/app/test/services/pdf_import_test.dart: preview null result closes loading and allows retry
+Setting PdfrxEntryFunctions instance: _Engine
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +292: /workspace/Nowia/app/test/services/asset_test.dart: (setUpAll)
+00:33 +292: /workspace/Nowia/app/test/services/asset_test.dart: missing PDF and byte cache entries can recover when bytes arrive
+Setting PdfrxEntryFunctions instance: _Engine
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +293: /workspace/Nowia/app/test/services/asset_test.dart: all callers receive a recoverable PDF load failure
+Setting PdfrxEntryFunctions instance: _Engine
+[38;5;1m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m│ [error] | 7:49:48 765ms | Failed to load PDF document BFLY/pdf/test.pdf[0m
+[38;5;1m│ Bad state: temporary failure[0m
+[38;5;1m│ StackTrace: dart:async/future_impl.dart 21:26                              _interceptError[0m
+[38;5;1m│ dart:async/future_impl.dart 52:23                              _interceptUserError[0m
+[38;5;1m│ dart:async/future_impl.dart 82:26                              _Completer.completeError[0m
+[38;5;1m│ test/services/asset_test.dart 61:13                            main.<fn>[0m
+[38;5;1m│ ===== asynchronous gap ===========================[0m
+[38;5;1m│ dart:async/zone.dart 841:35                                    _CustomZone.registerUnaryCallback[0m
+[38;5;1m│ test/services/asset_test.dart 60:5                             main.<fn>[0m
+[38;5;1m│ package:test_api/src/backend/declarer.dart 253:25              Declarer.test.<fn>.<fn>[0m
+[38;5;1m│ ===== asynchronous gap ===========================[0m
+[38;5;1m│ dart:async/zone.dart 841:35                                    _CustomZone.registerUnaryCallback[0m
+[38;5;1m│ package:test_api/src/backend/declarer.dart 252:15              Declarer.test.<fn>.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/declarer.dart 250:17              Declarer.test.<fn>[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 318:17               Invoker._waitForOutstandingCallbacks.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 314:5                Invoker._waitForOutstandingCallbacks[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 457:21               Invoker._onRun.<fn>.<fn>.<fn>[0m
+[38;5;1m│ ===== asynchronous gap ===========================[0m
+[38;5;1m│ dart:async/zone.dart 841:35                                    _CustomZone.registerUnaryCallback[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 455:15               Invoker._onRun.<fn>.<fn>.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 445:11               Invoker._onRun.<fn>.<fn>[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 500:15               Invoker._guardIfGuarded[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 444:9                Invoker._onRun.<fn>[0m
+[38;5;1m│ package:stack_trace/src/chain.dart 97:24                       Chain.capture.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:stack_trace/src/chain.dart 95:12                       Chain.capture[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 442:11               Invoker._onRun[0m
+[38;5;1m│ package:test_api/src/backend/live_test_controller.dart 161:11  LiveTestController.run[0m
+[38;5;1m│ package:test_api/src/backend/remote_listener.dart 320:16       RemoteListener._runLiveTest.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/remote_listener.dart 319:5        RemoteListener._runLiveTest[0m
+[38;5;1m│ package:test_api/src/backend/remote_listener.dart 261:7        RemoteListener._serializeTest.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 48:47                                _rootRunUnary[0m
+[38;5;1m│ dart:async/zone.dart 816:35                                    _CustomZone.runUnary[0m
+[38;5;1m│ dart:async/zone.dart 710:7                                     _CustomZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/zone_root.dart 56:13                                _rootRunUnary[0m
+[38;5;1m│ dart:async/zone.dart 816:35                                    _CustomZone.runUnary[0m
+[38;5;1m│ dart:async/zone.dart 710:7                                     _CustomZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/stream_controller.dart 898:13                       _StreamSinkWrapper.add[0m
+[38;5;1m│ package:stream_channel/src/guarantee_channel.dart 125:12       _GuaranteeSink.add[0m
+[38;5;1m│ package:stream_channel/src/multi_channel.dart 159:31           new _MultiChannel.<fn>[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:_internal/async_cast.dart 95:11                           CastStreamSubscription._onData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/stream_controller.dart 898:13                       _StreamSinkWrapper.add[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_pipe.dart 154:11                             _ForwardingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_pipe.dart 252:10                             _MapStream._handleData[0m
+[38;5;1m│ dart:async/stream_pipe.dart 184:13                             _ForwardingStreamSubscription._handleData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:_http/websocket_impl.dart 1530:27                         new _WebSocketImpl._fromSocket.<fn>[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_transformers.dart 67:11                      _SinkTransformerStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_transformers.dart 13:11                      _EventSinkWrapper.add[0m
+[38;5;1m│ dart:_http/websocket_impl.dart 525:23                          _WebSocketProtocolTransformer._messageFrameEnd[0m
+[38;5;1m│ dart:_http/websocket_impl.dart 409:46                          _WebSocketProtocolTransformer.add[0m
+[38;5;1m│ dart:async/stream_transformers.dart 115:24                     _SinkTransformerStreamSubscription._handleData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:io-patch/socket_patch.dart 2906:41                        _Socket._onData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:io-patch/socket_patch.dart 2344:31                        new _RawSocket.<fn>[0m
+[38;5;1m│ dart:io-patch/socket_patch.dart 1679:14                        _NativeSocket.issueReadEvent.issue[0m
+[38;5;1m│ dart:async/schedule_microtask.dart 40:35                       _microtaskLoop[0m
+[38;5;1m│ dart:async/schedule_microtask.dart 49:5                        _startMicrotaskLoop[0m
+[38;5;1m│ [0m
+[38;5;1m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +294: /workspace/Nowia/app/test/services/asset_test.dart: page change preserves PDFs shared with the destination page
+Setting PdfrxEntryFunctions instance: _Engine
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +295: /workspace/Nowia/app/test/services/asset_test.dart: page change evicts unused PDFs and their bytes
+Setting PdfrxEntryFunctions instance: _Engine
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +296: /workspace/Nowia/app/test/services/asset_test.dart: page cleanup retains background and paint sources
+Setting PdfrxEntryFunctions instance: _Engine
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +297: /workspace/Nowia/app/test/services/asset_test.dart: document close disposes cached PDFs and prevents new loads
+Setting PdfrxEntryFunctions instance: _Engine
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +298: /workspace/Nowia/app/test/services/asset_test.dart: late failed load cannot evict a replacement PDF
+Setting PdfrxEntryFunctions instance: _Engine
+[38;5;1m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;1m│ [error] | 7:49:48 829ms | Failed to load PDF document BFLY/pdf/test.pdf[0m
+[38;5;1m│ Bad state: old failure[0m
+[38;5;1m│ StackTrace: dart:async/future_impl.dart 21:26                              _interceptError[0m
+[38;5;1m│ dart:async/future_impl.dart 52:23                              _interceptUserError[0m
+[38;5;1m│ dart:async/future_impl.dart 82:26                              _Completer.completeError[0m
+[38;5;1m│ test/services/asset_test.dart 140:13                           main.<fn>[0m
+[38;5;1m│ ===== asynchronous gap ===========================[0m
+[38;5;1m│ dart:async/zone.dart 841:35                                    _CustomZone.registerUnaryCallback[0m
+[38;5;1m│ test/services/asset_test.dart 136:5                            main.<fn>[0m
+[38;5;1m│ package:test_api/src/backend/declarer.dart 253:25              Declarer.test.<fn>.<fn>[0m
+[38;5;1m│ ===== asynchronous gap ===========================[0m
+[38;5;1m│ dart:async/zone.dart 841:35                                    _CustomZone.registerUnaryCallback[0m
+[38;5;1m│ package:test_api/src/backend/declarer.dart 252:15              Declarer.test.<fn>.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/declarer.dart 250:17              Declarer.test.<fn>[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 318:17               Invoker._waitForOutstandingCallbacks.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 314:5                Invoker._waitForOutstandingCallbacks[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 457:21               Invoker._onRun.<fn>.<fn>.<fn>[0m
+[38;5;1m│ ===== asynchronous gap ===========================[0m
+[38;5;1m│ dart:async/zone.dart 841:35                                    _CustomZone.registerUnaryCallback[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 455:15               Invoker._onRun.<fn>.<fn>.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 445:11               Invoker._onRun.<fn>.<fn>[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 500:15               Invoker._guardIfGuarded[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 444:9                Invoker._onRun.<fn>[0m
+[38;5;1m│ package:stack_trace/src/chain.dart 97:24                       Chain.capture.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:stack_trace/src/chain.dart 95:12                       Chain.capture[0m
+[38;5;1m│ package:test_api/src/backend/invoker.dart 442:11               Invoker._onRun[0m
+[38;5;1m│ package:test_api/src/backend/live_test_controller.dart 161:11  LiveTestController.run[0m
+[38;5;1m│ package:test_api/src/backend/remote_listener.dart 320:16       RemoteListener._runLiveTest.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 35:13                                _rootRun[0m
+[38;5;1m│ dart:async/zone.dart 810:35                                    _CustomZone.run[0m
+[38;5;1m│ dart:async/zone_api.dart 165:6                                 _runZoned[0m
+[38;5;1m│ dart:async/zone_api.dart 91:10                                 runZoned[0m
+[38;5;1m│ package:test_api/src/backend/remote_listener.dart 319:5        RemoteListener._runLiveTest[0m
+[38;5;1m│ package:test_api/src/backend/remote_listener.dart 261:7        RemoteListener._serializeTest.<fn>[0m
+[38;5;1m│ dart:async/zone_root.dart 48:47                                _rootRunUnary[0m
+[38;5;1m│ dart:async/zone.dart 816:35                                    _CustomZone.runUnary[0m
+[38;5;1m│ dart:async/zone.dart 710:7                                     _CustomZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/zone_root.dart 56:13                                _rootRunUnary[0m
+[38;5;1m│ dart:async/zone.dart 816:35                                    _CustomZone.runUnary[0m
+[38;5;1m│ dart:async/zone.dart 710:7                                     _CustomZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/stream_controller.dart 898:13                       _StreamSinkWrapper.add[0m
+[38;5;1m│ package:stream_channel/src/guarantee_channel.dart 125:12       _GuaranteeSink.add[0m
+[38;5;1m│ package:stream_channel/src/multi_channel.dart 159:31           new _MultiChannel.<fn>[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:_internal/async_cast.dart 95:11                           CastStreamSubscription._onData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:async/stream_controller.dart 898:13                       _StreamSinkWrapper.add[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_pipe.dart 154:11                             _ForwardingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_pipe.dart 252:10                             _MapStream._handleData[0m
+[38;5;1m│ dart:async/stream_pipe.dart 184:13                             _ForwardingStreamSubscription._handleData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:_http/websocket_impl.dart 1530:27                         new _WebSocketImpl._fromSocket.<fn>[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_transformers.dart 67:11                      _SinkTransformerStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_transformers.dart 13:11                      _EventSinkWrapper.add[0m
+[38;5;1m│ dart:_http/websocket_impl.dart 525:23                          _WebSocketProtocolTransformer._messageFrameEnd[0m
+[38;5;1m│ dart:_http/websocket_impl.dart 409:46                          _WebSocketProtocolTransformer.add[0m
+[38;5;1m│ dart:async/stream_transformers.dart 115:24                     _SinkTransformerStreamSubscription._handleData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:io-patch/socket_patch.dart 2906:41                        _Socket._onData[0m
+[38;5;1m│ dart:async/zone.dart 963:10                                    _RootZone.runUnaryGuarded[0m
+[38;5;1m│ dart:async/stream_impl.dart 381:11                             _BufferingStreamSubscription._sendData[0m
+[38;5;1m│ dart:async/stream_impl.dart 312:7                              _BufferingStreamSubscription._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 798:19                       _SyncStreamControllerDispatch._sendData[0m
+[38;5;1m│ dart:async/stream_controller.dart 663:7                        _StreamController._add[0m
+[38;5;1m│ dart:async/stream_controller.dart 618:5                        _StreamController.add[0m
+[38;5;1m│ dart:io-patch/socket_patch.dart 2344:31                        new _RawSocket.<fn>[0m
+[38;5;1m│ dart:io-patch/socket_patch.dart 1679:14                        _NativeSocket.issueReadEvent.issue[0m
+[38;5;1m│ dart:async/schedule_microtask.dart 40:35                       _microtaskLoop[0m
+[38;5;1m│ dart:async/schedule_microtask.dart 49:5                        _startMicrotaskLoop[0m
+[38;5;1m│ [0m
+[38;5;1m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+Setting PdfrxEntryFunctions instance: Instance of 'PdfrxEntryFunctionsImpl'
+00:33 +299: /workspace/Nowia/app/test/services/asset_test.dart: (tearDownAll)
+00:33 +299: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: recognizes repeated mouse button clicks
+00:33 +300: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: triple clicks supersede pending double clicks
+00:33 +301: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: rejects repeated clicks that move like a drag
+00:33 +302: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: releases a single tap after the repeat timeout
+00:33 +303: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: keeps repeated tap continuations in the same buffer
+00:33 +304: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: releases a buffered tap before a non-continuation
+00:33 +305: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: recognizes a simultaneous two-finger tap
+00:33 +306: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: recognizes a simultaneous three-finger tap
+00:33 +307: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: does not confuse sequential taps with a multi-finger tap
+00:33 +308: /workspace/Nowia/app/test/services/pointer_shortcuts_test.dart: rejects moved, held, and canceled multi-finger gestures
+00:34 +309: /workspace/Nowia/app/test/services/import_test.dart: archive import preserves encrypted documents without a password
+00:34 +310: /workspace/Nowia/app/test/services/import_test.dart: archive import preserves encrypted documents without a password
+00:34 +310: /workspace/Nowia/app/test/services/backup_test.dart: manual backup writes a ZIP to the selected connection
+[38;5;4m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;4m│ [info] | 7:49:50 351ms | Created backup Butterfly-2026-08-12_14-05-09.zip on Backup target[0m
+[38;5;4m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:34 +311: /workspace/Nowia/app/test/services/import_test.dart: archive import preserves encrypted documents without a password
+00:35 +312: /workspace/Nowia/app/test/views/home/recent_files_test.dart: hides file extension in recent file path
+00:36 +313: /workspace/Nowia/app/test/views/home/page_test.dart: HomePage renders desktop layout correctly
+00:36 +314: /workspace/Nowia/app/test/views/home/page_test.dart: HomePage renders desktop layout correctly
+00:36 +315: /workspace/Nowia/app/test/views/home/page_test.dart: HomePage renders desktop layout correctly
+00:36 +316: /workspace/Nowia/app/test/views/home/page_test.dart: HomePage renders desktop layout correctly
+00:37 +317: /workspace/Nowia/app/test/views/home/page_test.dart: HomePage renders mobile layout correctly
+00:38 +318: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: replacing document route closes document bloc
+00:38 +319: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: replacing document route closes document bloc
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:54 681ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:39 +320: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: replacing document route closes document bloc
+00:39 +321: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: replacing document route closes document bloc
+00:39 +322: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: replacing document route closes document bloc
+00:40 +323: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: replacing document route closes document bloc
+00:40 +324: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: replacing document route closes document bloc
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:56 200ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:56 865ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:41 +325: /workspace/Nowia/app/test/views/navigator/layers_test.dart: layer operations stay consistent across UI and document state
+00:41 +325: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: backgrounding flushes a delayed autosave
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:57 544ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:57 797ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:57 802ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:57 805ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:57 879ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:57 882ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:42 +326: /workspace/Nowia/app/test/views/navigator/layers_test.dart: layer operations stay consistent across UI and document state
+00:42 +326: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: embed can start full screen and be toggled off
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:57 988ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:42 +327: /workspace/Nowia/app/test/views/navigator/layers_test.dart: layer operations stay consistent across UI and document state
+00:42 +327: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: normal embed can toggle native full screen
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:58 291ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:42 +328: /workspace/Nowia/app/test/views/navigator/layers_test.dart: layer operations stay consistent across UI and document state
+00:42 +328: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: embed shows full screen menu item when toggling is enabled
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:58 553ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:43 +329: /workspace/Nowia/app/test/views/navigator/layers_test.dart: layer operations stay consistent across UI and document state
+00:43 +329: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: embed hides full screen menu item when toggling is disabled
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:59 286ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:44 +329: /workspace/Nowia/app/test/views/navigator/layers_test.dart: layer operations stay consistent across UI and document state
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:59 837ms | Updating visible elements: 3 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:59 907ms | Baking viewport (reset: true, viewChanged: true, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:44 +330: /workspace/Nowia/app/test/views/navigator/layers_test.dart: layer operations stay consistent across UI and document state
+00:44 +330: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: locked full screen layout ignores toggles
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:49:59 974ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:44 +331: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: locked full screen layout ignores toggles
+00:44 +332: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: embed file name stays separate from document metadata
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:00 177ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:45 +333: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 54ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 223ms | Changing tool to index: 1[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 224ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:45 +334: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +335: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +336: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +337: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +338: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +339: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +340: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +341: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +342: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +343: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +344: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+00:45 +345: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: double tap shortcut does not draw with the pen tool
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 290ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 308ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 320ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 322ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 372ms | Baking viewport (reset: true, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:45 +346: /workspace/Nowia/app/test/views/navigator/pages_test.dart: dragging pages updates document and visible order
+00:45 +346: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: releasing one touch pointer keeps the camera stable
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 478ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:46 +347: /workspace/Nowia/app/test/views/navigator/pages_test.dart: dragging pages updates document and visible order
+00:46 +347: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: pinch zoom stays anchored to the stationary finger
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 721ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:46 +348: /workspace/Nowia/app/test/views/navigator/pages_test.dart: dragging pages updates document and visible order
+00:46 +348: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: hold shortcut resets before the next pointer down
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:01 971ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 132ms | Changing tool to index: 1[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 133ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 287ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 289ms | Updating visible elements: 1 new[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 290ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 331ms | Baking viewport (reset: true, viewChanged: false, rendererStatesChanged: false)[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:46 +349: /workspace/Nowia/app/test/views/navigator/pages_test.dart: dragging pages updates document and visible order
+00:46 +349: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: temporary release handler receives pointer up before removal
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 443ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:47 +350: /workspace/Nowia/app/test/views/navigator/pages_test.dart: dragging pages updates document and visible order
+00:47 +350: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: select tool manipulates a ruler enabled after viewport build
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:02 810ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:47 +351: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: select tool manipulates a ruler enabled after viewport build
+00:47 +352: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: select tool manipulates a ruler enabled after viewport build
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:03 24ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:03 44ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:03 54ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:47 +353: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: context menu key opens the active tool context menu
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:03 133ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:03 309ms | Refreshing tools[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:47 +354: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: mobile navigator dialogs receive the editor runtime cubits
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:03 444ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:49 +355: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: full screen navigator menu opens the sidebar
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:05 171ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:50 +356: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: desktop navigator menu opens the sidebar when its rail is disabled
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:06 455ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:51 +357: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: converted imported file starts unsaved
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:07 511ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:52 +358: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: cancelling a newer document warning returns home
+00:52 +359: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: wrong encrypted document password returns home
+00:52 +360: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: saved connection password opens without a prompt
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:08 464ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:52 +361: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: embed does not load or save persistent document state
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:08 627ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:53 +362: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: embed can replace a used document with a blank document
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:08 783ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+[38;5;255m│ [verbose] | 7:50:08 888ms | Changing tool to index: 0[0m
+[38;5;255m└──────────────────────────────────────────────────────────────────────────────────────────────────────────────[0m
+00:53 +363: /workspace/Nowia/app/test/views/project_page_lifecycle_test.dart: (tearDownAll)
+00:53 +363: All tests passed!

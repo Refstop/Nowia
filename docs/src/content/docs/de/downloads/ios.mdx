@@ -1,0 +1,55 @@
+---
+title: iOS
+---
+
+![Stabile Release-Version](https://img.shields.io/badge/dynamic/yaml?color=c4840d&label=Stable&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FLinwoodDev%2Fbutterfly%2Fstable%2Fapp%2Fpubspec.yaml&style=for-the-badge)
+![Nightly-Release-Version](https://img.shields.io/badge/dynamic/yaml?color=f7d28c&label=Nightly&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2FLinwoodDev%2Fbutterfly%2Fnightly%2Fapp%2Fpubspec.yaml&style=for-the-badge)
+
+import {CardGrid, TabItem, Tabs} from '@astrojs/starlight/components';
+import DownloadButton from '/src/components/DownloadButton.astro';
+
+:::warning
+
+Die iOS-Version von Butterfly ist eine Vorschauversion und funktioniert möglicherweise nicht wie erwartet.
+Klicken Sie [hier](https://github.com/LinwoodDev/Butterfly/issues/244), um das Issue auf GitHub mit aktuell bekannten Fehlern und Updates zu öffnen. Bitte melden Sie dort alle Probleme.
+
+:::
+
+## Links
+
+<Tabs>
+<TabItem label="Stabil">
+  <CardGrid>
+    <DownloadButton href="https://github.com/LinwoodDev/butterfly/releases/download/stable/linwood-butterfly-ios.ipa" title="IPA"/>
+  </CardGrid>
+</TabItem>
+<TabItem label="Nightly">
+  <CardGrid>
+    <DownloadButton href="https://github.com/LinwoodDev/butterfly/releases/download/nightly/linwood-butterfly-ios.ipa" title="IPA"/>
+  </CardGrid>
+</TabItem>
+</Tabs>
+
+Lesen Sie mehr über die Nightly-Version von Butterfly [hier](/community/nightly).
+
+## Installation
+
+Die von uns bereitgestellte IPA-Datei ist nicht signiert. Das bedeutet, dass Sie sie selbst signieren müssen, bevor Sie sie auf Ihrem iOS-Gerät installieren können. \
+Zum Glück gibt es Projekte wie [AltStore](https://altstore.io) (Open Source) oder [Sideloadly](https://sideloadly.io) (Closed Source). \
+\
+Für das Sideloading von Butterfly benötigst Sie eine Apple-ID. Wir empfehlen, speziell dafür eine neue zu erstellen. Melden Sie Sie bitte mindestens einmal bei [Apple Developer](https://developer.apple.com) an und akzeptiere die Bedingungen.
+\
+Wenn auf Ihrem Gerät iOS 16.0 oder neuer läuft, aktiviere den Entwicklermodus unter Einstellungen/Datenschutz/Entwicklermodus.
+
+## Installation (AltStore)
+
+1. Richte AltStore anhand der Anleitung auf der AltStore-Website ein.
+2. Übertragen Sie eine Kopie der IPA-Datei auf Ihr Gerät. Am besten laden Sie sie mit einem Webbrowser herunter oder senden sich selbst eine ZIP-Datei, die die IPA enthält. Verwende kein AirDrop. Senden Sie sich die Datei außerdem nicht direkt selbst. Möglicherweise können Sie sie nicht öffnen.
+3. Öffnen Sie die IPA-Datei, verwenden Sie das Menü „Teilen“ und tippen Sie auf „AltStore“. Wenn Ihr Gerät mit Ihrem PC verbunden ist, auf dem AltServer läuft (per Kabel oder drahtlos), wird sie automatisch installiert.
+
+## Installation (Sideloadly)
+
+1. Richte Sideloadly anhand der Anleitungen auf sideloadly.io ein.
+2. Öffnen Sie Sideloadly auf Ihrem PC.
+3. Fügen Sie die IPA oben rechts hinzu und wählen Sie Ihr Gerät sowie Ihre Apple-ID aus. Klicken Sie auf Start. Die App wird auf Ihrem Gerät installiert.
+   Wenn ein Popup anzeigt, dass einem Entwickler nicht vertraut wird, gehen Sie zu Einstellungen/Allgemein/VPN & Geräteverwaltung und ändern Sie dies dort.

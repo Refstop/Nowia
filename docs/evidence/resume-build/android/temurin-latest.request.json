@@ -1,0 +1,14 @@
+{
+  "command": [
+    "curl",
+    "-fsSL",
+    "--max-time",
+    "60",
+    "https://github.com/adoptium/temurin21-binaries/releases/latest",
+    "-o",
+    "/workspace/build-resume-evidence/android/temurin-latest.html"
+  ],
+  "exit_code": 0,
+  "seconds": 0.8009922504425049,
+  "stderr": ""
+}

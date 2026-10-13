@@ -1,0 +1,196 @@
+{
+  "started_utc": "2026-10-13T10:24:08.934081+00:00",
+  "probe": "none",
+  "upstream_commit": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "stages": [
+    {
+      "stage": "commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:24:08.934186+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "commit.log",
+      "ended_utc": "2026-10-13T10:24:08.935819+00:00"
+    },
+    {
+      "stage": "source-before",
+      "command": [
+        "/usr/bin/python3",
+        "/home/runner/work/Nowia/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:24:08.936294+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-before.log",
+      "ended_utc": "2026-10-13T10:24:09.050432+00:00"
+    },
+    {
+      "stage": "flutter-version",
+      "command": [
+        "flutter",
+        "--version",
+        "--machine"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:24:09.050893+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "flutter-version.log",
+      "ended_utc": "2026-10-13T10:24:09.165241+00:00"
+    },
+    {
+      "stage": "dart-version",
+      "command": [
+        "dart",
+        "--version"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:24:09.165843+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "dart-version.log",
+      "ended_utc": "2026-10-13T10:24:09.230017+00:00"
+    },
+    {
+      "stage": "app-pub-get",
+      "command": [
+        "flutter",
+        "pub",
+        "get",
+        "--enforce-lockfile"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia/app",
+      "started_utc": "2026-10-13T10:24:09.230468+00:00",
+      "timeout_seconds": 1800,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "app-pub-get.log",
+      "ended_utc": "2026-10-13T10:24:25.827366+00:00"
+    },
+    {
+      "stage": "api-pub-get",
+      "command": [
+        "dart",
+        "pub",
+        "get",
+        "--enforce-lockfile"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia/api",
+      "started_utc": "2026-10-13T10:24:25.827885+00:00",
+      "timeout_seconds": 1800,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "api-pub-get.log",
+      "ended_utc": "2026-10-13T10:24:26.343014+00:00"
+    },
+    {
+      "stage": "source-after-pub",
+      "command": [
+        "/usr/bin/python3",
+        "/home/runner/work/Nowia/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:24:26.343520+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-after-pub.log",
+      "ended_utc": "2026-10-13T10:24:26.459719+00:00"
+    },
+    {
+      "stage": "app-analyze",
+      "command": [
+        "flutter",
+        "analyze",
+        "--no-pub",
+        "--fatal-infos"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia/app",
+      "started_utc": "2026-10-13T10:24:26.460197+00:00",
+      "timeout_seconds": 600,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "app-analyze.log",
+      "ended_utc": "2026-10-13T10:24:48.023186+00:00"
+    },
+    {
+      "stage": "api-analyze",
+      "command": [
+        "dart",
+        "analyze",
+        "--fatal-infos"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia/api",
+      "started_utc": "2026-10-13T10:24:48.026274+00:00",
+      "timeout_seconds": 600,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "api-analyze.log",
+      "ended_utc": "2026-10-13T10:24:50.000831+00:00"
+    },
+    {
+      "stage": "api-test",
+      "command": [
+        "dart",
+        "test",
+        "--reporter",
+        "expanded",
+        "--concurrency=2"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia/api",
+      "started_utc": "2026-10-13T10:24:50.001394+00:00",
+      "timeout_seconds": 900,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "api-test.log",
+      "ended_utc": "2026-10-13T10:24:56.832047+00:00"
+    },
+    {
+      "stage": "app-test",
+      "command": [
+        "flutter",
+        "test",
+        "--no-pub",
+        "--reporter",
+        "expanded",
+        "--concurrency=2"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia/app",
+      "started_utc": "2026-10-13T10:24:56.832613+00:00",
+      "timeout_seconds": 1800,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "app-test.log",
+      "ended_utc": "2026-10-13T10:27:16.838038+00:00"
+    },
+    {
+      "stage": "source-after",
+      "command": [
+        "/usr/bin/python3",
+        "/home/runner/work/Nowia/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:27:16.840757+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-after.log",
+      "ended_utc": "2026-10-13T10:27:17.155496+00:00"
+    }
+  ],
+  "quality": "PASS",
+  "source_after": "PASS",
+  "expected_failure_observed": false,
+  "ended_utc": "2026-10-13T10:27:17.156002+00:00",
+  "exit_code": 0
+}

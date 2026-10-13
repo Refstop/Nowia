@@ -1,0 +1,16 @@
+{
+  "command": [
+    "curl",
+    "-fSL",
+    "--retry",
+    "2",
+    "--max-time",
+    "300",
+    "https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/9.4.0/gradle-9.4.0.pom",
+    "-o",
+    "/workspace/build-resume-evidence/android/agp-pom.xml"
+  ],
+  "exit_code": 0,
+  "seconds": 0.13627123832702637,
+  "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n100  9034  100  9034    0     0  72033      0 --:--:-- --:--:-- --:--:-- 72272\n"
+}

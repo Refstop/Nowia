@@ -1,0 +1,396 @@
+{
+  "files": 65,
+  "passed": true,
+  "results": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3033,
+      "sha256": "2b9752d18a165c136b919843abc85d128041728423817e220bb5647d2a423cde",
+      "pass": true
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 7672,
+      "sha256": "baddd76c535ae2e15f011a26f048c709b13471f2c41e048356f767d75ecdc7ee",
+      "pass": true
+    },
+    {
+      "path": "adr/ADR-001-butterfly-baseline.md",
+      "bytes": 3086,
+      "sha256": "6edfa5941c27427024c56e2b8108cb06c54cb36f24e28f1abd965a6e43ea686a",
+      "pass": true
+    },
+    {
+      "path": "agent-handoff.md",
+      "bytes": 5143,
+      "sha256": "b16bbc91760f3b70a7ca1da01c920d94e00b05888a863cf273d4561f6040ad63",
+      "pass": true
+    },
+    {
+      "path": "build-baseline.md",
+      "bytes": 6619,
+      "sha256": "7004cf09b48c1ca64618d4a56f1b1b78caf13ed944f5f8eb4d1cd33ef2520210",
+      "pass": true
+    },
+    {
+      "path": "evidence/FND-01.md",
+      "bytes": 1540,
+      "sha256": "969ea0268725c2afd725f8f93609d4899758c60b1b05c31b251106678c7e5184",
+      "pass": true
+    },
+    {
+      "path": "evidence/FND-02.md",
+      "bytes": 1644,
+      "sha256": "1d10db924ea8a5275361f95e73a7c2d66903cb1b72b89d4165f7abbe81a93772",
+      "pass": true
+    },
+    {
+      "path": "evidence/FND-03.md",
+      "bytes": 8714,
+      "sha256": "9defc8aaf2e5abca76c2e8df8d18d423bbff2f1770d75542741274ce61e52037",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/android-package-metadata.json",
+      "bytes": 3428,
+      "sha256": "b155cd0819a324ec87cc5585a012eec45c990b23b5156f1a02d52dd04f508716",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/android-repository.xml",
+      "bytes": 375813,
+      "sha256": "2fe5ec9185d840be617b2d336f12f6683c4c365e213599a8be28a2d7fb026afe",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/apk-inventory.json",
+      "bytes": 137,
+      "sha256": "5255410ae824e41ef7d2857510c2809b60bf2b2c4d7c55e022a769831b183c0e",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/dart-version.json",
+      "bytes": 304,
+      "sha256": "0d3ee6e2d4740ad2221fb02e08378fa72c37088f4933b404afc21b316343dc93",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-build-apk-no-owner.json",
+      "bytes": 436,
+      "sha256": "f584f2f2eca45cf1ffe898d4ed498d0699b8abe7444e7ea15e0142acd4ef3372",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-build-apk-no-owner.log",
+      "bytes": 1284,
+      "sha256": "3c2c7a37ec2856ebe9d68355719f3c73a1835a0fb4069a940a1e78bdb2fba50f",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-build-apk-preflight.json",
+      "bytes": 530,
+      "sha256": "8bd44efcc930324875bb2729d21254593bbb82d83ad09731122d1c782683c615",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-build-apk-preflight.log",
+      "bytes": 415,
+      "sha256": "65c5515af807a50c457ef0b0709cd19613a13378fe79463db1c51456f38b8ff6",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-build-apk.json",
+      "bytes": 369,
+      "sha256": "a01c8e13cdb6da5c002a634a9ae40e39cc22f79e97f8ad674f636e6c56e53297",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-build-apk.log",
+      "bytes": 2593,
+      "sha256": "7185178ef13a6ab872d2dc19c80a1a2c0ad254750bd48e6a3c480df903971cd4",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-clone.json",
+      "bytes": 313,
+      "sha256": "5efb2e2716d69088de4cfccfdc6627cbe1efe80293e1eb9f431888aaa6259e48",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-clone.log",
+      "bytes": 790,
+      "sha256": "ccc829dfff8dfee6f83a495ed70833d1bdab79e27ecc4cf0358331ad705d82a9",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-source.json",
+      "bytes": 153,
+      "sha256": "3d794198f81065acd587cc6ac44bc6913468e84418b5df493e9411edd6764111",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-version.json",
+      "bytes": 218,
+      "sha256": "79155537f051edf0462c09c72496ff3d18d8797bdd5580bb7b65647f7a170de6",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/flutter-version.log",
+      "bytes": 4737,
+      "sha256": "0eae191f40cd00f9462fbc3e98c92c9e6b1ef3f26f9395003df80a3d91e2ef3f",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/host-environment.json",
+      "bytes": 1858,
+      "sha256": "414e14c82df163c71262d71452a5b44d71af540aff245c5131ca1e6e8d466cff",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/pub-connectivity.json",
+      "bytes": 2762,
+      "sha256": "83e29772c91afe15826cb39543814e9dfb8bb8fcf35723a8005be4157b0de9c0",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/result-summary.json",
+      "bytes": 852,
+      "sha256": "aaddeaf3a691c3b99d55e95431c9e3c37959b2701e7fc45a564803a2926b002d",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/source-after.json",
+      "bytes": 778,
+      "sha256": "0e322cb87cb7e4578d90ffcc557516c7c3ed43631d0bd1f92441dac3ee579193",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/source-before.json",
+      "bytes": 778,
+      "sha256": "0e322cb87cb7e4578d90ffcc557516c7c3ed43631d0bd1f92441dac3ee579193",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build/temurin-fetch-status.json",
+      "bytes": 399,
+      "sha256": "7e4e6954fa1ffe399e53c2c1d1c3740c0f5c45393915d6f36075d82b7bb83b83",
+      "pass": true
+    },
+    {
+      "path": "evidence/local-build-index.json",
+      "bytes": 3082,
+      "sha256": "eea548d6c9cfb33e0b92099da84c2aa499e2d52012a5599c1ab9498856fa2bb0",
+      "pass": true
+    },
+    {
+      "path": "foundation.patch",
+      "bytes": 495508,
+      "sha256": "2eb5b26e88241df18d23ed30d0cf28d2a51f5f6f06b35533628eb650aa7227ca",
+      "pass": true
+    },
+    {
+      "path": "project-inputs.md",
+      "bytes": 4034,
+      "sha256": "77a6785e2ffa9bef4a5e8ba3f92d4606a7025b2c945acbfc7526983f89273ba5",
+      "pass": true
+    },
+    {
+      "path": "reconstruct.sh",
+      "bytes": 2037,
+      "sha256": "ef635e5a91269a6b4a4ba29f43397712390845fa08ddd72ffcd0c8a4147c5242",
+      "pass": true
+    },
+    {
+      "path": "runbooks/device-baseline.md",
+      "bytes": 4725,
+      "sha256": "8fbf747c8911ef7703a30cd73e4b476c7d300655d3a185f44a6ed354894acdfc",
+      "pass": true
+    },
+    {
+      "path": "status.md",
+      "bytes": 2008,
+      "sha256": "3bd2c86ec8fb55f9c24a9775d12eff787f398f0f95c341e609c9109e4b9c0228",
+      "pass": true
+    },
+    {
+      "path": "upstream-audit.md",
+      "bytes": 12880,
+      "sha256": "10adf130734464e9eaf927cf1fba729cdb1ff5202c9fe30d1d7d5459c5d483d5",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/.github/workflows/build.yml",
+      "bytes": 47212,
+      "sha256": "f07074dcacc6712fc7f375b2d985f9ed2036e09eb8a3aad0a734a7f0c62969a9",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/.github/workflows/dart.yml",
+      "bytes": 1826,
+      "sha256": "cf8ab81d95462dd69df8e81c7ee6ca69001b5acd871dce98cf4a0780a48f7a8f",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/BRANDING_LICENSE",
+      "bytes": 20138,
+      "sha256": "187442db4df3afd21f2f0525739fd4beac28a62daaba3ee8d3533f60e7c33ec7",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/CONTRIBUTING.md",
+      "bytes": 3107,
+      "sha256": "c186a1f740352008da86bc9619540cea88ceb09e3281645d6e7e18c333c8fac7",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/LICENSE",
+      "bytes": 34523,
+      "sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/README.md",
+      "bytes": 7621,
+      "sha256": "79800ab2d4c63ac1df929cbfb93bcae34936a33183bf7d606d5e3e41f52a93ad",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/api/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/api/pubspec.lock",
+      "bytes": 18761,
+      "sha256": "e5fa6063dc3c9d0781d5630775eb068f6cd3a6498f694c4f62f7af3b2ab27e24",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/api/pubspec.yaml",
+      "bytes": 785,
+      "sha256": "292b615c8b8f7142d4b849ceebfd82ce9c2d7790f0864bd9c3da81ff41cd616a",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/README.md",
+      "bytes": 3347,
+      "sha256": "67c30a1ea199ab1021c1235adf1cd16f87f965a7fa7ba2ebad957be7b3caccc8",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/android/app/build.gradle.kts",
+      "bytes": 3182,
+      "sha256": "c89b6b44846d49fbbc88325f0dafc8c77401f3aad066c14765838579b8b97226",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/android/gradle/wrapper/gradle-wrapper.properties",
+      "bytes": 339,
+      "sha256": "dd7f9ae2b5f8b2282ef84335c9120582cd6e56a0c784ca04a33355295cdefa55",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/android/gradle.properties",
+      "bytes": 300,
+      "sha256": "0f82b18017fba6bb5ce3aa4b2d1a00c9382fc8aae7b1d9326e44b18abd66d80b",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/android/settings.gradle.kts",
+      "bytes": 739,
+      "sha256": "de767b2334241295d9cc46120bd6b40e17f9e7e146fee2669acfe77f6180dcc5",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/fonts/Comfortaa-LICENSE.txt",
+      "bytes": 4426,
+      "sha256": "c1276722229ed1866c84a0ec9eb9db174f091c77ea3a605724ada55c476c0296",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/fonts/NotoSansArabic-LICENSE.txt",
+      "bytes": 4382,
+      "sha256": "a7a5a25eb188bf1cd96982030d53e23c33485c69b1044a562254226857ee13af",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/fonts/Roboto-LICENSE.txt",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/pubspec.lock",
+      "bytes": 53715,
+      "sha256": "fbc231cdef6548052a57a9809a070e6682ce6fe156e39984a40ea552ef6e490a",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/pubspec.yaml",
+      "bytes": 7141,
+      "sha256": "7e43306e622737d297fd21b55841bbf2f59fec57c58f9549b6c88b42eee86e2f",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/app/rust-toolchain.toml",
+      "bytes": 31,
+      "sha256": "0bf007546885bfdc84484863a3b2dd936a89627191998d987cd798759e3935f1",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/docs/src/content/docs/downloads/build-your-own.md",
+      "bytes": 541,
+      "sha256": "07d72acc3e91c55beb1461e00249fb8363daf9d9a410aab7dde1aebfa3e9cf09",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/flutter-3.47.5-FlutterExtension.kt",
+      "bytes": 3280,
+      "sha256": "5af7d2f4c66199f0471f3f8e9cdcb601d8770732f1392695df03e798e9a2e9dc",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/flutter-ref.json",
+      "bytes": 340,
+      "sha256": "73820e50879f4535ff5e118367087d9e4b49162cd2b2d4f5594f9faa97c81559",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/release-jobs.json",
+      "bytes": 55202,
+      "sha256": "953624934faeffb3123941b525a53fbc8c3b399d8a8abf7fd82bab5131879a96",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/release.json",
+      "bytes": 46345,
+      "sha256": "4fa37748501c26f35e4470ff86a5b58a5d52c6d95f1360d4c470e7d6de95fca7",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/runs.json",
+      "bytes": 123430,
+      "sha256": "704e0907c57eda79a2713bcb2fc9608a484a80ea8f9214be8faef6884b14525f",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/source-manifest.json",
+      "bytes": 249782,
+      "sha256": "219b21293254f409fbd599ef77bfdd81a275cad5ad8ab99834c38b49266ffcd2",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/tag-object.json",
+      "bytes": 663,
+      "sha256": "4a681f4d61e294e77967e0fa3ea6e4f651fb281d83da143b492cd2195446cabc",
+      "pass": true
+    },
+    {
+      "path": "upstream_evidence/upstream-tree.json",
+      "bytes": 1224539,
+      "sha256": "aeb788f3306193cbbb535df16f52c714f66a8c5aefde4e0db446bc361d009af9",
+      "pass": true
+    }
+  ]
+}

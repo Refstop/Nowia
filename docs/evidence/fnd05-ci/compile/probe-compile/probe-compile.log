@@ -1,0 +1,5 @@
+/tmp/nowia-failure-probe-qh850f9g/compile_error.dart:4:15: Error: A value of type 'String' can't be assigned to a variable of type 'int'.
+  int value = 'NOWIA_INTENTIONAL_COMPILE_FAILURE';
+              ^
+Error: AOT compilation failed
+Bad state: Generating AOT kernel dill failed!

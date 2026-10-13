@@ -1,0 +1,103 @@
+{
+  "started_utc": "2026-10-13T10:28:45.932019+00:00",
+  "probe": "compile",
+  "upstream_commit": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "stages": [
+    {
+      "stage": "commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:28:45.932165+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "commit.log",
+      "ended_utc": "2026-10-13T10:28:45.936140+00:00"
+    },
+    {
+      "stage": "source-before",
+      "command": [
+        "/usr/bin/python3",
+        "/home/runner/work/Nowia/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:28:45.936580+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-before.log",
+      "ended_utc": "2026-10-13T10:28:46.050886+00:00"
+    },
+    {
+      "stage": "flutter-version",
+      "command": [
+        "flutter",
+        "--version",
+        "--machine"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:28:46.051328+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "flutter-version.log",
+      "ended_utc": "2026-10-13T10:28:46.167653+00:00"
+    },
+    {
+      "stage": "dart-version",
+      "command": [
+        "dart",
+        "--version"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:28:46.168358+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "dart-version.log",
+      "ended_utc": "2026-10-13T10:28:46.232803+00:00"
+    },
+    {
+      "stage": "probe-compile",
+      "command": [
+        "dart",
+        "compile",
+        "exe",
+        "/tmp/nowia-failure-probe-qh850f9g/compile_error.dart",
+        "-o",
+        "/tmp/nowia-failure-probe-qh850f9g/must-not-exist"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:28:46.233790+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 254,
+      "log": "probe-compile.log",
+      "ended_utc": "2026-10-13T10:28:46.398318+00:00"
+    },
+    {
+      "stage": "source-after",
+      "command": [
+        "/usr/bin/python3",
+        "/home/runner/work/Nowia/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/home/runner/work/Nowia/Nowia",
+      "started_utc": "2026-10-13T10:28:46.399134+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-after.log",
+      "ended_utc": "2026-10-13T10:28:46.513567+00:00"
+    }
+  ],
+  "quality": "NOT_RUN",
+  "source_after": "PASS",
+  "expected_failure_observed": true,
+  "error": "Expected compile failure propagated to CI",
+  "ended_utc": "2026-10-13T10:28:46.514014+00:00",
+  "exit_code": 254
+}

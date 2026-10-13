@@ -1,0 +1,45 @@
+[!] Flutter (Channel [user-branch], 3.47.5, on Ubuntu 26.04.1 LTS 7.0.0-1012-azure, locale C.UTF-8) [34ms]
+    ! Flutter version 3.47.5 on channel [user-branch] at /home/runner/work/_temp/nowia-toolchains/flutter
+      Currently on an unknown channel. Run `flutter channel` to switch to an official channel.
+      If that doesn't fix the issue, try deleting the 'bin/cache/flutter.version.json' file in your Flutter SDK directory and then reinstall Flutter by following instructions at https://flutter.dev/setup.
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 6a19cca564 (4 weeks ago), 2026-09-17 14:13:22 -0400
+    • Engine revision af7e796e16
+    • Dart version 3.13.4
+    • DevTools version 2.60.0
+    • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios, cli-animations, enable-native-assets, enable-record-use, enable-swift-package-manager, omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration, enable-riscv64
+    • If those were intentional, you can disregard the above warnings; however it is recommended to use "git" directly to perform update checks and upgrades.
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 36.0.0) [127ms]
+    • Android SDK at /home/runner/work/_temp/nowia-toolchains/android-sdk
+    • Emulator version unknown
+    • Platform android-36, build-tools 36.0.0
+    • ANDROID_HOME = /home/runner/work/_temp/nowia-toolchains/android-sdk
+    • ANDROID_SDK_ROOT = /home/runner/work/_temp/nowia-toolchains/android-sdk
+    • Java binary at: /home/runner/work/_temp/nowia-toolchains/jdk-21/bin/java
+      This JDK is specified by the JAVA_HOME environment variable.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment Temurin-21.0.12.1+1 (build 21.0.12.1+1-LTS)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web [48ms]
+    • Chrome at google-chrome
+
+[✗] Linux toolchain - develop for Linux desktop [142ms]
+    • Ubuntu clang version 21.1.8 (6ubuntu1)
+    • cmake version 4.4.3
+    • ninja version 1.13.2
+    • pkg-config version 2.5.1
+    ✗ GTK 3.0 development libraries are required for Linux development.
+      They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
+    ! Unable to access driver information using 'eglinfo'.
+      It is likely available from your distribution (e.g.: apt install mesa-utils)
+
+[✓] Connected device (2 available) [146ms]
+    • Linux (desktop) • linux  • linux-x64      • Ubuntu 26.04.1 LTS 7.0.0-1012-azure
+    • Chrome (web)    • chrome • web-javascript • Google Chrome 154.0.8037.57
+
+[✓] Network resources [236ms]
+    • All expected network resources are available.
+
+! Doctor found issues in 2 categories.

@@ -1,0 +1,8 @@
+Running Gradle task 'assembleProductionDebug'...                
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=proxy -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy -Dhttps.proxyPort=8080
+WARNING: Your Android app project: app located at: /workspace/Nowia/app/android/app/build.gradle.kts
+applies the Kotlin Gradle Plugin, which will cause build failures in future versions of Flutter.
+Please migrate your app to Built-in Kotlin using this guide: https://docs.flutter.dev/release/breaking-changes/migrate-to-built-in-kotlin/for-app-developers
+
+Running Gradle task 'assembleProductionDebug'...                    9.4s
+✓ Built build/app/outputs/flutter-apk/app-production-debug.apk

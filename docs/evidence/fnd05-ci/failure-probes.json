@@ -1,0 +1,40 @@
+{
+  "normal_source": "de79ee491bc95938357689ab3053537f215ef01e",
+  "integrity": {
+    "probe": "integrity",
+    "branch": "task/fnd-05-probe-integrity",
+    "tree": "fcf3cba735a2e045e94e4f085ac076e74f9d79b0",
+    "sha": "6fb26e00a0d53831ba71a460240fe457dbf54fe8",
+    "run_id": 38383269605,
+    "job_id": 115248689814,
+    "conclusion": "failure",
+    "failed_step": "Prove integrity failure propagation (expected red job)",
+    "expected_failure_observed": true,
+    "process_exit_code": 1,
+    "source_after": "PASS",
+    "artifact_count": 1,
+    "artifact_id": 11804581732,
+    "artifact_zip_sha256": "1030b43a95bebd832b57c62c12bbc69bae7248d4e8f7cd02f1b20301af5e7985",
+    "download_and_hash": "PASS",
+    "apk_artifact": "ABSENT"
+  },
+  "compile": {
+    "probe": "compile",
+    "branch": "task/fnd-05-probe-compile",
+    "tree": "729702f03cb0163d664763615d7613e8a7f9be7e",
+    "sha": "d07baa7f13671bcf11c6cdf143f10b044d895e70",
+    "run_id": 38383276918,
+    "job_id": 115248714138,
+    "conclusion": "failure",
+    "failed_step": "Prove compiler failure propagation (expected red job)",
+    "expected_failure_observed": true,
+    "process_exit_code": 254,
+    "source_after": "PASS",
+    "artifact_count": 1,
+    "artifact_id": 11804796599,
+    "artifact_zip_sha256": "5c027cb6914d9ba30c80352d82e1ba0356552b3964c93853adba03a510159d80",
+    "download_and_hash": "PASS",
+    "apk_artifact": "ABSENT"
+  },
+  "scope": "Each disposable branch changes only the corresponding existing probe condition to true. Compiler probe is standalone Dart AOT, not Android APK compilation. Main and the normal PR branch retain probes disabled."
+}

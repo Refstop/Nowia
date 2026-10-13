@@ -1,0 +1,13 @@
+WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the replacement for 'sdkmanager'.
+To learn more about the Android CLI and how to use it, see the documentation (https://d.android.com/tools/agents/android-cli)
+
+Picked up JAVA_TOOL_OPTIONS: 
+Installed packages:
+  build-tools/36.0.0           36.0.0                            Android SDK Build-Tools 36             
+  cmake/3.22.1                 3.22.1                            CMake 3.22.1                           
+  cmdline-tools/latest         unknown         ->        23.0.0  Android SDK Command-line Tools (latest)
+  ndk/28.2.13676358            28.2.13676358                     NDK (Side by side) 28.2.13676358       
+  platform-tools               37.0.1                            Android SDK Platform-Tools             
+  platforms/android-35         2.0.0                             Android SDK Platform 35                
+  platforms/android-36         2.0.0                             Android SDK Platform 36                

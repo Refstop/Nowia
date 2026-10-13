@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Κρατήστε σημειώσεις, σχεδιάστε ελεύθερα και οργανώστε τις ιδέες σας σε έναν ατελείωτο χώρο εργασίας
+template: splash
+hero:
+  tagline: Your ideas should not have to fit inside a page. Handwrite, sketch, annotate, and organize on an infinite canvas that stays yours.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Λήψη του Butterfly
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Δοκιμάστε την εφαρμογή web
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Τεκμηρίωση
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Ιστολόγιο
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Ένας καμβάς Butterfly με χειρόγραφες σημειώσεις, διαγράμματα και χάρακα">
+
+
+
+
+  ## Ένας χώρος εργασίας για οπτικούς στοχαστές
+
+  Κρατήστε σημειώσεις από διαλέξεις με γραφίδα, σχολιάστε ένα PDF, σχεδιάστε μια διεπαφή, φτιάξτε ένα διάγραμμα, οργανώστε ένα έργο — ή συνδυάστε τα όλα στο ίδιο έγγραφο.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Ρυθμίσεις πένας για εργαλείο σχεδίασης του Butterfly" reverse>
+
+
+
+
+
+  ## Ρυθμίστε κάθε πινελιά
+
+  Draw with a stylus, touch, or mouse. Adjust stroke width, color, smoothing, and texture. If a mark is not quite right, edit it instead of starting over.
+</LandingFeature>
+
+## Ισχυρό όσο μεγαλώνουν τα έργα σας
+
+<CardGrid stagger>
+  <Card title="Κάθε στοιχείο παραμένει επεξεργάσιμο" icon="pencil">
+    Move, resize, recolor, and reorganize content after placing it. Your first attempt never has to be your final one.
+  </Card>
+  <Card title="Συνηθισμένα μέσα σε ένα έγγραφο" icon="document">
+    Import camera photos, gallery images, PDFs, and SVGs. Combine them with your own notes and export clean results in common formats.
+  </Card>
+  <Card title="Επαναχρησιμοποιήσιμα δομικά στοιχεία" icon="puzzle">
+    Μετατρέψτε αγαπημένες διατάξεις σε πρότυπα και συχνά χρησιμοποιούμενο περιεχόμενο σε πακέτα, σφραγίδες, παλέτες και στυλ διαθέσιμα σε όλα τα έγγραφα.
+  </Card>
+  <Card title="Εργαλεία για κάθε ιδέα" icon="open-book">
+    Προχωρήστε πέρα από την πένα και τη γόμα με ετικέτες, σχήματα, πολύγωνα, χάρακες, πλέγματα, υφές, σφραγίδες, δείκτη λέιζερ, εργαλεία παρουσίασης και πολλά άλλα.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Πρότυπα και πακέτα Butterfly με επαναχρησιμοποιήσιμα στυλ καμβά">
+
+
+
+
+  ## Προσαρμόστε το Butterfly στη ροή εργασίας σας
+
+  Start with a template that brings together your favorite backgrounds, tools, layers, areas, and pages. Save reusable content in packs so your next project starts with everything you need.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Ένα χειρόγραφο έγγραφο Butterfly σε τηλέφωνο και επιτραπέζιο υπολογιστή" reverse>
+
+
+
+
+
+  ## Λειτουργεί παντού
+
+  Take your canvas from your desk to your next class or meeting. Butterfly runs on Android, Windows, macOS, Linux, and in your browser, with an iOS preview also available.
+
+</LandingFeature>
+
+## Η δουλειά σας σάς ανήκει
+
+<CardGrid>
+  <Card title="Τοπικά από προεπιλογή" icon="laptop">
+    Keep working without an internet connection. Your documents live on your device unless you choose to save them somewhere else.
+  </Card>
+  <Card title="Χρησιμοποιήστε το δικό σας cloud" icon="rocket">
+    Συνδέστε υπηρεσίες WebDAV όπως το Nextcloud για να συγχρονίζετε, να δημιουργείτε αντίγραφα ασφαλείας και να επεξεργάζεστε τις σημειώσεις σας οπουδήποτε.
+  </Card>
+  <Card title="Λογισμικό ανοικτού κώδικα" icon="code-branch">
+    Butterfly is free and open source under the GNU AGPL-3.0 license. Keep your documents in its documented `.bfly` and `.tbfly` formats.
+  </Card>
+  <Card title="Δημιουργήστε μαζί" icon="comment">
+    Η πειραματική συνεργασία υποστηρίζει κρυπτογραφημένες από άκρο σε άκρο συνεδρίες μέσω Swamp ή διακομιστή WebSocket που φιλοξενείτε εσείς.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly, ο απεριόριστος καμβάς για οπτική σκέψη.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Λήψη του Butterfly" description="Εγκαταστήστε την εφαρμογή στο τηλέφωνο, το tablet ή τον υπολογιστή σας." href="/downloads/" />
+  <LinkCard title="Δοκιμάστε την εφαρμογή web" description="Start a canvas in your browser without installing anything. Chromium-based browsers are recommended." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Διαβάστε το ιστολόγιο του Butterfly" description="Παρακολουθήστε εκδόσεις, νέα του έργου και ιστορίες από την ανάπτυξη." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Μάθετε τα βασικά" description="Δημιουργήστε το πρώτο σας έγγραφο και εξερευνήστε ολόκληρη την εργαλειοθήκη." href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly is built in the open and available in many languages. [Join the community](/community/) to share feedback, help with translations, or contribute to the project.

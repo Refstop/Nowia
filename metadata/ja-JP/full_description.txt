@@ -1,0 +1,11 @@
+Butterfly は、アイデアをのびのび広げられるオープンソースアプリです。メモを取り、スケッチや図を描き、画像やドキュメントを自由に配置できる、広がり続けるワークスペースを使えます。 Instead of writing everything from top to bottom on a fixed page, you get an endless workspace where you can place notes, sketches, diagrams, images, and documents wherever they make sense.
+
+授業メモ、会議メモ、研究、数学、ワークシート、計画、ホワイトボード、ストーリーボード、製品スケッチ、または開始が乱雑で成長の余地が必要なあらゆるプロジェクトに使用します。スタイラス、タッチ、マウスを使って手書きし、テキストやマークダウンを入力し、図形や線を追加し、画像や写真を配置し、PDF、SVG、画像ファイルをインポートし、作業を PDF、SVG、画像、またはポータブルな Butterfly ファイルとしてエクスポートします。 Write by hand with a stylus, touch, or mouse, type text and Markdown, add shapes and lines, place images and photos, import PDFs, SVGs, and image files, then export your work as PDF, SVG, images, or portable Butterfly files.
+
+Butterfly tries to stay out of your way while you work. Recent files, quick-start templates, search, folders, imports, page navigation, and tool settings are close when you need them, but the document stays at the center. You can begin with a plain page, ruled paper, a grid, dotted paper, music paper, or your own template.
+
+As your document grows, Butterfly gives you ways to keep it understandable. Split work into pages and page folders, use layers, mark important places with areas and waypoints, save reusable parts in packs, and keep palettes and text styles ready for the next document. Almost everything you add remains editable, so you can move, resize, recolor, reorder, and refine your work later instead of starting over.
+
+Your files stay under your control. Work offline, store documents on your device, choose a different data directory, or connect WebDAV and Nextcloud if you want your own sync setup. There is no required account, no required subscription, and no required proprietary cloud.
+
+Butterfly は無料で、コミュニティで翻訳され、携帯電話、タブレット、デスクトップ、Web で利用でき、AGPL-3.0 ライセンスに基づいて公開開発されています。

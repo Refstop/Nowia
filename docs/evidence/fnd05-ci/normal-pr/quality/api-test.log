@@ -1,0 +1,48 @@
+00:00 +0: loading test/data_test.dart
+00:00 +0: test/data_test.dart: Pack fonts font assets can be listed, inherited, and removed
+00:00 +1: test/data_test.dart: Text style fonts old styles default to Roboto without fallbacks
+00:00 +2: test/data_test.dart: Highlighter options new options remain disabled for old JSON
+00:00 +3: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +4: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +5: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +6: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +7: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +8: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +9: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +10: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +11: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +12: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +13: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +14: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +15: test/xopp_test.dart: imports and exports supported Xournal++ document data
+00:00 +16: test/data_test.dart: NoteData metadata conversion NoteFile display reads text thumbnails and metadata
+00:00 +17: test/data_test.dart: NoteData metadata conversion NoteFile display reads text thumbnails and metadata
+00:00 +18: test/data_test.dart: NoteData metadata conversion NoteFile display reads text thumbnails and metadata
+00:00 +19: test/data_test.dart: NoteData metadata conversion NoteFile display reads text thumbnails and metadata
+00:00 +20: test/data_test.dart: NoteData metadata conversion NoteFile display reads text thumbnails and metadata
+00:00 +21: test/data_test.dart: NoteData metadata conversion NoteFile display reads text thumbnails and metadata
+00:00 +22: test/data_test.dart: NoteData metadata conversion NoteFile display reads text thumbnails and metadata
+00:00 +23: test/data_test.dart: NoteData metadata conversion createTemplate sets template metadata and thumbnail
+00:00 +24: test/data_test.dart: NoteData metadata conversion createDocument with disablePages removes all pages
+00:00 +25: test/data_test.dart: NoteData assets getValidAssets returns usable full paths for text export
+00:00 +26: test/data_test.dart: NoteData assets getAllAssets contains imported image and pdf entries
+00:00 +27: test/data_test.dart: NoteData assets getAllAssets contains imported texture entries
+00:00 +28: test/data_test.dart: NoteData assets importImage reuses existing asset path for identical content
+00:00 +29: test/data_test.dart: NoteData parent packs pack assets fall back to parent pack
+00:00 +30: test/data_test.dart: NoteData parent packs tool preset override only applies when the type matches parent
+00:00 +31: test/data_test.dart: ElementPaint migration file version 12 colors migrate to explicit paint fields
+00:00 +32: test/migration_test.dart: Document migration Migrate from v1
+00:00 +33: test/migration_test.dart: Document migration Migrate from v1
+00:00 +34: test/migration_test.dart: Document migration Migrate from v1
+00:00 +35: test/migration_test.dart: Document migration Migrate from v1
+00:00 +36: test/table_model_test.dart: row and column operations preserve surrounding cell data
+00:00 +37: test/table_model_test.dart: table always retains at least one row and column
+00:00 +38: test/table_model_test.dart: individual border changes materialize all table border lines
+00:00 +39: test/table_model_test.dart: row insertion preserves existing boundaries
+00:00 +40: test/table_model_test.dart: column insertion preserves customized border segments
+00:00 +41: test/table_model_test.dart: cell border changes affect only its four edge segments
+00:00 +42: test/table_model_test.dart: table boundaries resize adjacent rows and columns
+00:00 +43: test/table_model_test.dart: last boundaries resize the table and final row or column
+00:00 +44: test/table_model_test.dart: setting a row or column extent only changes that track size
+00:00 +45: test/table_model_test.dart: column insertion preserves existing custom widths
+00:00 +46: All tests passed!

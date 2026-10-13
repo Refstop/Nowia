@@ -1,0 +1,16 @@
+{
+  "command": [
+    "curl",
+    "-fSL",
+    "--retry",
+    "2",
+    "--max-time",
+    "300",
+    "https://dl.google.com/android/repository/commandlinetools-linux-16111833_latest.zip",
+    "-o",
+    "/workspace/build-resume-evidence/android/cmdline-tools.zip"
+  ],
+  "exit_code": 0,
+  "seconds": 2.9867801666259766,
+  "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n 15  172M   15 27.5M    0     0  39.3M      0  0:00:04 --:--:--  0:00:04 39.3M\n 52  172M   52 90.7M    0     0  53.3M      0  0:00:03  0:00:01  0:00:02 53.3M\n 89  172M   89  154M    0     0  57.0M      0  0:00:03  0:00:02  0:00:01 57.0M\n100  172M  100  172M    0     0  58.0M      0  0:00:02  0:00:02 --:--:-- 58.0M\n"
+}

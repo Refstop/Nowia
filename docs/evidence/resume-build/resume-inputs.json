@@ -1,0 +1,20 @@
+{
+  "ticket": "FND-03",
+  "recorded_at": "2026-10-13",
+  "handoff_archive_sha256": "6be686cc75f5e8d10cab2a2c5f15e6232f8044ee58791fb2a2cfed3ddffc3f18",
+  "upstream_commit": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "restored_nowia_commit": "d1feecc5beecc21bb30901135f6d9eca04b9c94c",
+  "restored_nowia_tree": "51dbbcd09c11409f792d46b3c7d6f0307f773492",
+  "branch": "task/fnd-03-resume",
+  "source_unchanged": {
+    "app": "ff163eaaab6fbf214b87f76c1edb133cc9edd4d6",
+    "api": "3d0f3e16e0f55ad4c593568dae8262f3ffbad55d"
+  },
+  "source_locks_sha256": {
+    "app/pubspec.lock": "fbc231cdef6548052a57a9809a070e6682ce6fe156e39984a40ea552ef6e490a",
+    "api/pubspec.lock": "e5fa6063dc3c9d0781d5630775eb068f6cd3a6498f694c4f62f7af3b2ab27e24"
+  },
+  "device_test": "NOT_RUN",
+  "remote_push": "NOT_RUN",
+  "ci": "NOT_RUN"
+}

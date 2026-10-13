@@ -1,0 +1,11 @@
+Butterfly es una aplicación de código abierto pensada para dar espacio a tus ideas. Instead of writing everything from top to bottom on a fixed page, you get an endless workspace where you can place notes, sketches, diagrams, images, and documents wherever they make sense.
+
+Úselo para notas de clase, notas de reuniones, investigaciones, matemáticas, hojas de trabajo, planificación, pizarras, guiones gráficos, bocetos de productos o cualquier proyecto que comience de manera desordenada y necesite espacio para crecer. Escriba a mano con un lápiz óptico, toque o mouse, escriba texto y Markdown, agregue formas y líneas, coloque imágenes y fotografías, importe archivos PDF, SVG y de imágenes, luego exporte su trabajo como PDF, SVG, imágenes o archivos Butterfly portátiles.
+
+Butterfly intenta mantenerse fuera de tu camino mientras trabajas. Los archivos recientes, las plantillas de inicio rápido, la búsqueda, las carpetas, las importaciones, la navegación de páginas y la configuración de herramientas están cerca cuando los necesita, pero el documento permanece en el centro. Puede comenzar con una página normal, papel rayado, una cuadrícula, papel punteado, papel musical o su propia plantilla.
+
+A medida que su documento crece, Butterfly le ofrece formas de hacerlo comprensible. Divida el trabajo en páginas y carpetas de páginas, use capas, marque lugares importantes con áreas y puntos de referencia, guarde partes reutilizables en paquetes y mantenga paletas y estilos de texto listos para el siguiente documento. Casi todo lo que agregas sigue siendo editable, por lo que puedes mover, cambiar el tamaño, cambiar el color, reordenar y refinar tu trabajo más tarde en lugar de empezar de nuevo.
+
+Tus archivos permanecen bajo tu control. Trabaje sin conexión, almacene documentos en su dispositivo, elija un directorio de datos diferente o conecte WebDAV y Nextcloud si desea su propia configuración de sincronización. No se requiere una cuenta, ni una suscripción, ni una nube propietaria requerida.
+
+Butterfly es gratuito, está traducido por la comunidad, está disponible en teléfonos, tabletas, computadoras de escritorio y en la web, y está desarrollado en público bajo la licencia AGPL-3.0.

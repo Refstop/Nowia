@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-10-13T10:36:06.628493+00:00",
+  "source_repository": "Refstop/Nowia",
+  "source_run_id": 38382751680,
+  "source_run_attempt": 1,
+  "source_run_head_sha_expected": "de79ee491bc95938357689ab3053537f215ef01e",
+  "source_artifact_name": "nowia-upstream-debug-38382751680-1",
+  "apk_name_expected": "app-production-debug.apk",
+  "apk_sha256_expected": "ab5d88c3cc614e152431da8a14fa5f73839f4e2378fdd56073899fd1df47a4de",
+  "verification_run_id": 38384463103,
+  "verification_run_attempt": 1,
+  "source_validation": "PASS",
+  "downloaded_apk_verification": "PASS",
+  "source_run_url": "https://github.com/Refstop/Nowia/actions/runs/38382751680",
+  "source_run_head_sha": "de79ee491bc95938357689ab3053537f215ef01e",
+  "source_run_status": "completed",
+  "source_run_conclusion": "success",
+  "source_artifact": {
+    "id": 11804603978,
+    "name": "nowia-upstream-debug-38382751680-1",
+    "size_in_bytes": 219410154,
+    "digest": "sha256:6d064c702f7f683081065ddf402cc530819a4080d16fd86360802d9b1d24dd08",
+    "created_at": "2026-10-13T10:34:39Z",
+    "expires_at": "2026-10-27T10:34:35Z"
+  },
+  "downloaded_apk": {
+    "name": "app-production-debug.apk",
+    "bytes": 219409992,
+    "sha256": "ab5d88c3cc614e152431da8a14fa5f73839f4e2378fdd56073899fd1df47a4de"
+  },
+  "finished_utc": "2026-10-13T10:36:19.154796+00:00"
+}

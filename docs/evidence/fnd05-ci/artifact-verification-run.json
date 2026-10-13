@@ -1,0 +1,18 @@
+{
+  "publication": {
+    "branch": "verification/fnd-05-artifact-download",
+    "sha": "b2cce3c8c6d6c37bbb850a1e8888a52b49415a1b",
+    "tree": "558e501c9c95a523533750768f70ac8b61d84e36",
+    "source_run_id": 38382751680
+  },
+  "run_id": 38384463103,
+  "status": "completed",
+  "conclusion": "success",
+  "artifact": {
+    "id": 11805215417,
+    "name": "nowia-artifact-download-verification-38384463103-1",
+    "size_in_bytes": 914,
+    "digest": "sha256:a8538326188c0c3cec271dbd56b6021bb14cc7df1a180737a4c1ee8f041dbaae",
+    "expires_at": "2026-10-27T10:36:19Z"
+  }
+}

@@ -1,0 +1,129 @@
+name: Nowia unchanged Android baseline
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, 'task/fnd-*']
+  workflow_dispatch:
+    inputs:
+      failure_probe:
+        description: 'Opt-in failure proof: integrity and compile intentionally fail the job'
+        type: choice
+        required: true
+        default: none
+        options: [none, integrity, compile]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: nowia-baseline-${{ github.event.pull_request.number || github.ref }}-${{ inputs.failure_probe || 'none' }}
+  cancel-in-progress: false
+
+jobs:
+  debug-apk:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 90
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check unchanged upstream and create evidence directory
+        run: |
+          mkdir -p build/nowia-evidence
+          # New ephemeral toolchain/caches per job; no cache restore action.
+          printf 'NOWIA_TOOLCHAIN_ROOT=%s/nowia-toolchains\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
+          python3 tools/nowia/verify_baseline.py | tee build/nowia-evidence/initial-integrity.log
+      - name: Prove integrity failure propagation (expected red job)
+        if: inputs.failure_probe == 'integrity'
+        run: python3 tools/nowia/quality-gate.py --probe integrity --evidence build/nowia-evidence/probe-integrity
+      - name: Prepare ephemeral runner and require 24 GiB free
+        run: |
+          exec > >(tee build/nowia-evidence/runner-preflight.log) 2>&1
+          if [[ "${RUNNER_ENVIRONMENT:-}" != github-hosted || "${RUNNER_OS:-}" != Linux ]]; then
+            echo 'Runner cleanup is restricted to ephemeral GitHub-hosted Linux runners.' >&2
+            exit 1
+          fi
+          source /etc/os-release
+          if [[ "$ID" != ubuntu || "$VERSION_ID" != 26.04 ]]; then
+            echo 'This runner preparation requires Ubuntu 26.04.' >&2
+            exit 1
+          fi
+          df -h "$RUNNER_TEMP" "$GITHUB_WORKSPACE"
+          # Pinned tools are installed later in a new RUNNER_TEMP directory.
+          # These four preinstalled stacks are unused by this Android job.
+          for unused_stack in /usr/local/lib/android /usr/share/dotnet /opt/ghc /opt/hostedtoolcache/CodeQL; do
+            if [[ -e "$unused_stack" || -L "$unused_stack" ]]; then
+              printf 'Removing unused preinstalled stack: %s\n' "$unused_stack"
+              sudo rm -rf -- "$unused_stack"
+            fi
+          done
+          missing_packages=()
+          for runtime_package in libglu1-mesa libglib2.0-0t64 pkg-config; do
+            if package_status="$(dpkg-query -W -f='${db:Status-Status}' "$runtime_package" 2>/dev/null)" && [[ "$package_status" == installed ]]; then
+              printf 'Runtime package already installed: %s\n' "$runtime_package"
+            else
+              missing_packages+=("$runtime_package")
+            fi
+          done
+          if (( ${#missing_packages[@]} )); then
+            sudo apt-get update
+            sudo apt-get install --yes --no-install-recommends "${missing_packages[@]}"
+          fi
+          dpkg-query -W -f='${Package}\t${Version}\n' libglu1-mesa libglib2.0-0t64 pkg-config
+          df -h "$RUNNER_TEMP" "$GITHUB_WORKSPACE"
+          python3 - "$RUNNER_TEMP" "$GITHUB_WORKSPACE" <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          import sys
+
+          minimum = 24 * 1024 ** 3
+          volumes = []
+          for directory in sys.argv[1:]:
+              volume = os.statvfs(directory)
+              volumes.append({"path": directory, "free_bytes": volume.f_bavail * volume.f_frsize})
+          result = {"minimum_free_bytes": minimum, "volumes": volumes,
+                    "pass": all(item["free_bytes"] >= minimum for item in volumes)}
+          Path("build/nowia-evidence/runner-disk.json").write_text(json.dumps(result, indent=2) + "\n")
+          print(json.dumps(result, indent=2))
+          if not result["pass"]:
+              raise SystemExit("Insufficient runner disk: require at least 24 GiB free before installing the pinned toolchain.")
+          PY
+      - name: Install exact toolchain from empty directory
+        env:
+          NOWIA_SETUP_EVIDENCE_DIR: ${{ github.workspace }}/build/nowia-evidence/setup
+        run: bash tools/nowia/setup-cloud.sh 2>&1 | tee build/nowia-evidence/setup-cloud.log
+      - name: Prove compiler failure propagation (expected red job)
+        if: inputs.failure_probe == 'compile'
+        run: bash tools/nowia/quality-gate.sh --probe compile --evidence build/nowia-evidence/probe-compile
+      - name: Strict analysis and all existing app/API tests
+        run: bash tools/nowia/quality-gate.sh --evidence build/nowia-evidence/quality
+      - name: Build and verify unchanged production-flavor debug APK
+        env:
+          NOWIA_EVIDENCE_DIR: ${{ github.workspace }}/build/nowia-evidence/apk
+        run: bash tools/nowia/build-cloud.sh
+      - name: Preserve evidence on success or failure
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: nowia-baseline-evidence-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            build/nowia-evidence/
+            !build/nowia-evidence/**/*.zip
+            !build/nowia-evidence/**/*.tar.gz
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve verified APK
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: nowia-upstream-debug-${{ github.run_id }}-${{ github.run_attempt }}
+          path: app/build/app/outputs/flutter-apk/app-production-debug.apk
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 14

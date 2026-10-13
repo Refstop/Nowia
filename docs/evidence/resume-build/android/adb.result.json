@@ -1,0 +1,8 @@
+{
+  "command": [
+    "/workspace/toolchains/android-sdk/platform-tools/adb",
+    "version"
+  ],
+  "exit_code": 0,
+  "seconds": 0.0020127296447753906
+}

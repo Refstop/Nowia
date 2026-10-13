@@ -1,0 +1,72 @@
+[
+  {
+    "path": "platforms;android-36",
+    "revision": "<revision>\n      <major>1</major>\n    </revision>\n    ",
+    "license": {
+      "ref": "android-sdk-license"
+    },
+    "archives": [
+      "<archive>\n        <complete>\n          <size>66057671</size>\n          <checksum>52e240c229cf2ad561ee262ebdfff266e180c585</checksum>\n          <url>platform-36-ext19_r01.zip</url>\n        </complete>\n      </archive>\n    "
+    ]
+  },
+  {
+    "path": "platforms;android-36",
+    "revision": "<revision>\n      <major>1</major>\n    </revision>\n    ",
+    "license": {
+      "ref": "android-sdk-license"
+    },
+    "archives": [
+      "<archive>\n        <complete>\n          <size>66044874</size>\n          <checksum>33a7af9f531f6ce67b3ec357f619e69aa0a95c8a</checksum>\n          <url>platform-36-ext18_r01.zip</url>\n        </complete>\n      </archive>\n    "
+    ]
+  },
+  {
+    "path": "platforms;android-36",
+    "revision": "<revision>\n      <major>2</major>\n    </revision>\n    ",
+    "license": {
+      "ref": "android-sdk-license"
+    },
+    "archives": [
+      "<archive>\n        <complete>\n          <size>65878410</size>\n          <checksum>2c1a80dd4d9f7d0e6dd336ec603d9b5c55a6f576</checksum>\n          <url>platform-36_r02.zip</url>\n        </complete>\n      </archive>\n    "
+    ]
+  },
+  {
+    "path": "ndk;28.2.13676358",
+    "revision": "<revision>\n      <major>28</major>\n      <minor>2</minor>\n      <micro>13676358</micro>\n    </revision>\n    ",
+    "license": {
+      "ref": "android-sdk-license"
+    },
+    "archives": [
+      "<archive>\n        <complete>\n          <size>722261334</size>\n          <checksum>a7b54a5de87fecd125a17d54f73c446199e72a64</checksum>\n          <url>android-ndk-r28c-linux.zip</url>\n        </complete>\n        <host-os>linux</host-os>\n      </archive>\n      "
+    ]
+  },
+  {
+    "path": "build-tools;36.0.0",
+    "revision": "<revision>\n      <major>36</major>\n      <minor>0</minor>\n      <micro>0</micro>\n    </revision>\n    ",
+    "license": {
+      "ref": "android-sdk-license"
+    },
+    "archives": [
+      "<archive>\n        <complete>\n          <size>63737259</size>\n          <checksum>b0b6376977657e8ad9b969bacf4093601da2c6fb</checksum>\n          <url>build-tools_r36_linux.zip</url>\n        </complete>\n        <host-os>linux</host-os>\n      </archive>\n      "
+    ]
+  },
+  {
+    "path": "cmdline-tools;latest",
+    "revision": "<revision>\n      <major>23</major>\n      <minor>0</minor>\n    </revision>\n    ",
+    "license": {
+      "ref": "android-sdk-license"
+    },
+    "archives": [
+      "<archive>\n        <complete>\n          <size>181052239</size>\n          <checksum>e025545c62a8e64c7559119566a569fb1dec5f60</checksum>\n          <url>commandlinetools-linux-16111833_latest.zip</url>\n        </complete>\n        <host-os>linux</host-os>\n      </archive>\n      "
+    ]
+  },
+  {
+    "path": "platform-tools",
+    "revision": "<revision>\n      <major>37</major>\n      <minor>0</minor>\n      <micro>1</micro>\n    </revision>\n    ",
+    "license": {
+      "ref": "android-sdk-license"
+    },
+    "archives": [
+      "<archive>\n        <complete>\n          <size>9054187</size>\n          <checksum>477254aa5f903c15cf51001717bdf347fb6b53e0</checksum>\n          <url>platform-tools_r37.0.1-linux.zip</url>\n        </complete>\n        <host-os>linux</host-os>\n      </archive>\n      "
+    ]
+  }
+]

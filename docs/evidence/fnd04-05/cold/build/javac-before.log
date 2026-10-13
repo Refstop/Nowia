@@ -1,0 +1,2 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=172.31.0.45 -Dhttp.proxyPort=8080 -Dhttps.proxyHost=172.31.0.45 -Dhttps.proxyPort=8080
+javac 21.0.12.1

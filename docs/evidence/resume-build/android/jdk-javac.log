@@ -1,0 +1,2 @@
+javac 21.0.12.1
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts

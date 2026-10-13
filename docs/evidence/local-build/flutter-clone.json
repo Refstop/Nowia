@@ -1,0 +1,15 @@
+{
+  "command": [
+    "git",
+    "clone",
+    "--branch",
+    "3.47.5",
+    "--depth",
+    "1",
+    "https://github.com/flutter/flutter.git",
+    "/workspace/scratch/26e6ed352677/toolchains/flutter"
+  ],
+  "start": "2026-10-12T16:09:16.461292+00:00",
+  "end": "2026-10-12T16:09:30.747090+00:00",
+  "exit_code": 0
+}

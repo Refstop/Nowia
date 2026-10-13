@@ -1,0 +1,14 @@
+{
+  "stage": "dart-after",
+  "command": [
+    "dart",
+    "--version"
+  ],
+  "cwd": "/work/Nowia/app",
+  "started_utc": "2026-10-13T08:10:17.195324+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "dart-after.log",
+  "ended_utc": "2026-10-13T08:10:17.262975+00:00"
+}

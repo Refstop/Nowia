@@ -1,0 +1,8 @@
+{
+  "command": [
+    "/workspace/toolchains/jdk-21/bin/java",
+    "-version"
+  ],
+  "exit_code": 0,
+  "seconds": 0.02947545051574707
+}

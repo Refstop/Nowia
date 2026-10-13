@@ -1,0 +1,14 @@
+{
+  "stage": "sdk-packages",
+  "command": [
+    "/work/toolchains/android-sdk/cmdline-tools/latest/bin/sdkmanager",
+    "--list_installed"
+  ],
+  "cwd": "/work/Nowia",
+  "started_utc": "2026-10-13T08:03:13.641232+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "sdk-packages.log",
+  "ended_utc": "2026-10-13T08:03:15.113918+00:00"
+}

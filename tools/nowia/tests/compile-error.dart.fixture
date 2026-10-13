@@ -1,0 +1,6 @@
+// Deliberately invalid. Copied into a temporary directory by --probe compile.
+// This fixture must never enter the app/api source or the normal test suite.
+void main() {
+  int value = 'NOWIA_INTENTIONAL_COMPILE_FAILURE';
+  print(value);
+}

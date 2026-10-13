@@ -1,0 +1,410 @@
+{
+  "started_utc": "2026-10-13T07:36:49.634007+00:00",
+  "started_ns": 1791877009633930096,
+  "upstream_commit": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "evidence_directory": "/workspace/build-resume-evidence/wrapper",
+  "apk_build": "PASS",
+  "apk_signature": "PASS",
+  "apk_manifest": "CAPTURED",
+  "environment": {
+    "JAVA_HOME": "/workspace/toolchains/jdk-21",
+    "ANDROID_HOME": "/workspace/toolchains/android-sdk",
+    "ANDROID_SDK_ROOT": "/workspace/toolchains/android-sdk",
+    "TAR_OPTIONS": "--no-same-owner --no-same-owner"
+  },
+  "apk": {
+    "path": "/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk",
+    "bytes": 219409984,
+    "sha256": "da100dbcde47a4b8d03c3ef1e0cbce869146a5ca2beaf929babf2bedf1263c5b"
+  },
+  "source_after": "PASS",
+  "ended_utc": "2026-10-13T07:37:07.696563+00:00",
+  "exit_code": 0,
+  "stages": [
+    {
+      "stage": "source-before",
+      "command": [
+        "python3",
+        "tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:36:49.634160+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-before.log",
+      "ended_utc": "2026-10-13T07:36:49.698266+00:00"
+    },
+    {
+      "stage": "commit-before",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:36:49.698684+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "commit-before.log",
+      "ended_utc": "2026-10-13T07:36:49.700219+00:00"
+    },
+    {
+      "stage": "status-before",
+      "command": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:36:49.700646+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "status-before.log",
+      "ended_utc": "2026-10-13T07:36:49.716373+00:00"
+    },
+    {
+      "stage": "lockfiles-before",
+      "command": [
+        "sha256sum",
+        "app/pubspec.lock",
+        "api/pubspec.lock"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:36:49.716837+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "lockfiles-before.log",
+      "ended_utc": "2026-10-13T07:36:49.720474+00:00"
+    },
+    {
+      "stage": "flutter-before",
+      "command": [
+        "flutter",
+        "--version",
+        "--machine"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:36:49.720721+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "flutter-before.log",
+      "ended_utc": "2026-10-13T07:36:49.835436+00:00"
+    },
+    {
+      "stage": "dart-before",
+      "command": [
+        "dart",
+        "--version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:36:49.835811+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "dart-before.log",
+      "ended_utc": "2026-10-13T07:36:49.869503+00:00"
+    },
+    {
+      "stage": "java-before",
+      "command": [
+        "java",
+        "-version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:36:49.869850+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "java-before.log",
+      "ended_utc": "2026-10-13T07:36:49.933891+00:00"
+    },
+    {
+      "stage": "javac-before",
+      "command": [
+        "javac",
+        "-version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:36:49.934275+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "javac-before.log",
+      "ended_utc": "2026-10-13T07:36:50.048824+00:00"
+    },
+    {
+      "stage": "rust-before",
+      "command": [
+        "rustc",
+        "--version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:36:50.049191+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "rust-before.log",
+      "ended_utc": "2026-10-13T07:36:50.163743+00:00"
+    },
+    {
+      "stage": "flutter-doctor",
+      "command": [
+        "flutter",
+        "doctor",
+        "-v"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:36:50.164491+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "flutter-doctor.log",
+      "ended_utc": "2026-10-13T07:36:53.040767+00:00"
+    },
+    {
+      "stage": "sdk-packages",
+      "command": [
+        "/workspace/toolchains/android-sdk/cmdline-tools/latest/bin/sdkmanager",
+        "--list_installed"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:36:53.041286+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "sdk-packages.log",
+      "ended_utc": "2026-10-13T07:36:53.911474+00:00"
+    },
+    {
+      "stage": "pub-get",
+      "command": [
+        "flutter",
+        "pub",
+        "get",
+        "--enforce-lockfile"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:36:53.912366+00:00",
+      "timeout_seconds": 1800,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "pub-get.log",
+      "ended_utc": "2026-10-13T07:36:55.181294+00:00"
+    },
+    {
+      "stage": "source-after-pub",
+      "command": [
+        "python3",
+        "tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:36:55.181694+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-after-pub.log",
+      "ended_utc": "2026-10-13T07:36:55.246124+00:00"
+    },
+    {
+      "stage": "build-apk",
+      "command": [
+        "flutter",
+        "build",
+        "apk",
+        "--debug",
+        "--flavor",
+        "production",
+        "--no-pub"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:36:55.246552+00:00",
+      "timeout_seconds": 3600,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "build-apk.log",
+      "ended_utc": "2026-10-13T07:37:06.555928+00:00"
+    },
+    {
+      "stage": "apk-sha256",
+      "command": [
+        "sha256sum",
+        "/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:37:06.556458+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "apk-sha256.log",
+      "ended_utc": "2026-10-13T07:37:06.771091+00:00"
+    },
+    {
+      "stage": "apk-signature",
+      "command": [
+        "/workspace/toolchains/android-sdk/build-tools/36.0.0/apksigner",
+        "verify",
+        "--verbose",
+        "--print-certs",
+        "/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:37:06.772184+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "apk-signature.log",
+      "ended_utc": "2026-10-13T07:37:07.237299+00:00"
+    },
+    {
+      "stage": "apk-manifest",
+      "command": [
+        "/workspace/toolchains/android-sdk/build-tools/36.0.0/aapt",
+        "dump",
+        "badging",
+        "/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:37:07.238302+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "apk-manifest.log",
+      "ended_utc": "2026-10-13T07:37:07.246025+00:00"
+    },
+    {
+      "stage": "source-after",
+      "command": [
+        "python3",
+        "tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:37:07.246306+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-after.log",
+      "ended_utc": "2026-10-13T07:37:07.310507+00:00"
+    },
+    {
+      "stage": "commit-after",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:37:07.310895+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "commit-after.log",
+      "ended_utc": "2026-10-13T07:37:07.314584+00:00"
+    },
+    {
+      "stage": "status-after",
+      "command": [
+        "git",
+        "status",
+        "--porcelain=v1"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:37:07.314923+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "status-after.log",
+      "ended_utc": "2026-10-13T07:37:07.330917+00:00"
+    },
+    {
+      "stage": "lockfiles-after",
+      "command": [
+        "sha256sum",
+        "app/pubspec.lock",
+        "api/pubspec.lock"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:37:07.331229+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "lockfiles-after.log",
+      "ended_utc": "2026-10-13T07:37:07.334872+00:00"
+    },
+    {
+      "stage": "flutter-after",
+      "command": [
+        "flutter",
+        "--version",
+        "--machine"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:37:07.335087+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "flutter-after.log",
+      "ended_utc": "2026-10-13T07:37:07.449643+00:00"
+    },
+    {
+      "stage": "dart-after",
+      "command": [
+        "dart",
+        "--version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:37:07.450018+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "dart-after.log",
+      "ended_utc": "2026-10-13T07:37:07.482771+00:00"
+    },
+    {
+      "stage": "java-after",
+      "command": [
+        "java",
+        "-version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:37:07.483198+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "java-after.log",
+      "ended_utc": "2026-10-13T07:37:07.515076+00:00"
+    },
+    {
+      "stage": "javac-after",
+      "command": [
+        "javac",
+        "-version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:37:07.515457+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "javac-after.log",
+      "ended_utc": "2026-10-13T07:37:07.679921+00:00"
+    },
+    {
+      "stage": "rust-after",
+      "command": [
+        "rustc",
+        "--version"
+      ],
+      "cwd": "/workspace/Nowia/app",
+      "started_utc": "2026-10-13T07:37:07.680317+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "rust-after.log",
+      "ended_utc": "2026-10-13T07:37:07.696244+00:00"
+    }
+  ]
+}

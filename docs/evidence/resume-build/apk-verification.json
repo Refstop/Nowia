@@ -1,0 +1,40 @@
+{
+  "ticket": "FND-03",
+  "status": "VERIFIED_CURRENT_ENVIRONMENT",
+  "recorded_at_kst": "2026-10-13T16:38:03.803018+09:00",
+  "apk": {
+    "path": "/workspace/Nowia/app/build/app/outputs/flutter-apk/app-production-debug.apk",
+    "bytes": 219409984,
+    "sha256": "da100dbcde47a4b8d03c3ef1e0cbce869146a5ca2beaf929babf2bedf1263c5b",
+    "download_path": "/workspace/Nowia/build/artifacts/butterfly-v2.6.0-production-debug.apk"
+  },
+  "manifest_checks": {
+    "package": true,
+    "version": true,
+    "min_sdk": true,
+    "target_sdk": true,
+    "compile_sdk": true,
+    "label": true,
+    "debuggable": true,
+    "abis": true
+  },
+  "package": "dev.linwood.butterfly",
+  "version": "2.6.0+199",
+  "min_sdk": 24,
+  "target_sdk": 36,
+  "compile_sdk": 36,
+  "abis": [
+    "arm64-v8a",
+    "armeabi-v7a",
+    "x86_64"
+  ],
+  "signature_verification": "PASS_APK_V2_ANDROID_DEBUG",
+  "source_and_locks": "PASS",
+  "first_and_wrapper_apk_hash_equal": true,
+  "build_head": "d1feecc5beecc21bb30901135f6d9eca04b9c94c",
+  "tooling_uncommitted_during_build": true,
+  "G0": "NOT_ACCEPTED_FRESH_TASK_REPRODUCTION_PENDING",
+  "G1": "NOT_ACCEPTED_DEVICE_NOT_RUN",
+  "remote_push": "NOT_RUN",
+  "ci": "NOT_RUN"
+}

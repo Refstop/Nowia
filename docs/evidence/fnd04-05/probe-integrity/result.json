@@ -1,0 +1,105 @@
+{
+  "started_utc": "2026-10-13T07:53:37.994230+00:00",
+  "probe": "integrity",
+  "upstream_commit": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "stages": [
+    {
+      "stage": "commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:37.994345+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "commit.log",
+      "ended_utc": "2026-10-13T07:53:37.998142+00:00"
+    },
+    {
+      "stage": "source-before",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:37.998385+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-before.log",
+      "ended_utc": "2026-10-13T07:53:38.062473+00:00"
+    },
+    {
+      "stage": "probe-worktree-add",
+      "command": [
+        "git",
+        "worktree",
+        "add",
+        "--detach",
+        "/tmp/nowia-failure-probe-5kkjxx1u/source",
+        "HEAD"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:38.063125+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "probe-worktree-add.log",
+      "ended_utc": "2026-10-13T07:53:38.879089+00:00"
+    },
+    {
+      "stage": "probe-integrity",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/tmp/nowia-failure-probe-5kkjxx1u/source/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/tmp/nowia-failure-probe-5kkjxx1u/source",
+      "started_utc": "2026-10-13T07:53:38.879625+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 1,
+      "log": "probe-integrity.log",
+      "ended_utc": "2026-10-13T07:53:38.943720+00:00"
+    },
+    {
+      "stage": "probe-worktree-remove",
+      "command": [
+        "git",
+        "worktree",
+        "remove",
+        "--force",
+        "/tmp/nowia-failure-probe-5kkjxx1u/source"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:38.944096+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "probe-worktree-remove.log",
+      "ended_utc": "2026-10-13T07:53:38.976225+00:00"
+    },
+    {
+      "stage": "source-after",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/Nowia/tools/nowia/verify_baseline.py"
+      ],
+      "cwd": "/workspace/Nowia",
+      "started_utc": "2026-10-13T07:53:38.976806+00:00",
+      "timeout_seconds": 120,
+      "timed_out": false,
+      "exit_code": 0,
+      "log": "source-after.log",
+      "ended_utc": "2026-10-13T07:53:39.040988+00:00"
+    }
+  ],
+  "quality": "NOT_RUN",
+  "source_after": "PASS",
+  "expected_failure_observed": true,
+  "error": "Expected integrity failure propagated to CI",
+  "ended_utc": "2026-10-13T07:53:39.041370+00:00",
+  "exit_code": 1
+}

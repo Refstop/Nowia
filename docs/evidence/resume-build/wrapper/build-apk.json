@@ -1,0 +1,19 @@
+{
+  "stage": "build-apk",
+  "command": [
+    "flutter",
+    "build",
+    "apk",
+    "--debug",
+    "--flavor",
+    "production",
+    "--no-pub"
+  ],
+  "cwd": "/workspace/Nowia/app",
+  "started_utc": "2026-10-13T07:36:55.246552+00:00",
+  "timeout_seconds": 3600,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "build-apk.log",
+  "ended_utc": "2026-10-13T07:37:06.555928+00:00"
+}

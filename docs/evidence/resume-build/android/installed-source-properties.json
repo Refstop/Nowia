@@ -1,0 +1,7 @@
+{
+  "platform-tools/source.properties": "Pkg.UserSrc=false\nPkg.Revision=37.0.1\n",
+  "ndk/28.2.13676358/source.properties": "Pkg.Desc = Android NDK\nPkg.Revision = 28.2.13676358\nPkg.BaseRevision = 28.2.13676358\nPkg.ReleaseName = r28c\n",
+  "build-tools/36.0.0/source.properties": "Pkg.UserSrc=false\nPkg.Revision=36.0.0\n#Pkg.Revision=36.0.0 rc5",
+  "cmdline-tools/latest/source.properties": "Pkg.Revision=23.0\nPkg.Path=cmdline-tools;23.0\nPkg.Desc=Android SDK Command-line Tools\n",
+  "platforms/android-36/source.properties": "Pkg.Desc=Android SDK Platform 16\nPkg.UserSrc=false\nPlatform.Version=16\nPlatform.CodeName=\nPkg.Revision=2\nAndroidVersion.ApiLevel=36\nAndroidVersion.ExtensionLevel=17\nAndroidVersion.IsBaseSdk=true\nLayoutlib.Api=15\nLayoutlib.Revision=1\nPlatform.MinToolsRev=22\n"
+}

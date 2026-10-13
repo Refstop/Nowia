@@ -1,0 +1,3 @@
+* Fix layout on bigger screens
+* Fix image export
+* Improve position of submenus

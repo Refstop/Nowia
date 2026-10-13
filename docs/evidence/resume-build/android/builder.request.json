@@ -1,0 +1,16 @@
+{
+  "command": [
+    "curl",
+    "-fSL",
+    "--retry",
+    "2",
+    "--max-time",
+    "120",
+    "https://dl.google.com/dl/android/maven2/com/android/tools/build/builder/9.4.0/builder-9.4.0.jar",
+    "-o",
+    "/workspace/build-resume-evidence/android/builder.jar"
+  ],
+  "exit_code": 0,
+  "seconds": 0.4870004653930664,
+  "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n 81 16.6M   81 13.6M    0     0  31.1M      0 --:--:-- --:--:-- --:--:-- 31.0M\n100 16.6M  100 16.6M    0     0  34.9M      0 --:--:-- --:--:-- --:--:-- 34.9M\n"
+}

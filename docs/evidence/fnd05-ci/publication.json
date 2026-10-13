@@ -1,0 +1,40 @@
+{
+  "repository": "Refstop/Nowia",
+  "account": "Refstop",
+  "local_snapshot": "1b877f181ab1720d4a5eb2590eb7eaeab22b9a42",
+  "published_commit": "de79ee491bc95938357689ab3053537f215ef01e",
+  "tree": "5f6c46411d3afdd359c10081686f448700e1c3f9",
+  "tree_equality": "PASS",
+  "pull_request": "https://github.com/Refstop/Nowia/pull/1",
+  "draft": true,
+  "merged": false,
+  "normal_runs": [
+    {
+      "id": 38382751680,
+      "event": "pull_request",
+      "url": "https://github.com/Refstop/Nowia/actions/runs/38382751680",
+      "sha": "de79ee491bc95938357689ab3053537f215ef01e"
+    },
+    {
+      "id": 38382711491,
+      "event": "push",
+      "url": "https://github.com/Refstop/Nowia/actions/runs/38382711491",
+      "sha": "de79ee491bc95938357689ab3053537f215ef01e"
+    }
+  ],
+  "probe_commits": [
+    {
+      "probe": "integrity",
+      "branch": "task/fnd-05-probe-integrity",
+      "tree": "fcf3cba735a2e045e94e4f085ac076e74f9d79b0",
+      "sha": "6fb26e00a0d53831ba71a460240fe457dbf54fe8"
+    },
+    {
+      "probe": "compile",
+      "branch": "task/fnd-05-probe-compile",
+      "tree": "729702f03cb0163d664763615d7613e8a7f9be7e",
+      "sha": "d07baa7f13671bcf11c6cdf143f10b044d895e70"
+    }
+  ],
+  "transport": "Authorized GitHub connector Git data API; duplicate blobs uploaded once; all blob/tree hashes verified. Publication commit has independent metadata and preserves the exact local source tree."
+}

@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Készíts jegyzeteket, rajzolj szabadon, és rendezd ötleteidet egy végtelen munkaterületen
+template: splash
+hero:
+  tagline: Your ideas should not have to fit inside a page. Handwrite, sketch, annotate, and organize on an infinite canvas that stays yours.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Butterfly letöltése
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Webalkalmazás kipróbálása
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Dokumentáció
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Butterfly-vászon kézzel írt jegyzetekkel, diagramokkal és vonalzóval">
+
+
+
+
+  ## Munkaterület a vizuálisan gondolkodóknak
+
+  Készíts előadásjegyzeteket tollal, jegyzetelj egy PDF-re, skiccelj felületet, készíts diagramot, tervezz projektet — vagy keverd mindet egy dokumentumba.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="A Butterfly rajzeszköz tollbeállításai" reverse>
+
+
+
+
+
+  ## Hangolj minden vonást
+
+  Draw with a stylus, touch, or mouse. Adjust stroke width, color, smoothing, and texture. If a mark is not quite right, edit it instead of starting over.
+</LandingFeature>
+
+## Erős, amikor a projektjeid növekednek
+
+<CardGrid stagger>
+  <Card title="Minden elem szerkeszthető marad" icon="pencil">
+    Move, resize, recolor, and reorganize content after placing it. Your first attempt never has to be your final one.
+  </Card>
+  <Card title="Gyakori média egy dokumentumban" icon="document">
+    Import camera photos, gallery images, PDFs, and SVGs. Combine them with your own notes and export clean results in common formats.
+  </Card>
+  <Card title="Újrahasználható építőelemek" icon="puzzle">
+    Alakítsd kedvenc elrendezéseidet sablonokká, a gyakran használt tartalmat pedig csomagokká, bélyegekké, palettákká és stílusokká minden dokumentumhoz.
+  </Card>
+  <Card title="Eszközök minden ötlethez" icon="open-book">
+    A tollon és radíron túl címkéket, alakzatokat, sokszögeket, vonalzókat, rácsokat, textúrákat, bélyegeket, lézermutatót, prezentációs eszközöket és még sok mást is használhatsz.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Butterfly-sablonok és -csomagok újrahasználható vászonstílusokkal">
+
+
+
+
+  ## Igazítsd a Butterflyt a munkafolyamatodhoz
+
+  Start with a template that brings together your favorite backgrounds, tools, layers, areas, and pages. Save reusable content in packs so your next project starts with everything you need.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Kézzel írt Butterfly-dokumentum telefonon és asztali gépen" reverse>
+
+
+
+
+
+  ## Mindenhol működik
+
+  Take your canvas from your desk to your next class or meeting. Butterfly runs on Android, Windows, macOS, Linux, and in your browser, with an iOS preview also available.
+
+</LandingFeature>
+
+## A munkád a tiéd
+
+<CardGrid>
+  <Card title="Alapértelmezetten helyi" icon="laptop">
+    Keep working without an internet connection. Your documents live on your device unless you choose to save them somewhere else.
+  </Card>
+  <Card title="Használd a saját felhődet" icon="rocket">
+    Csatlakoztass WebDAV-szolgáltatásokat, például Nextcloudot, hogy bárhonnan szinkronizálhasd, menthesd és szerkeszthesd a jegyzeteidet.
+  </Card>
+  <Card title="Nyílt forráskódú szoftver" icon="code-branch">
+    Butterfly is free and open source under the GNU AGPL-3.0 license. Keep your documents in its documented `.bfly` and `.tbfly` formats.
+  </Card>
+  <Card title="Alkossatok együtt" icon="comment">
+    A kísérleti együttműködés végpontok közötti titkosított munkameneteket támogat Swampon vagy saját üzemeltetésű WebSocket-kiszolgálón keresztül.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly, a korlátlan vászon a vizuális gondolkodáshoz.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Butterfly letöltése" description="Telepítsd az alkalmazást telefonodra, táblagépedre vagy számítógépedre." href="/downloads/" />
+  <LinkCard title="Webalkalmazás kipróbálása" description="Start a canvas in your browser without installing anything. Chromium-based browsers are recommended." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Butterfly-blog olvasása" description="Kövesd a kiadásokat, a projekt híreit és a fejlesztés történeteit." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Ismerd meg az alapokat" description="Hozd létre első dokumentumodat, és fedezd fel a teljes eszköztárat." href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly is built in the open and available in many languages. [Join the community](/community/) to share feedback, help with translations, or contribute to the project.

@@ -1,0 +1,21 @@
+{
+  "status": "BLOCKED_NOT_PASSED",
+  "source_head": "1e4c86b91f4d64361a73598bda0acc587f9381b0",
+  "source_tree_clean": true,
+  "flutter_runtime_version": "3.47.5",
+  "flutter_source_commit": "6a19cca56475dbfba1478ee68d7bd0c2ef891da1",
+  "dart_runtime_version": "3.13.4",
+  "normal_attempt_exit": 1,
+  "normal_attempt_stage": "Flutter Gradle-wrapper extraction ownership metadata",
+  "retry_timeout_seconds": 300,
+  "retry_harness_timeout": true,
+  "retry_process_exit_code": 0,
+  "retry_exit_interpretation": "Process returned zero after SIGTERM; no success, timeout takes precedence",
+  "retry_stage": "Resolving application dependencies",
+  "no_pub_preflight_exit": 1,
+  "no_pub_preflight_error": "No Android SDK found",
+  "compiler_started": false,
+  "apk_files": [],
+  "new_android_license_acceptance": false,
+  "physical_device_test": "NOT_RUN"
+}

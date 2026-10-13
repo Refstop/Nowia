@@ -1,0 +1,14 @@
+{
+  "command": [
+    "curl",
+    "-fsSL",
+    "--max-time",
+    "60",
+    "https://dl.google.com/android/repository/repository2-1.xml",
+    "-o",
+    "/workspace/build-resume-evidence/android/sdk-repository.xml"
+  ],
+  "exit_code": 0,
+  "seconds": 0.14830231666564941,
+  "stderr": ""
+}

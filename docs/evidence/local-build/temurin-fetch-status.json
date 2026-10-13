@@ -1,0 +1,8 @@
+{
+  "utc": "2026-10-12T16:10:00Z (approximate; observed tool output retained separately)",
+  "request": "https://api.adoptium.net/v3/assets/latest/21/hotspot?architecture=x64&image_type=jdk&os=linux&vendor=eclipse",
+  "client": "urllib.request.urlopen(timeout=35)",
+  "observed_result": "HTTP Error 403: Forbidden",
+  "retry_count": 0,
+  "action": "No JDK downloaded; no alternate route attempted"
+}

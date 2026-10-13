@@ -1,0 +1,126 @@
+---
+title: Linwood Butterfly
+description: Делайте заметки, рисуйте свободно и организуйте идеи в бесконечном рабочем пространстве
+template: splash
+hero:
+  tagline: Ваши идеи не обязаны помещаться на одной странице. Пишите от руки, делайте наброски, добавляйте примечания и организуйте всё на бесконечном холсте, который принадлежит вам.
+  image:
+    file: /public/img/logo.svg
+  actions:
+    - text: Скачать Butterfly
+      link: /downloads/
+      icon: download
+      variant: primary
+    - text: Попробовать веб-приложение
+      link: https://web.butterfly.linwood.dev
+      icon: external
+      variant: secondary
+    - text: Документация
+      link: /docs/v2/intro/
+      icon: open-book
+      variant: secondary
+    - text: Blog
+      link: https://linwood.dev/butterfly
+      icon: external
+      variant: secondary
+---
+
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
+import LandingFeature from '@components/LandingFeature.astro';
+import crossplatform from '@assets/img/homepage/crossplatform.png';
+import crossplatformDark from '@assets/img/homepage/crossplatform-dark.png';
+import collageLight from '@assets/img/homepage/collage-light.png';
+import collageDark from '@assets/img/homepage/collagedark.png';
+import desktop2LightRuler from '@assets/img/homepage/Desktop2-light-ruler.png';
+import desktop2DarkRuler from '@assets/img/homepage/Desktop2-dark-ruler.png';
+import penLight from '@assets/img/homepage/Pen-light.png';
+import penDark from '@assets/img/homepage/Pen-dark.png';
+
+<LandingFeature image={desktop2LightRuler} darkImage={desktop2DarkRuler} alt="Холст Butterfly с рукописными заметками, диаграммами и линейкой">
+
+
+
+
+  ## Рабочее пространство для визуального мышления
+
+  Делайте конспекты стилусом, размечайте PDF, набрасывайте интерфейс, создавайте диаграммы, планируйте проекты — или сочетайте всё это в одном документе.
+
+</LandingFeature>
+
+<LandingFeature image={penLight} darkImage={penDark} alt="Настройки пера в инструменте рисования Butterfly" reverse>
+
+
+
+
+
+  ## Настройте каждый штрих
+
+  Рисуйте стилусом, касанием или мышью. Настраивайте толщину, цвет, сглаживание и текстуру штриха. Если отметка не получилась, отредактируйте её вместо того, чтобы начинать заново.
+</LandingFeature>
+
+## Мощный инструмент для растущих проектов
+
+<CardGrid stagger>
+  <Card title="Каждый элемент остаётся редактируемым" icon="pencil">
+    Перемещайте, меняйте размер и цвет, а также перестраивайте содержимое после размещения. Первая попытка не обязана быть окончательной.
+  </Card>
+  <Card title="Популярные медиа в одном документе" icon="document">
+    Импортируйте фотографии с камеры, изображения из галереи, PDF и SVG. Объединяйте их со своими заметками и экспортируйте аккуратный результат в распространённых форматах.
+  </Card>
+  <Card title="Многоразовые строительные блоки" icon="puzzle">
+    Превращайте любимые макеты в шаблоны, а часто используемое содержимое — в наборы, штампы, палитры и стили для всех документов.
+  </Card>
+  <Card title="Инструменты для любой идеи" icon="open-book">
+    Не ограничивайтесь пером и ластиком: используйте подписи, фигуры, многоугольники, линейки, сетки, текстуры, штампы, лазерную указку, инструменты презентаций и многое другое.
+  </Card>
+</CardGrid>
+
+<LandingFeature image={collageLight} darkImage={collageDark} alt="Шаблоны и наборы Butterfly с многоразовыми стилями холста">
+
+
+
+
+  ## Настройте Butterfly под свой процесс
+
+  Начните с шаблона, объединяющего любимые фоны, инструменты, слои, области и страницы. Сохраняйте многоразовое содержимое в наборах, чтобы следующий проект начинался со всем необходимым.
+</LandingFeature>
+
+<LandingFeature image={crossplatform} darkImage={crossplatformDark} alt="Рукописный документ Butterfly на телефоне и настольном компьютере" reverse>
+
+
+
+
+
+  ## Работает везде
+
+  Берите холст с собой со стола на следующий урок или встречу. Butterfly работает на Android, Windows, macOS, Linux и в браузере; также доступна предварительная версия для iOS.
+
+</LandingFeature>
+
+## Ваша работа принадлежит вам
+
+<CardGrid>
+  <Card title="Локально по умолчанию" icon="laptop">
+    Продолжайте работать без подключения к интернету. Документы хранятся на вашем устройстве, если вы не решите сохранить их в другом месте.
+  </Card>
+  <Card title="Используйте своё облако" icon="rocket">
+    Подключите сервисы WebDAV, например Nextcloud, чтобы синхронизировать, резервировать и редактировать заметки откуда угодно.
+  </Card>
+  <Card title="Программное обеспечение с открытым кодом" icon="code-branch">
+    Butterfly бесплатен и имеет открытый исходный код по лицензии GNU AGPL-3.0. Храните документы в документированных форматах `.bfly` и `.tbfly`.
+  </Card>
+  <Card title="Творите вместе" icon="comment">
+    Экспериментальная совместная работа поддерживает сквозное шифрование сеансов через Swamp или самостоятельно размещаемый сервер WebSocket.
+  </Card>
+</CardGrid>
+
+<h2 style="text-align: center; padding-bottom: 3rem; padding-top: 1rem; text-shadow: 0rem 0rem 3rem var(--sl-color-accent);">Butterfly — безграничный холст для визуального мышления.</h2>
+
+<CardGrid>
+  <LinkCard class="landing-action" title="Скачать Butterfly" description="Установите приложение на телефон, планшет или компьютер." href="/downloads/" />
+  <LinkCard title="Попробовать веб-приложение" description="Откройте холст в браузере без установки. Рекомендуются браузеры на основе Chromium." href="https://web.butterfly.linwood.dev" target="_blank" />
+  <LinkCard title="Читать блог Butterfly" description="Следите за релизами, новостями проекта и историями разработки." href="https://linwood.dev/butterfly" target="_blank" />
+  <LinkCard title="Освойте основы" description="Создайте первый документ и изучите все инструменты." href="/docs/v2/intro/" />
+</CardGrid>
+
+Butterfly разрабатывается открыто и доступен на многих языках. [Присоединяйтесь к сообществу](/community/), чтобы делиться отзывами, помогать с переводами или вносить вклад в проект.

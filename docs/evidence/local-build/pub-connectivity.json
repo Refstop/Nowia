@@ -1,0 +1,14 @@
+{
+  "command": [
+    "curl",
+    "--head",
+    "--location",
+    "--max-time",
+    "20",
+    "https://pub.dev"
+  ],
+  "exit_code": 0,
+  "stdout": "HTTP/1.1 200 OK\ndate: Mon, 12 Oct 2026 16:10:59 GMT\n\nHTTP/2 200 \ndate: Mon, 12 Oct 2026 16:11:00 GMT\ncontent-type: text/html; charset=\"utf-8\"\ncontent-length: 34233\nvary: Accept-Encoding\ncache-control: no-store, no-cache, must-revalidate\nstrict-transport-security: max-age=31536000; includeSubDomains; preload\nreferrer-policy: strict-origin-when-cross-origin\nx-xss-protection: 1; mode=block\nx-powered-by: Dart with package:shelf\nreporting-endpoints: csp-endpoint=\"/api/csp-report\"\nx-frame-options: deny\nx-content-type-options: nosniff\ncontent-security-policy: default-src 'self'; font-src 'self' data: https://fonts.googleapis.com/ https://fonts.gstatic.com/; img-src 'self' https: data:; manifest-src 'none'; object-src 'none'; script-src 'self' https://tagmanager.google.com https://www.googletagmanager.com/ https://www.google.com/ https://www.google-analytics.com/ https://ssl.google-analytics.com https://adservice.google.com/ https://ajax.googleapis.com/ https://apis.google.com/ https://www.gstatic.com/ https://gstatic.com https://accounts.google.com/gsi/client; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/ https://gstatic.com https://www.gstatic.com/ https://tagmanager.google.com https://accounts.google.com/gsi/style; frame-src 'self' https://www.googletagmanager.com/ https://accounts.google.com/ https://*.clients6.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://www.google.com/ https://apis.google.com/ https://gstatic.com https://*.gstatic.com https://*.clients6.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests; report-to csp-endpoint; report-uri /api/csp-report\nexpires: Mon, 12 Oct 2026 16:06:00 GMT\nx-appengine-flex-applatency: 0.007\nvia: 1.1 google\nalt-svc: h3=\":443\"; ma=2592000\n\n",
+  "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0\n  0 34233    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0\n  0 34233    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0\n",
+  "utc": "2026-10-12T16:11:00.151118+00:00"
+}

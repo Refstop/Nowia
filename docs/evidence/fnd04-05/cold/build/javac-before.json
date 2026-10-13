@@ -1,0 +1,14 @@
+{
+  "stage": "javac-before",
+  "command": [
+    "javac",
+    "-version"
+  ],
+  "cwd": "/work/Nowia/app",
+  "started_utc": "2026-10-13T08:03:12.941042+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "javac-before.log",
+  "ended_utc": "2026-10-13T08:03:13.155845+00:00"
+}

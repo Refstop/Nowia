@@ -1,0 +1,25 @@
+{
+  "recorded_at_kst": "2026-10-13T17:02:28.735749+09:00",
+  "repository": "Refstop/Nowia",
+  "branch": "task/fnd-04-05-ci",
+  "git_dry_run": {
+    "account": "ByungheeChoi-Riibotics",
+    "http_status": 403,
+    "message": "Permission to Refstop/Nowia.git denied to ByungheeChoi-Riibotics.",
+    "ref_mutated": false
+  },
+  "selected_connector_account": "Refstop (학교); explicitly selected by user",
+  "read_metadata": {
+    "repository_role": "admin",
+    "reported_push": true
+  },
+  "create_branch": {
+    "base_sha": "b0ab030fa132028fee02b3e4210257d894dc5e00",
+    "http_status": 403,
+    "error_code": "FORBIDDEN",
+    "message": "Resource not accessible by integration",
+    "ref_created": false
+  },
+  "remote_ci": "NOT_RUN",
+  "conclusion": "Repository role and integration token permissions differ; authenticated write remains blocked. No alternative identity/transport retry after this denial."
+}

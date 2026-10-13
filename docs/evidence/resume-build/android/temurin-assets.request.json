@@ -1,0 +1,16 @@
+{
+  "command": [
+    "curl",
+    "-fSL",
+    "--retry",
+    "2",
+    "--max-time",
+    "300",
+    "https://github.com/adoptium/temurin21-binaries/releases/expanded_assets/jdk-21.0.12.1%2B1",
+    "-o",
+    "/workspace/build-resume-evidence/android/temurin-assets.html"
+  ],
+  "exit_code": 0,
+  "seconds": 1.3026676177978516,
+  "stderr": "  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current\n                                 Dload  Upload   Total   Spent    Left  Speed\n\n  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0\n  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0\n100 1267k  100 1267k    0     0   983k      0  0:00:01  0:00:01 --:--:--  984k\n"
+}

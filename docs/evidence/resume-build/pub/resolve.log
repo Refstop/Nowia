@@ -1,0 +1,65 @@
+[1/10] Material Fonts                                              175ms
+[2/10] Gradle Wrapper                                              100ms
+[3/10] Flutter SDK
+  ├─ [1/5] sky_engine                                              150ms
+  ├─ [2/5] flutter_gpu                                              75ms
+  ├─ [3/5] flutter_patched_sdk                                     188ms
+  ├─ [4/5] flutter_patched_sdk_product                             232ms
+  └─ [5/5] linux-x64                                               815ms
+[10/10] linux-x64/font-subset                                      126ms
+Resolving dependencies...
+Downloading packages...
+  _fe_analyzer_shared 108.0.0 (109.0.0 available)
+  analyzer 14.4.0 (14.5.0 available)
+  android_file_picker 1.1.1 (2.1.0 available)
+  animations 2.2.0 (3.0.0 available)
+  archive 4.3.0 (4.5.2 available)
+  build_runner 2.16.1 (2.16.2 available)
+  built_collection 5.1.1 (5.1.2 available)
+  camera_android_camerax 0.7.5 (0.7.5+1 available)
+  camera_avfoundation 0.10.3+1 (0.11.0 available)
+  camera_platform_interface 2.14.0 (2.15.0 available)
+  camera_windows 0.2.6+5 (0.3.0 available)
+  connectivity_plus 7.3.1 (7.3.2 available)
+  cross_file 0.3.5+5 (0.4.0 available)
+  dbus 0.7.15 (0.8.0 available)
+  dynamic_color 1.9.0 (2.1.0 available)
+  file_picker 12.3.0 (13.1.0 available)
+  file_picker_darwin 1.2.0 (2.3.0 available)
+  file_picker_linux 1.1.0 (2.0.2 available)
+  file_picker_platform_interface 3.4.0 (4.2.0 available)
+  file_picker_web 3.1.0 (4.1.0 available)
+  flex_color_scheme 8.4.0 (9.0.0 available)
+  flex_seed_scheme 4.0.1 (5.0.1 available)
+  flutter_secure_storage 10.3.4 (11.2.0 available)
+  flutter_secure_storage_darwin 0.3.2 (0.4.3 available)
+  go_router 17.5.0 (18.0.2 available)
+  idb_shim 2.9.9 (2.9.11 available)
+  image 4.10.1 (4.12.0 available)
+  jni 1.0.3 (1.1.0 available)
+  jni_flutter 1.0.3 (1.0.4+1 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  network_info_plus 8.2.1 (8.2.2 available)
+  nm 0.5.0 (0.6.0 available)
+  objective_c 9.6.0 (9.6.2 available)
+  package_info_plus 10.2.1 (10.2.2 available)
+  pdfium_dart 0.2.5 (0.3.1 available)
+  pdfium_flutter 0.2.3 (0.3.1 available)
+  pdfrx 2.4.8 (2.6.5 available)
+  pdfrx_engine 0.4.7 (0.6.1 available)
+  popover 0.4.0 (0.5.1 available)
+  qr 3.0.2 (4.0.0 available)
+  screen_retriever 0.2.2 (0.3.0 available)
+  share_plus 13.3.0 (13.3.1 available)
+  shared_preferences 2.5.5 (2.5.6 available)
+  test_api 0.7.12 (0.7.15 available)
+  url_launcher 6.3.2 (6.3.3 available)
+  vector_graphics_compiler 1.3.0 (1.3.1 available)
+  windows_file_picker 1.3.0 (2.0.1 available)
+  xml 7.0.1 (7.1.0 available)
+Got dependencies!
+48 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+[app_el.arb:persistentStateCleanupFeedback] ICU Syntax Warning: The plural part specified below is overridden by a later plural part.
+    {locations, plural, =1{Καθαρίστηκε 1 θέση αποθήκευσης} other{Καθαρίστηκε {locations} θέσεις αποθήκευσης}}; {records, plural, =1{αφαιρέθηκε 1 εγγραφή} other{αφαιρέθηκε } other{ αφαιρέθηκε {records} καταγράφει}}.
+                                                                                          ^
