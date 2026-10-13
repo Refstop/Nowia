@@ -100,7 +100,7 @@ jobs:
           NOWIA_SETUP_EVIDENCE_DIR: ${{ github.workspace }}/build/nowia-evidence/setup
         run: bash tools/nowia/setup-cloud.sh 2>&1 | tee build/nowia-evidence/setup-cloud.log
       - name: Prove compiler failure propagation (expected red job)
-        if: inputs.failure_probe == 'compile'
+        if: ${{ true }}
         run: bash tools/nowia/quality-gate.sh --probe compile --evidence build/nowia-evidence/probe-compile
       - name: Strict analysis and all existing app/API tests
         run: bash tools/nowia/quality-gate.sh --evidence build/nowia-evidence/quality
