@@ -2,7 +2,7 @@
 
 기록: 2026-10-13 KST. Linux x86_64 관리형 Cloud에서 **새 도구 설치 → 정적 분석·테스트 → 원본 APK 빌드**를 수행하는 절차다. 원본은 Butterfly `v2.6.0`, commit `1e4c86b91f4d64361a73598bda0acc587f9381b0`이며 `app/`, `api/`, lockfile을 변경하지 않는다.
 
-현재 작업 공간에서의 FND-03 APK 성공과 이번 새 컨테이너 재현은 별도 실행이다. 새 컨테이너의 설치·분석·409개 테스트·APK 빌드·서명·원본 보존 검증은 모두 통과했다. 최종 결과·hash는 해당 실행의 `build/result.json`과 [빌드 기준선](../build-baseline.md)을 따른다. Cloud 설정 publish·새 Codex 작업 재현과 원격 GitHub Actions 실행은 **NOT_RUN**이다.
+현재 작업 공간에서의 FND-03 APK, 새 Docker 컨테이너, 원격 GitHub Actions는 각각 별도 실행으로 검증했다. 설치·분석·409개 테스트·APK 빌드·서명·원본 보존과 CI artifact 다운로드·hash 대조가 통과했다. [ADR-006](../adr/ADR-006-ci-reproduction.md)의 CI 대체 재현 경로 채택으로 **FND-04/FND-05 VERIFIED, G0 ACCEPTED**다. [PR #1](https://github.com/Refstop/Nowia/pull/1)은 draft·미병합이며 Cloud 설정 publish·별도 새 Codex 작업은 **NOT_RUN**이다. 실제 실행 결과와 다음 실행 절차를 구분한다.
 
 ## 고정 도구와 네트워크
 
@@ -114,6 +114,12 @@ base image만 준비하려면 `prepare /workspace/fnd04-image-check`를 사용�
 
 FND-03 APK와 인증서·hash가 다르므로 두 APK를 같은 서명의 업데이트 파일로 취급하지 않는다. 이는 새 환경의 빌드 성공·원본 보존 재현이며 APK bytes의 동일성 검증은 아니다.
 
-[GitHub Actions workflow](../../.github/workflows/nowia-baseline.yml)는 `main` PR·push, `task/fnd-*` push와 수동 실행을 지원한다. 매 job마다 빈 toolchain에서 같은 setup·quality·build를 수행한다. 증거 artifact는 성공·실패 모두 보관하고 APK artifact는 앞 단계 성공 후 보관한다. 수동 `failure_probe=integrity` 또는 `compile`은 의도된 오류를 발생시켜 **job 실패가 예상 결과**다. 실제 CI 완료에는 정상 실행의 APK 다운로드·hash 대조와 각 probe의 의도된 오류·실패 상태 확인이 필요하다. 로컬 probe 성공만으로 원격 job 실패를 검증했다고 하지 않는다.
+[GitHub Actions workflow](../../.github/workflows/nowia-baseline.yml)는 `main` PR·push, `task/fnd-*` push와 수동 실행을 지원한다. 매 job마다 빈 toolchain에서 같은 setup·quality·build를 수행한다. 증거 artifact는 성공·실패 모두 보관하고 APK artifact는 앞 단계 성공 후 보관한다. `failure_probe=integrity` 또는 `compile`은 의도된 오류를 발생시켜 **job 실패가 예상 결과**다. 재실행 방법·실패 검증 범위·artifact 보관 규칙은 [CI runbook](ci-baseline.md)을 따른다.
 
-현재 GitHub 연결의 `Refstop/Nowia` 쓰기 요청은 HTTP 403으로 거절되어 원격 반영·Actions 실행 검증은 완료하지 못했다. 정확한 연결 권한 원인은 확정하지 않는다. Cloud 환경 설정 publish와 별도 새 Codex 작업 검증도 NOT_RUN이다. 새 Docker 컨테이너 결과, 새 Codex 작업, 원격 CI, APP-01 실기기 결과는 각각 구분해 [현재 상태](../status.md)에 기록한다. APP-01/G1은 기기 시험 전까지 WAITING_DEVICE다.
+원격 정상 [PR run 38382751680](https://github.com/Refstop/Nowia/actions/runs/38382751680)과 [push run 38382711491](https://github.com/Refstop/Nowia/actions/runs/38382711491)은 SUCCESS다. PR head는 `de79ee491bc95938357689ab3053537f215ef01e`, 실제 checkout은 GitHub PR merge commit `6f83f51a65938fe5535ef865ff25fd4141bc3120`이다. PR run에서 분석·409개 테스트, 26개 빌드 단계, 서명·원본 보존을 통과했다. 자세한 값은 [정상 실행 요약](../evidence/fnd05-ci/normal-pr-summary.json)을 따른다.
+
+원본 무결성 오류 [38383269605](https://github.com/Refstop/Nowia/actions/runs/38383269605)와 독립 Dart AOT 컴파일 오류 [38383276918](https://github.com/Refstop/Nowia/actions/runs/38383276918)는 예상대로 job 실패에 전파됐다. 둘 다 원래 source 사후 PASS, 실패 evidence 다운로드·hash 확인 PASS, APK artifact 없음이다. [실패 결과](../evidence/fnd05-ci/failure-probes.json)를 보존했다. Dart AOT 오류를 Android APK 컴파일 실패 시험으로 확대 해석하지 않는다.
+
+별도 [다운로드 검증 run 38384463103](https://github.com/Refstop/Nowia/actions/runs/38384463103)은 정상 PR run의 기존 APK artifact를 내려받아 **219,409,992 bytes**, SHA-256 `ab5d88c3cc614e152431da8a14fa5f73839f4e2378fdd56073899fd1df47a4de` 일치를 확인했다. [검증 결과](../evidence/fnd05-ci/artifact-download/verification.json)는 PASS다. APK를 다시 빌드해 다운로드 검증을 대신하지 않았으며, 약 209 MiB인 CI APK 전체를 이 managed 작업 공간에 내려받았다는 뜻은 아니다.
+
+이전 HTTP 403·원격 NOT_RUN은 접근 복구 전 기록이다. 이후 [접근 복구](../evidence/fnd05-ci/access-restored.json)와 [원격 게시·PR 생성](../evidence/fnd05-ci/publication.json)이 확인됐다. FND-04/FND-05와 G0는 검증 완료지만 main에는 병합하지 않았다. Cloud 설정 publish·새 Codex 작업은 NOT_RUN이며 이 CI 대체 경로와 구분한다. 최신 통합 상태는 [현재 상태](../status.md)를 따른다. APP-01은 WAITING_DEVICE, G1은 NOT_ACCEPTED이며 실제 Galaxy Tab S7 시험이 필요하다.

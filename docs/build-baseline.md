@@ -1,6 +1,6 @@
 # FND-03 — 수정 없는 Android 빌드 기준선
 
-기록: 2026-10-13 KST. **현재 환경과 기존 개발 캐시를 가져오지 않은 새 컨테이너에서 원본 production/debug APK 빌드·서명·소스 보존 검증 PASS.** 원격 CI, Cloud 설정 publish·별도 Codex task, 실기기 검증은 아직 완료하지 않았다.
+기록: 2026-10-13 KST. **현재 환경과 기존 개발 캐시를 가져오지 않은 새 컨테이너에서 원본 production/debug APK 빌드·서명·소스 보존 검증 PASS.** 원격 CI와 별도 APK artifact 다운로드·hash 대조도 완료했다. [ADR-006](adr/ADR-006-ci-reproduction.md)에 따라 G0를 통과했다. Cloud 설정 publish·별도 Codex task는 NOT_RUN, 실기기 검증은 대기 중이다.
 
 ## 결과와 실행
 
@@ -59,7 +59,7 @@ bash tools/nowia/build-cloud.sh
 
 [재개 실행 보고서](evidence/FND-03-resume.md), [기계 판정](evidence/resume-build/apk-verification.json), [wrapper 결과](evidence/resume-build/wrapper/result.json)에 명령·exit·timeout·도구·APK·source 정보를 보존한다. 실행마다 독립 증거 디렉터리를 만들고 실패 후에도 source/lock을 확인한다. 이전 실패 기록은 [기존 FND-03 보고서](evidence/FND-03.md)에 그대로 남아 있다.
 
-FND-03은 **VERIFIED (미병합)**다. FND-04의 새 컨테이너 결과는 아래와 같으며 별도 Codex task·환경 publish는 NOT_RUN이다. FND-05 실제 CI는 연결 앱의 쓰기 403으로 BLOCKED, APP-01은 WAITING_DEVICE다. G0와 G1은 아직 NOT_ACCEPTED다. 원격 ref 변경·PR·merge는 없다.
+FND-03은 **VERIFIED (미병합)**다. FND-04의 새 컨테이너 결과는 아래와 같으며 별도 Codex task·환경 publish는 NOT_RUN이다. FND-05는 정상 push/PR CI 및 의도한 실패 job·APK 다운로드 대조를 완료해 VERIFIED다. FND-04는 ADR-006의 대체 경로로 VERIFIED, G0는 ACCEPTED다. APP-01은 WAITING_DEVICE, G1은 NOT_ACCEPTED다. [초안 PR #1](https://github.com/Refstop/Nowia/pull/1)은 미병합이다.
 
 ## FND-04 새 컨테이너 재현
 
@@ -73,3 +73,11 @@ FND-03은 **VERIFIED (미병합)**다. FND-04의 새 컨테이너 결과는 아�
 - 빌드 전후 source/lockfile PASS, Git 상태 깨끗함. 앱/API 원본 변경 없음.
 
 환경별 debug key가 다르므로 과거 APK와 byte 단위 동일성을 주장하지 않는다. 같은 호스트의 독립 컨테이너 검증이며 Cloud publish·별도 Codex task나 GitHub runner 검증을 대신하지 않는다. [전체 보고서](evidence/FND-04-05.md)와 [기계 결과](evidence/fnd04-05/cold/build/result.json)를 확인한다.
+
+## FND-05 원격 CI와 APK 다운로드
+
+정상 push [38382711491](https://github.com/Refstop/Nowia/actions/runs/38382711491) 및 PR [38382751680](https://github.com/Refstop/Nowia/actions/runs/38382751680)은 SUCCESS다. PR head `de79ee491bc95938357689ab3053537f215ef01e`와 실제 checkout `6f83f51a65938fe5535ef865ff25fd4141bc3120`의 tree는 동일하다. 새 GitHub-hosted runner에서 도구 설치, 엄격한 분석, 409개 테스트, APK 빌드·서명·source/lock 보존을 통과했다.
+
+PR CI APK는 219,409,992 bytes, SHA-256 `ab5d88c3cc614e152431da8a14fa5f73839f4e2378fdd56073899fd1df47a4de`다. 별도 [다운로드 검증 job](https://github.com/Refstop/Nowia/actions/runs/38384463103)이 원래 artifact를 실제 내려받아 크기·hash를 대조했다. 이 다운로드는 별도 GitHub job에서 실행했으며 현재 작업 공간에 같은 대용량 APK를 내려받았다는 의미는 아니다. 무결성·독립 Dart AOT 컴파일 실패도 각각 실제 실패 job으로 전파됐다. 상세 artifact ID, ZIP hash, APK 인증서 및 실행 범위는 [FND-05 보고서](evidence/FND-05-ci.md)를 따른다.
+
+기존 [기기 시험 안내](runbooks/device-baseline.md)는 위 FND-03 APK를 계속 사용한다. 서로 다른 환경의 debug 서명키를 혼동하지 않는다.

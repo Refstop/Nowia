@@ -1,0 +1,14 @@
+{
+  "minimum_free_bytes": 25769803776,
+  "volumes": [
+    {
+      "path": "/home/runner/work/_temp",
+      "free_bytes": 116511637504
+    },
+    {
+      "path": "/home/runner/work/Nowia/Nowia",
+      "free_bytes": 116511637504
+    }
+  ],
+  "pass": true
+}

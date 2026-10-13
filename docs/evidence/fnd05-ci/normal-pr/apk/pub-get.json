@@ -1,0 +1,16 @@
+{
+  "stage": "pub-get",
+  "command": [
+    "flutter",
+    "pub",
+    "get",
+    "--enforce-lockfile"
+  ],
+  "cwd": "/home/runner/work/Nowia/Nowia/app",
+  "started_utc": "2026-10-13T10:27:21.897313+00:00",
+  "timeout_seconds": 1800,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "pub-get.log",
+  "ended_utc": "2026-10-13T10:27:22.964462+00:00"
+}

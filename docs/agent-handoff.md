@@ -1,10 +1,10 @@
 # Nowia 다음 에이전트 배정
 
-현재 범위는 FND-04·05와 APP-01 준비다. 제품 기능을 추가하지 않고 고정 upstream의 원본 debug APK 재현과 증거를 남긴다. 현재 상태·빌드 결과는 [status.md](status.md), [build-baseline.md](build-baseline.md)를 확인한다. 2026-10-13 브랜치는 `task/fnd-04-05-ci`, 새 컨테이너에서 실제 실행한 구현 commit은 `c46c32f66534db09a144ce31000fd502282dd00a`다. 인계 복원 commit `d1feecc5beecc21bb30901135f6d9eca04b9c94c`와 과거 SHA는 출처이며 현재 checkout과 구분한다.
+FND-03·04·05 검증을 마쳤으며 다음 사용자 확인 단계는 APP-01이다. 제품 기능을 추가하지 않고 고정 upstream의 원본 debug APK 재현과 증거를 남겼다. 현재 상태·빌드 결과는 [status.md](status.md), [build-baseline.md](build-baseline.md)를 확인한다. 원격 브랜치는 `task/fnd-04-05-ci`, [초안 PR #1](https://github.com/Refstop/Nowia/pull/1)은 미병합이다. 정상 CI head는 `de79ee491bc95938357689ab3053537f215ef01e`, PR 실제 checkout은 `6f83f51a65938fe5535ef865ff25fd4141bc3120`이며 tree가 동일하다. 후속 문서 commit을 빌드 실행 SHA로 표시하지 않는다. 과거 인계 복원·컨테이너 실행 SHA는 출처이며 현재 checkout과 구분한다.
 
-FND-03은 VERIFIED다. FND-04는 빈 도구·캐시의 새 컨테이너에서 설치·분석·409개 테스트·APK·서명·원본 검사를 통과했다. [FND-04·05 보고서](evidence/FND-04-05.md)를 따른다. Cloud 설정 publish·별도 Codex task는 미실행이며 G0를 승인하지 않았다. FND-05 원격 접근은 사용자 GitHub 설치 설정 수정 후 Refstop 계정의 브랜치 생성으로 재검증했다. 이전 403은 해결됐으며 원격 CI를 진행한다. 최신 상태는 status.md를 따른다.
+FND-04는 새 컨테이너 및 GitHub-hosted runner에서 설치·분석·409개 테스트·APK·서명·원본 검사를 통과했다. FND-05의 정상 push/PR CI, 의도한 두 실패 job, APK artifact 별도 다운로드·hash 대조를 실제 확인했다. [FND-05 보고서](evidence/FND-05-ci.md)와 [ADR-006](adr/ADR-006-ci-reproduction.md)에 따라 FND-04·05는 VERIFIED, G0는 ACCEPTED다. Cloud 설정 publish·별도 Codex task는 NOT_RUN이며 검증된 대체 CI 경로를 채택했다. GitHub 설치 접근 수정으로 이전 403이 해결됐고 ChatGPT 재연결은 필요하지 않았다. 과거 컨테이너 결과와 당시 차단 상태는 [이전 보고서](evidence/FND-04-05.md)에 보존한다.
 
-다음 순서: 정상 CI 및 artifact 다운로드 → 의도한 실패 job 검증. [CI runbook](runbooks/ci-baseline.md)에 절차가 있다. APP-01은 [기기 시험](runbooks/device-baseline.md)과 [결과 양식](runbooks/device-results-template.md)이 준비됐으며 WAITING_DEVICE다. 기존 시험 안내는 FND-03 APK/hash를 사용한다. 새 컨테이너 APK는 다른 debug key를 사용하므로 설치 파일을 혼동하지 않는다.
+다음 순서: APP-01 실기기 시험과 PR 검토. [CI runbook](runbooks/ci-baseline.md)에 재실행 절차가 있다. APP-01은 [기기 시험](runbooks/device-baseline.md)과 [결과 양식](runbooks/device-results-template.md)이 준비됐으며 WAITING_DEVICE다. 기존 시험 안내는 FND-03 APK/hash를 사용한다. 컨테이너·CI APK는 다른 debug key를 사용하므로 설치 파일을 혼동하지 않는다. G1은 NOT_ACCEPTED이며 실제 시험 결과 없이 후속 제품 기능의 기기 게이트를 통과 처리하지 않는다.
 
 ## 작업 시작 규칙
 
@@ -26,7 +26,7 @@ FND-03은 VERIFIED다. FND-04는 빈 도구·캐시의 새 컨테이너에서 �
 | CORE-01 / CORE+BACKEND+LEAD | FND-02 | 계약·ADR-002~005·valid/invalid fixture | 실제 모델 확장 경로 확인, ID/revision/영역/snapshot/unknown field 의미 합의 | 설계 초안은 가능. 미통과 build/device gate를 통과한 것으로 가정해 기능 확대 금지 |
 | CORE-02 / CORE+QA | FND-03, CORE-01 | 왕복 fixture·의미 비교기·호환 증거 | 펜/텍스트/Markdown/이미지/PDF/페이지/영역/extra 보존 | 정보 유실 시 저장 설계 수정이 우선 |
 
-FND-03 이후 FND-04·FND-05·APP-01을 병렬 배정할 수 있다. 단, Cloud 접근이 없으면 FND-04는 대기 상태를 유지한다. CORE-01은 FND-02 이후 계약 초안을 준비할 수 있다. W0~W8 묶음은 달력이나 무조건 병렬 실행 지시가 아니며 각 티켓의 선행 조건이 우선한다.
+FND-03 이후 FND-04·FND-05·APP-01을 병렬 배정할 수 있다. Cloud 접근도 검증된 대체 CI도 없으면 FND-04는 대기 상태를 유지한다. 이번 대체 경로는 ADR-006을 따른다. CORE-01은 FND-02 이후 계약 초안을 준비할 수 있다. W0~W8 묶음은 달력이나 무조건 병렬 실행 지시가 아니며 각 티켓의 선행 조건이 우선한다.
 
 후속 의존성: `CORE-02 → CORE-03 → CORE-04/CORE-05`, `CORE-02 + CORE-03 → APP-02`, `CORE-04 + APP-02 → APP-03`. APP-06은 APP-05와 저장 내구성 검증 뒤에 진행한다.
 

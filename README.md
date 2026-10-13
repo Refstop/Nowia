@@ -2,7 +2,7 @@
 
 Android 태블릿의 자유 캔버스 필기와 외부 Agent 읽기 연동을 준비하는 Butterfly thin fork입니다.
 
-기존 개발 캐시를 가져오지 않은 새 컨테이너에서 도구 설치, 분석, 409개 테스트, 원본 debug APK 빌드·서명 검증을 완료했습니다. 앱/API 코드는 Butterfly v2.6.0에서 변경하지 않았습니다. GitHub 쓰기 접근을 확인해 원격 CI 검증을 진행 중이며, 별도 Codex task와 실기기 검증도 남아 있습니다. [현재 상태](docs/status.md)와 [재현 증거](docs/evidence/FND-04-05.md)를 확인하세요.
+새 컨테이너와 GitHub CI에서 도구 설치, 분석, 409개 테스트, 원본 debug APK 빌드·서명 검증을 완료했습니다. CI가 만든 APK는 별도 job에서 다운로드해 SHA-256 일치도 확인했습니다. 앱/API 코드는 Butterfly v2.6.0에서 변경하지 않았습니다. [ADR-006](docs/adr/ADR-006-ci-reproduction.md)에 따라 새 환경 재현 게이트 G0를 통과했고, [초안 PR #1](https://github.com/Refstop/Nowia/pull/1)은 미병합 상태입니다. 다음은 실기기 시험입니다. [현재 상태](docs/status.md)와 [CI 검증 증거](docs/evidence/FND-05-ci.md)를 확인하세요.
 
 - 대상: Galaxy Tab S7 / S Pen / Android 13
 - 외부 OCR·AI로 필기 전송: 기본 OFF 정책. 관련 Nowia 기능은 아직 구현되지 않았습니다.

@@ -1,0 +1,15 @@
+{
+  "stage": "status-before",
+  "command": [
+    "git",
+    "status",
+    "--porcelain=v1"
+  ],
+  "cwd": "/home/runner/work/Nowia/Nowia",
+  "started_utc": "2026-10-13T10:27:17.418038+00:00",
+  "timeout_seconds": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "log": "status-before.log",
+  "ended_utc": "2026-10-13T10:27:19.285476+00:00"
+}
