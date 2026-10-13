@@ -40,7 +40,7 @@ jobs:
           printf 'NOWIA_TOOLCHAIN_ROOT=%s/nowia-toolchains\n' "$RUNNER_TEMP" >> "$GITHUB_ENV"
           python3 tools/nowia/verify_baseline.py | tee build/nowia-evidence/initial-integrity.log
       - name: Prove integrity failure propagation (expected red job)
-        if: inputs.failure_probe == 'integrity'
+        if: ${{ true }}
         run: python3 tools/nowia/quality-gate.py --probe integrity --evidence build/nowia-evidence/probe-integrity
       - name: Prepare ephemeral runner and require 24 GiB free
         run: |
